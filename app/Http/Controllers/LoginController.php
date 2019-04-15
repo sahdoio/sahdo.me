@@ -31,7 +31,7 @@ class LoginController extends Controller
             return redirect()->route('home');
         }
 
-        return view('pages.login');
+        return view('admin.login');
     }
 
     /**
@@ -46,7 +46,7 @@ class LoginController extends Controller
             $this->my_session->setSession($token);
             return redirect()->route('admin.dashboard');
         }
-        return view('pages.login');
+        return view('login');
     }
 
     /**
@@ -65,10 +65,6 @@ class LoginController extends Controller
      */
     private function validateLogin($email, $password)
     {
-        $token = $this->apiRepo->authenticate($email, $password);
-
-        dd($token);
-
-        return $token;
-    }    
+        return $this->apiRepo->authenticate($email, $password);
+    }
 }

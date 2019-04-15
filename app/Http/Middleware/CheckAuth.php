@@ -19,7 +19,7 @@ class CheckAuth
         $my_session = new MySession();
 
         if (!$my_session->checkSession()) {
-            return redirect()->route('login');
+            return redirect()->route('admin.login');
         }
 
         return $next($request);

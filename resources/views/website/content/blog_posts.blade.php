@@ -18,7 +18,7 @@
         </a>
     </article>
     @php
-        if ($i_style >= 7) $i_style = 1;
+        if ($i_style >= 6) $i_style = 1;
         $i_style++
     @endphp
     @endforeach

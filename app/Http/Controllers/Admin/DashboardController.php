@@ -15,11 +15,7 @@ class DashboardController extends Controller
      */
     public function dashboard()
     {
-        $siteviews = SiteView::query()
-            ->orderBy('date', 'desc')
-            ->limit(300)
-            ->get()
-            ->toArray();
+        $siteviews = [];
 
         $siteviews_labels = [];
         $siteviews_data = [];
@@ -37,11 +33,7 @@ class DashboardController extends Controller
             $visitors_data[] = $siteview['views'];
         }
 
-        $messages = Message::query()
-            ->orderBy('date', 'desc')
-            ->limit(300)
-            ->get()
-            ->toArray();
+        $messages = [];
 
         $map_date = [];
         for ($i = (count($messages) - 1); $i >= 0; $i--) {
@@ -63,29 +55,9 @@ class DashboardController extends Controller
             $messages_data[] = $qty;
         }
 
-        $visits = SiteView::query()
-            ->select([
-                DB::raw('SUM(views) as total')
-            ])
-            ->first();
-
-        $visits = $visits ? $visits->total : 0;
-
-        $pageviews = SiteView::query()
-            ->select([
-                DB::raw('SUM(pages) as total')
-            ])
-            ->first();
-
-        $pageviews = $pageviews ? $pageviews->total : 0;
-
-        $messages = Message::query()
-            ->select([
-                DB::raw('SUM(1) as total')
-            ])
-            ->first();
-
-        $messages = $messages ? $messages->total : 0;
+        $visits = 5;
+        $pageviews = 10;
+        $messages = 6;
 
         $siteviews_labels = json_encode($siteviews_labels, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES );
         $siteviews_data = json_encode($siteviews_data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);

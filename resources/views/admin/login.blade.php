@@ -19,7 +19,7 @@
                 <div class="content">
                     <div class="container">
                         <div class="col-md-5 ml-auto mr-auto">
-                            <form id="formLogin" class="form" method="post" action="{{ route('admin.login.in') }}">
+                            <form id="formLogin" class="form" method="post" action="{{ route('login.in') }}">
                                 {{ csrf_field() }}
                                 <div class="card card-login card-plain">
                                     <div class="card-header ">
