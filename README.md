@@ -9,6 +9,13 @@
 sahdo.me é uma aplicação desenvolvida em PHP com o framework Laravel 5.5. Ele é nada mais é que um website com blog e controle de conteúdo via painel de controle.
 Para testar a aplicação acesse [sahdo.me](http://sahdo.me) 
 
+Para acessar o painel de controle acesse [sahdo.me/adm]('http://sahdo.me/adm'):
+
+Credenciais:
+
+    login: lucassahdo@gmail.com
+    senha: 123456
+
 ## Setup
 
 Para simular o projeto em ambiente local você vai precisar configurar um servidor nginx ou apache. Não entrarei em muitos detahes, mas fornecerei o setup que utilizei com nginx.
@@ -68,7 +75,11 @@ Crie o arquivo .env e cole a seguinte configuração:
     MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
     MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
     
-    API_PREFIX=http://api.sahdo.me/                                              
+    API_PREFIX=http://api.sahdo.me/
+
+Se a pasta bootstrap/cache não existir, crie a mesma:
+    
+    mkdir bootstrap/cache                                              
     
 Vamos precisar alterar algumas permissões, primeiramente digite:
     
