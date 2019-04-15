@@ -6,7 +6,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
 [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-sahdo.me é uma aplicação desenvolvida em PHP com o framework Laravel 5.5. Ele é nada mais é que um website com blog e controle de conteúdo via painel de controle.
+sahdo.me é uma aplicação desenvolvida em PHP com o framework Laravel 5.5. Trata-se de um website convencional com blog e controle de conteúdo via painel de controle.
 Para testar a aplicação acesse [sahdo.me](http://sahdo.me) 
 
 Para acessar o painel de controle acesse [sahdo.me/adm](http://sahdo.me/adm) 
