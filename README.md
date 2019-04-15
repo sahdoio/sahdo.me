@@ -17,7 +17,7 @@ O primiero passo é baixar o projeto e executar o seguinte comando:
 
     composer update
         
-Esse comando irá instalar todas a dependências do composer na pasta vendor do Lumen.
+Esse comando irá instalar todas a dependências do composer na pasta vendor do Laravel.
 
 Feito isso você irá precisar criar um arquivo de configuração .env na raiz do projeto.
     
