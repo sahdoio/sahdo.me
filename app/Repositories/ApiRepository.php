@@ -6,6 +6,7 @@ namespace App\Repositories;
 
 use App\Libs\MySession;
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 
 class ApiRepository
 {
@@ -51,6 +52,9 @@ class ApiRepository
             }
         }
         catch (RequestException $e) {
+            return false;
+        }
+        catch (ClientException $e) {
             return false;
         }
 

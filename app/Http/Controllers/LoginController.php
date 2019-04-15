@@ -46,7 +46,7 @@ class LoginController extends Controller
             $this->my_session->setSession($token);
             return redirect()->route('admin.dashboard');
         }
-        return view('login');
+        return view('admin.login');
     }
 
     /**
