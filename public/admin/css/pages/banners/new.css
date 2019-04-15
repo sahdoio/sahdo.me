@@ -1,0 +1,85 @@
+#banner-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+#banner-content .section {
+    padding: 35px 0;
+}
+
+#banner-content .section-title {
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#banner-content .profile-img-row .dropify-wrapper {
+    height: 150px;
+}
+
+#banner-content .bg-row .dropify-wrapper {
+    height: 400px;
+}
+
+#banner-content .bg-row .dropify-render video {
+    height: 100%;
+}
+
+#banner-content .left-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 5%;
+}
+
+#banner-content .box-footer {
+    display: block;
+    width: 100%;
+}
+
+#banner-content .box-footer:after {
+    display: block;
+    content: '';
+    clear: both;
+    width: 100%;
+}
+
+#banner-content .btn-edit {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 45px;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+}
+
+#banner-content .btn-edit.save {
+    width: 49% !important;
+    float: right;
+}
+
+#banner-content .btn-edit.save:hover {
+    background: #00a4cd !important;
+}
+
+#banner-content .btn-edit.new {
+    width: 100% !important;
+}
+
+#banner-content .btn-edit.new:hover {
+    background: #00a4cd !important;
+}
+
+#banner-content .btn-edit.delete {
+    width: 49% !important;
+    float: left;
+    background: #cd4c4c;
+}
+
+#banner-content .btn-edit.delete:hover {
+    background: #ff4242 !important;
+}

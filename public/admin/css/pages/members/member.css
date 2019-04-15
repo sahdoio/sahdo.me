@@ -1,0 +1,38 @@
+.card {
+    padding: 20px 35px 40px 35px;
+}
+
+.card .card-header .section {
+    padding: 20px 0;
+}
+
+.card .card-header {
+    margin-bottom: 25px;
+}
+
+.card-title {
+    text-align: left;
+}
+
+.btn#add-contact {
+    width: 100%;
+}
+
+.btn#delete-contact {
+    float: right;
+    background: rgb(236, 129, 129);
+}
+
+.btn#btn-cancel,
+.btn#btn-save {
+    width: 100%;
+}
+
+a#buttonMemberLicense {
+    float: right;
+}
+
+.btn-group.col.s12.m6 {
+    justify-content: flex-end;
+}
+

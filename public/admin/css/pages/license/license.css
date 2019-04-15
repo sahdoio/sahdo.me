@@ -1,0 +1,19 @@
+.license-box {
+    height: 750px;
+    background: #3d3d3d;
+}
+
+.card {
+    padding: 20px 35px 40px 35px;
+}
+
+.license-not-found-image {
+    font-size: 32px;
+}
+
+.license-card-template {
+    width: auto;
+    position: relative;
+    top: 21%;
+}
+

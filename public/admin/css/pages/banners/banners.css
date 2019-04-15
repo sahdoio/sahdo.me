@@ -1,0 +1,256 @@
+/*******************************
+* Media Home Page
+********************************/
+
+#banners-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: -30px;
+    background: #fff;
+    display: block;
+    position: relative;
+}
+
+#banners-content .banners-top {
+    padding: 5px 0 10px 15px;
+}
+
+#banners-content .banners-top-wrapper {
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+#banners-content .section-title {
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#banners-content .btn.add {
+    width: 220px;
+    height: 40px;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    float: right;
+}
+
+#banners-content .row {
+    margin: 0;
+}
+
+#banners-content .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#banners-content .row .col {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.75rem;
+    min-height: 1px;
+}
+
+#banners-content .row .col.s12 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+#banners-content .row .col.m6 {
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+#banners-content .grid {
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+
+#banners-content .grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 700px;
+    max-height: 360px;
+    height: 360px;
+    width: 100%;
+    background: #3085a3;
+    text-align: center;
+}
+
+#banners-content .grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    opacity: 0.8;
+}
+
+#banners-content .grid figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#banners-content .grid figure figcaption::before,
+#banners-content .grid figure figcaption::after {
+    pointer-events: none;
+}
+
+#banners-content .grid figure figcaption,
+#banners-content .grid figure figcaption>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+}
+
+/* Anchor will cover the whole item by default */
+
+/* For some effects it will show as a button */
+
+#banners-content .grid figure figcaption>a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+#banners-content .grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+#banners-content .grid figure h2 span {
+    font-weight: 800;
+}
+
+#banners-content .grid figure h2,
+#banners-content .grid figure p {
+    margin: 0;
+}
+
+#banners-content .grid figure p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Roxy */
+
+#banners-content figure.effect-roxy {
+    background: -webkit-linear-gradient(45deg, #000 30%, #05abe0 70%);
+    background: linear-gradient(45deg, #000 30%, #05abe0 70%);
+}
+
+#banners-content figure.effect-roxy img {
+    max-width: none;
+    width: -webkit-calc(100% + 60px);
+    width: calc(100% + 60px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-50px, 0, 0);
+}
+
+#banners-content figure.effect-roxy figcaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+}
+
+#banners-content figure.effect-roxy figcaption {
+    padding: 3em;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+}
+
+#banners-content figure.effect-roxy h2 {
+    padding: 10% 0 10px 0;
+}
+
+#banners-content figure.effect-roxy p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+}
+
+#banners-content figure.effect-roxy:hover img {
+    opacity: 0.3;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#banners-content figure.effect-roxy:hover figcaption::before,
+#banners-content figure.effect-roxy:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#banners-content figure.effect-roxy .button-wrapper {
+    opacity: 0;
+    text-align: right;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-20px, 0, 0);
+    transform: translate3d(-20px, 0, 0);
+}
+
+#banners-content figure.effect-roxy:hover .button-wrapper {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+#banners-content figure.effect-roxy .button-wrapper .btn {
+    width: 90px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 0;
+}
+
+#banners-content figure.effect-roxy .button-wrapper .btn.edit {
+    margin-right: 4px;
+}
+
+#banners-content figure.effect-roxy .button-wrapper .btn.edit:hover {
+    border: 1px solid #05abe0;
+    background: #05abe014;
+}
+
+#banners-content figure.effect-roxy .button-wrapper .btn.delete:hover {
+    border: 1px solid #ff4242;
+    background: #ff42422b;
+}

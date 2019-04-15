@@ -1,0 +1,85 @@
+#contact-content {
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+#contact-content .section {
+    padding: 35px 0;
+}
+
+#contact-content .section-title {
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#contact-content .profile-img-row .dropify-wrapper {
+    height: 150px;
+}
+
+#contact-content .bg-row .dropify-wrapper {
+    height: 400px;
+}
+
+#contact-content .bg-row .dropify-render video {
+    height: 100%;
+}
+
+#contact-content .left-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 5%;
+}
+
+#contact-content .box-footer {
+    display: block;
+    width: 100%;
+}
+
+#contact-content .box-footer:after {
+    display: block;
+    content: '';
+    clear: both;
+    width: 100%;
+}
+
+#contact-content .btn-edit {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 45px;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: none;
+}
+
+#contact-content .btn-edit.save {
+    width: 49% !important;
+    float: right;
+}
+
+#contact-content .btn-edit.save:hover {
+    background: #00a4cd !important;
+}
+
+#contact-content .btn-edit.new {
+    width: 100% !important;
+}
+
+#contact-content .btn-edit.new:hover {
+    background: #00a4cd !important;
+}
+
+#contact-content .btn-edit.delete {
+    width: 49% !important;
+    float: left;
+    background: #cd4c4c;
+}
+
+#contact-content .btn-edit.delete:hover {
+    background: #ff4242 !important;
+}

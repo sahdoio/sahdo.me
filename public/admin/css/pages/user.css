@@ -1,0 +1,33 @@
+.card.card-user {
+    padding: 0;
+}
+
+.card-user .card-body {
+    min-height: 140px !important;
+}
+
+.btn#add-contact {
+    width: 100%;
+}
+
+.btn#delete-contact {
+    float: right;
+    background: rgb(236, 129, 129);
+}
+
+.btn#btn-cancel,
+.btn#btn-save {
+    width: 100%;
+}
+
+.card-user .avatar {
+    border: none;
+}
+
+.bootstrap-switch-label {
+    background-color: #fff !important;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on {
+    background: #00a1b9;
+}

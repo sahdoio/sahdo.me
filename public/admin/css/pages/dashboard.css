@@ -1,0 +1,100 @@
+.panel-header-lg {
+    height: 410px;
+    text-align: center;
+}
+
+.bigDashboardChart_title_area {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    width: 100%;
+}
+
+.title_bigDashboardChart {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+}
+
+.subtitle_bigDashboardChart {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.card-stats .statistics .stats-title {
+    color: #49b497;
+    font-weight: 600;
+}
+
+.card {
+    padding: 10px 5px 30px 5px;
+}
+
+.card .card-member {
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.card canvas {
+    margin: 0 auto;
+}
+
+.card-chart .card-header .card-category {
+    color: #121212;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-chart .card-header .card-title {
+    color: #17a2b8;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 8px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-chart .card-header .card-title span,
+.card-chart .card-header .card-title strong {
+    /* text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); */
+}
+
+.card-chart .card-header .card-subtitle {
+    font-weight: 400;
+    font-size: 17px;
+}
+
+/* revenue */
+
+.card-chart.revenue .card-header .card-title {
+    color: #09bb00;
+}
+
+/* use us */
+
+.card .card-header .card-title {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.card .card-body .card-category {
+    margin-top: 10px;
+    color: #6f6f6f;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card .card-body .card-title {
+    margin-top: 10px;
+    color: #17a2b8;
+    font-size: 40px;
+    font-weight: 600;
+}
