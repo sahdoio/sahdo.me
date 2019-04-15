@@ -1,45 +1,116 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# sahdo.me
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
+[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+sahdo.me é uma aplicação desenvolvida em PHP com o framework Laravel 5.5. Ele é nada mais é que um website com blog e controle de conteúdo via painel de controle.
+Para testar a aplicação acesse [sahdo.me](http://sahdo.me) 
 
----
+## Setup
 
-## Edit a file
+Para simular o projeto em ambiente local você vai precisar configurar um servidor nginx ou apache. Não entrarei em muitos detahes, mas fornecerei o setup que utilizei com nginx.
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+O primiero passo é baixar o projeto e executar o seguinte comando:
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+    composer update
+        
+Esse comando irá instalar todas a dependências do composer na pasta vendor do Lumen.
 
----
+Feito isso você irá precisar criar um arquivo de configuração .env na raiz do projeto.
+    
+E cole a seguinte configuração:
 
-## Create a file
+    APP_NAME=sahdo.me
+    APP_ENV=local
+    APP_KEY=base64:3vj780Twhir3YXQZIwYgcHJZmPyOuceeSr+nHQxoCDc=
+    APP_DEBUG=true
+    APP_URL=http://localhost
+    
+    LOG_CHANNEL=stack
+    
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=homestead
+    DB_USERNAME=homestead
+    DB_PASSWORD=secret
+    
+    BROADCAST_DRIVER=log
+    CACHE_DRIVER=file
+    QUEUE_CONNECTION=sync
+    SESSION_DRIVER=file
+    SESSION_LIFETIME=120
+    
+    REDIS_HOST=127.0.0.1
+    REDIS_PASSWORD=null
+    REDIS_PORT=6379
+    
+    MAIL_DRIVER=smtp
+    MAIL_HOST=smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME=null
+    MAIL_PASSWORD=null
+    MAIL_ENCRYPTION=null
+    
+    AWS_ACCESS_KEY_ID=
+    AWS_SECRET_ACCESS_KEY=
+    AWS_DEFAULT_REGION=us-east-1
+    AWS_BUCKET=
+    
+    PUSHER_APP_ID=
+    PUSHER_APP_KEY=
+    PUSHER_APP_SECRET=
+    PUSHER_APP_CLUSTER=mt1
+    
+    MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+    MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+~                                                  
+    
+Vamos precisar alterar algumas permissões, primeiramente digite:
+    
+    sudo chgrp -R www-data storage bootstrap/cache
 
-Next, you’ll add a new file to this repository.
+Em seguida:
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+    sudo chmod -R ug+rwx storage bootstrap/cache
+                  
+Agora, conforme disse anteriormente mostrarei como configurei o virtualhost do meu servidor nginx:
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+    server {
+        listen 80;
+        listen [::]:80;
+    
+        root /var/www/sahdo.me/public;
+    
+        # Add index.php to the list if you are using PHP
+        index index.html index.php index.htm index.nginx-debian.html;
+    
+        server_name sahdo.me;
+    
+        location / {
+            try_files $uri $uri/ /index.php?$query_string;
+        }
+    
+        # Execute PHP scripts
+        location ~ \.php$ {
+           fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+           fastcgi_split_path_info ^(.+\.php)(/.*)$;
+           include fastcgi_params;
+           fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+           fastcgi_param  HTTPS              off;
+        }
+    
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        location ~ /\.ht {
+            deny all;
+        }
+    
+        location ~* \.(eot|ttf|woff|woff2)$ {
+           add_header Access-Control-Allow-Origin *;
+        }
+    }
 
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
