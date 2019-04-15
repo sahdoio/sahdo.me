@@ -67,7 +67,8 @@ Crie o arquivo .env e cole a seguinte configuração:
     
     MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
     MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
-~                                                  
+    
+    API_PREFIX=http://api.sahdo.me/                                              
     
 Vamos precisar alterar algumas permissões, primeiramente digite:
     
