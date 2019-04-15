@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\SiteInfo;
 use App\Models\Media;
 
-class BannerController extends Controller
+class BlogController extends Controller
 {
     /*
     ###########################
@@ -18,15 +18,14 @@ class BannerController extends Controller
     /**
      * 
      */
-    public function banners() 
+    public function blog()
     {
         $data  =[
-            'banners' => Media::banners(),
-            'page' => 'banners',
-            'page_title' => 'Banners'
+            'page' => 'blog',
+            'page_title' => 'Blog'
         ];
 
-        return view('admin.banners.banners', $data);
+        return view('admin.blog.blog', $data);
     }
 
     /**
