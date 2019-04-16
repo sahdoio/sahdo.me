@@ -24,7 +24,7 @@
                                 <div class="card card-login card-plain">
                                     <div class="card-header ">
                                         <div class="logo-container">
-                                            <img src="{{ asset('/storage/media/logo.png') }}" alt="">
+                                            <img src="{{ asset('media/logo.png') }}" alt="">
                                         </div>
                                     </div>
                                     <div class="card-body ">

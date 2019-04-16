@@ -2,7 +2,7 @@
     <div class="inner">
         <!-- Logo -->
         <a href="{{ route('home') }}" class="logo">
-            <span class="symbol"><img src="{{ asset('storage/media/logo.png') }}" alt="" /></span><span class="title">Sahdo.me</span>
+            <span class="symbol"><img src="{{ asset('media/logo.png') }}" alt="" /></span><span class="title">Sahdo.me</span>
         </a>
         <!-- Nav -->
         <nav>

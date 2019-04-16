@@ -6,7 +6,7 @@
         @foreach($posts as $post)
         <article class="style{{ $i_style }}">
             <span class="image">
-                <img src="{{ asset('storage/media/blog_post.jpg') }}" alt="{{ $post->title }}" />
+                <img src="{{ asset('media/blog_post.jpg') }}" alt="{{ $post->title }}" />
             </span>
 
             <a href="{{ route('blog.post', $post->id) }}">
