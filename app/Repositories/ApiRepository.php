@@ -7,6 +7,7 @@ namespace App\Repositories;
 use App\Libs\MySession;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
+use GuzzleHttp\Exception\ServerException;
 
 class ApiRepository
 {
@@ -51,10 +52,16 @@ class ApiRepository
                 return false;
             }
         }
+        catch (\Exception $e) {
+            return false;
+        }
         catch (RequestException $e) {
             return false;
         }
         catch (ClientException $e) {
+            return false;
+        }
+        catch (ServerException $e) {
             return false;
         }
 
@@ -80,7 +87,16 @@ class ApiRepository
                 return false;
             }
         }
+        catch (\Exception $e) {
+            return false;
+        }
         catch (RequestException $e) {
+            return false;
+        }
+        catch (ClientException $e) {
+            return false;
+        }
+        catch (ServerException $e) {
             return false;
         }
 
@@ -106,7 +122,16 @@ class ApiRepository
                 return false;
             }
         }
+        catch (\Exception $e) {
+            return false;
+        }
         catch (RequestException $e) {
+            return false;
+        }
+        catch (ClientException $e) {
+            return false;
+        }
+        catch (ServerException $e) {
             return false;
         }
 
@@ -116,9 +141,9 @@ class ApiRepository
     /**
      * @return bool|mixed|\Psr\Http\Message\ResponseInterface
      */
-    public function savePost($params)
+    public function getPostComments($id)
     {
-        $uri = env('API_PREFIX') . 'posts/' . $id;
+        $uri = env('API_PREFIX') . 'posts/' . $id . '/comments';
 
         try {
             $result = $this->guzClient->get($uri);
@@ -131,7 +156,51 @@ class ApiRepository
                 return false;
             }
         }
+        catch (\Exception $e) {
+            return false;
+        }
         catch (RequestException $e) {
+            return false;
+        }
+        catch (ClientException $e) {
+            return false;
+        }
+        catch (ServerException $e) {
+            return false;
+        }
+
+        return false;
+    }
+
+
+    /**
+     * @return bool|mixed|\Psr\Http\Message\ResponseInterface
+     */
+    public function savePost($params)
+    {
+        $uri = env('API_PREFIX') . 'posts/' . $params['id'];
+
+        try {
+            $result = $this->guzClient->get($uri);
+
+            if ($result) {
+                $result = json_decode($result->getBody()->getContents(), true);
+                return array2Object($result);
+            }
+            else {
+                return false;
+            }
+        }
+        catch (\Exception $e) {
+            return false;
+        }
+        catch (RequestException $e) {
+            return false;
+        }
+        catch (ClientException $e) {
+            return false;
+        }
+        catch (ServerException $e) {
             return false;
         }
 

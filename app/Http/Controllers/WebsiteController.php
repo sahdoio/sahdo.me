@@ -8,6 +8,7 @@ use Flash;
 
 use Illuminate\Support\Facades\Session;
 use Intervention\Image\ImageManager;
+use MongoDB\BSON\UTCDateTime;
 
 class WebsiteController extends Controller 
 {
@@ -57,10 +58,14 @@ class WebsiteController extends Controller
     public function post($id)
     {
         $post = $this->apiRepo->getSinglePost($id);
+        $comments = $this->apiRepo->getPostComments($id);
+
+        dd($comments);
 
         $data = [
             'page' => 'blog',
-            'post' => isset($post->id) ? $post : null
+            'post' => isset($post->id) ? $post : null,
+            'comments' => $comments ? $comments : []
         ];
 
         return view('website.content.post', $data);
