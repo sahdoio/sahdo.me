@@ -32,7 +32,7 @@
                 Comentários
             </h3>
 
-            <form class="commentForm" action="{{ route('comments.new', $post->id) }}" method="post">
+            <form class="commentForm" action="{{ route('posts.comments.new', $post->id) }}" method="post">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <div class="col-lg-12">

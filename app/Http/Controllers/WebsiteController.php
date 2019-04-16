@@ -55,10 +55,10 @@ class WebsiteController extends Controller
     /**
      *
      */
-    public function post($id)
+    public function post($post_id)
     {
-        $post = $this->apiRepo->getSinglePost($id);
-        $comments = $this->apiRepo->getPostComments($id);
+        $post = $this->apiRepo->getSinglePost($post_id);
+        $comments = $this->apiRepo->getPostComments($post_id);
 
         $data = [
             'page' => 'blog',
@@ -98,12 +98,7 @@ class WebsiteController extends Controller
 
     public function newComment($post_id, Request $request)
     {
-        $post_id = intval($post_id);
         $post = $this->apiRepo->newComment($post_id, $request);
-
-        return response()->json([
-            'status' => 'ok',
-            'message' => 'success'
-        ]);
+        return redirect()->back();
     }
 }

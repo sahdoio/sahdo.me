@@ -135,9 +135,9 @@ class ApiRepository
     /**
      * @return bool|mixed|\Psr\Http\Message\ResponseInterface
      */
-    public function getPostComments($id)
+    public function getPostComments($post_id)
     {
-        $uri = env('API_PREFIX') . 'posts/' . $id . '/comments';
+        $uri = env('API_PREFIX') . 'posts/' . $post_id . '/comments';
 
         try {
             $result = $this->guzClient->get($uri);
@@ -215,7 +215,7 @@ class ApiRepository
      */
     public function newComment($post_id, $params)
     {
-        $uri = env('API_PREFIX') . 'comments/' . $post_id;
+        $uri = env('API_PREFIX') . 'posts/' . $post_id . '/comments';
 
         try {
             $data = [
@@ -224,10 +224,7 @@ class ApiRepository
                     'Accept' => 'application/json',
                 ],
                 'json' => [
-                    'pessoa' => [
-                        'title' => $params->title,
-                        'body' => $params->body
-                    ]
+                    'body' => $params->comment
                 ]
             ];
 
