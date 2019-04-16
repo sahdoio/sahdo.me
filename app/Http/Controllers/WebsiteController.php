@@ -60,12 +60,10 @@ class WebsiteController extends Controller
         $post = $this->apiRepo->getSinglePost($id);
         $comments = $this->apiRepo->getPostComments($id);
 
-        dd($comments);
-
         $data = [
             'page' => 'blog',
             'post' => isset($post->id) ? $post : null,
-            'comments' => $comments ? $comments : []
+            'comments' => is_array($comments) ? $comments : []
         ];
 
         return view('website.content.post', $data);
@@ -96,5 +94,16 @@ class WebsiteController extends Controller
             'page' => 'analytics_dashboard',
             'page_title' => 'Dashboard'
         ]);
-    }   
+    }
+
+    public function newComment($post_id, Request $request)
+    {
+        $post_id = intval($post_id);
+        $post = $this->apiRepo->newComment($post_id, $request);
+
+        return response()->json([
+            'status' => 'ok',
+            'message' => 'success'
+        ]);
+    }
 }

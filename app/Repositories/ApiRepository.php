@@ -64,8 +64,6 @@ class ApiRepository
         catch (ServerException $e) {
             return false;
         }
-
-        return false;
     }
 
 
@@ -99,8 +97,6 @@ class ApiRepository
         catch (ServerException $e) {
             return false;
         }
-
-        return false;
     }
 
 
@@ -134,8 +130,6 @@ class ApiRepository
         catch (ServerException $e) {
             return false;
         }
-
-        return false;
     }
 
     /**
@@ -168,24 +162,35 @@ class ApiRepository
         catch (ServerException $e) {
             return false;
         }
-
-        return false;
     }
-
 
     /**
      * @return bool|mixed|\Psr\Http\Message\ResponseInterface
      */
-    public function savePost($params)
+    public function newPost($params)
     {
-        $uri = env('API_PREFIX') . 'posts/' . $params['id'];
+        $uri = env('API_PREFIX') . 'posts';
 
         try {
-            $result = $this->guzClient->get($uri);
+            $data = [
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ],
+                'json' => [
+                    'pessoa' => [
+                        'title' => $params->title,
+                        'body' => $params->body
+                    ]
+                ]
+            ];
+
+            $result = $this->guzClient->post($uri, $data);
 
             if ($result) {
                 $result = json_decode($result->getBody()->getContents(), true);
-                return array2Object($result);
+                return $result;
+
             }
             else {
                 return false;
@@ -203,7 +208,51 @@ class ApiRepository
         catch (ServerException $e) {
             return false;
         }
+    }
 
-        return false;
+    /**
+     * @return bool|mixed|\Psr\Http\Message\ResponseInterface
+     */
+    public function newComment($post_id, $params)
+    {
+        $uri = env('API_PREFIX') . 'comments/' . $post_id;
+
+        try {
+            $data = [
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                    'Accept' => 'application/json',
+                ],
+                'json' => [
+                    'pessoa' => [
+                        'title' => $params->title,
+                        'body' => $params->body
+                    ]
+                ]
+            ];
+
+            $result = $this->guzClient->post($uri, $data);
+
+            if ($result) {
+                $result = json_decode($result->getBody()->getContents(), true);
+                return $result;
+
+            }
+            else {
+                return false;
+            }
+        }
+        catch (\Exception $e) {
+            return false;
+        }
+        catch (RequestException $e) {
+            return false;
+        }
+        catch (ClientException $e) {
+            return false;
+        }
+        catch (ServerException $e) {
+            return false;
+        }
     }
 }

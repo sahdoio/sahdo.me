@@ -32,10 +32,11 @@
                 Comentários
             </h3>
 
-            <form class="commentForm" role="form">
+            <form class="commentForm" action="{{ route('comments.new', $post->id) }}" method="post">
+                {{ csrf_field() }}
                 <div class="form-group">
                     <div class="col-lg-12">
-                        <textarea placeholder="Message" rows="8" class=" form-control"></textarea>
+                        <textarea placeholder="Message" name="comment" rows="8" class="form-control"></textarea>
                     </div>
                 </div>
 
@@ -49,7 +50,6 @@
                 <div class="comment">
                     <div class="comment-wrapper">
                         <h4 class="comment-heading">
-                            {{ dd($comment) }}
                             {{ $comment->user->name }}
                             <span>|</span>
                             @php

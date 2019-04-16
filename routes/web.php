@@ -23,6 +23,13 @@ Route::group(['middleware' => 'session_verify'], function () {
 });
 
 /**
+ * Protected routes for logged users
+ */
+
+Route::post('/comments/{post_id}', ['as' => 'comments.new', 'uses' => 'WebsiteController@newComment']);
+
+
+/**
  * Mail
  */
 Route::post('sendMail', ['as' => 'sendMail', 'uses' => 'MailController@sendMail']);
@@ -34,14 +41,14 @@ Route::post('sendMail', ['as' => 'sendMail', 'uses' => 'MailController@sendMail'
 Route::get('/building', ['as' => 'building', 'uses' => 'WebsiteController@building']);
 
 /**
- *  Login routes
+ *  Admin Login routes
  */
 Route::get('/login', ['as' => 'login', 'uses' => 'LoginController@index']);
 Route::post('/login/in', ['as' => 'login.in', 'uses' => 'LoginController@in']);
 Route::get('/login/out', ['as' => 'login.out', 'uses' => 'LoginController@out']);
 
 /**
- * Protect routes from unauthenticated access
+ * Protected routes for logged admin users
  */
 Route::group(['middleware' => 'check_auth'], function() {
     /**
