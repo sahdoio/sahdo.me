@@ -25,6 +25,7 @@ class OnlyAdmin
 //            }
 //        }
 
-        return redirect()->route('admin.dashboard');
+//        return redirect()->route('admin.dashboard');
+        return $next($request);
     }
 }

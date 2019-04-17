@@ -1,20 +1,19 @@
 @extends('layout.admin')
 
 @section('styles')
-    <link rel="stylesheet" href="/admin/css/dropify.css"/>
-    <link rel="stylesheet" href="/admin/css/pages/banners/new.css"/>
+    <link rel="stylesheet" href="/admin/css/pages/blog/post.css"/>
 @endsection
 
 @section('content')
     <div class="panel-header panel-header-sm">
     </div>
-    <section id="banner-content" class="content"> 
-        <form id="banner_form" action="{{ route('admin.banners.create') }}" method='post' role="form" enctype="multipart/form-data">
+    <section id="blog-content" class="content">
+        <form id="blog_form" action="{{ route('admin.blog.create') }}" method='post' role="form" enctype="multipart/form-data">
             {{ csrf_field() }}        
             <div class="form-group">
                 <div class="row section">
                     <div class="col s12 m4 l3"> 
-                        <p class="left-title">Título do Banner</p>
+                        <p class="left-title">Título da Publicação</p>
                     </div>
                     
                     <div class="col s12 m8 l9">
@@ -26,41 +25,31 @@
 
             <div class="form-group">
                 <div class="row section">
-                    <div class="col s12 m4 l3"> 
-                        <p class="left-title">Subtítulo do Banner</p>
+                    <div class="col s12 m4 l3">
+                        <p class="left-title">Conteúdo</p>
                     </div>
-                    
+
                     <div class="col s12 m8 l9">
                         <p>Text Area</p>
-                        <textarea class="form-control" name="subtitle" rows="3" placeholder="Enter Title..."></textarea>
+                        <textarea class="form-control" name="body" rows="3" placeholder="Enter Title..."></textarea>
                     </div>
                 </div>
             </div>
 
-            <div class="row section">
-                <div class="col s12 m4 l3">
-                    <p class="left-title">Imagem do Banner</p>
-                </div>
-                
-                <div class="col s12 m8 l9">
-                    <p>Maximum file upload size 2MB</p>
-                    <input type="file" id="input-file-max-fs" class="dropify" name="image" data-max-file-size="10M" />
-                </div>
-            </div>  
-
             <div class="box-footer">
-                <button id="btnCancel" class="btn btn-primary btn-edit delete">
-                    Cancelar
-                </button>
-                <button id="btnSave" type="submit" class="btn btn-primary btn-edit save" name="btn_save">
-                    Salvar
-                </button>
+                <div class="row">
+                    <button id="btnCancel" type="button" class="btn btn-primary btn-edit delete">
+                        Cancelar
+                    </button>
+                    <button id="btnSave" type="button" class="btn btn-primary btn-edit save" name="btn_save">
+                        Salvar
+                    </button>
+                </div>
             </div>
         </form>    
     </section>
 @endsection
 
 @section('scripts')
-    <script src="/admin/js/dropify.js"></script>
-    <script src="/admin/js/pages/banners/new.js"></script>
+    <script src="/admin/js/pages/blog/post.js"></script>
 @endsection

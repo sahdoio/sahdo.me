@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="/admin/css/now-ui-dashboard.css?v=1.1.0"/>
     <link rel="stylesheet" href="/admin/css/pages/login.css"/>
 </head>
-<body class="sidebar-mini admin_login">
+<body class="sidebar-mini website_login">
     <section>
         <div class="wrapper wrapper-full-page ">
             <div class="full-page login-page">
                 <div class="content">
                     <div class="container">
                         <div class="col-md-5 ml-auto mr-auto">
-                            <form id="formLogin" class="form" method="post" action="{{ route('admin.login.in') }}">
+                            <form id="formLogin" class="form" method="post" action="{{ route('website.login.in') }}">
                                 {{ csrf_field() }}
                                 <div class="card card-login card-plain">
                                     <div class="card-header ">

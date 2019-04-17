@@ -17,6 +17,12 @@
             border: 1px solid #ccc;
             border-radius: 10px;
         }
+
+        .commentForm {
+            border: 1px solid #ccc;
+            padding: 25px;
+            border-radius: 10px;
+        }
     </style>
 @endsection
 
@@ -34,6 +40,17 @@
 
             <form class="commentForm" action="{{ route('posts.comments.new', $post->id) }}" method="post">
                 {{ csrf_field() }}
+
+                <div class="form-group">
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="Nome" name="name" class="form-control">
+                    </div>
+                    <br>
+                    <div class="col-lg-6">
+                        <input type="text" placeholder="Email" name="email" class="form-control">
+                    </div>
+                </div>
+                <br>
                 <div class="form-group">
                     <div class="col-lg-12">
                         <textarea placeholder="Message" name="comment" rows="8" class="form-control"></textarea>

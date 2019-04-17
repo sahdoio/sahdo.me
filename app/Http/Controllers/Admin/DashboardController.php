@@ -5,8 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Message;
 use App\Models\SiteView;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
+use Session;
 
 class DashboardController extends Controller
 {

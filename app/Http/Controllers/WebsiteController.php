@@ -31,7 +31,7 @@ class WebsiteController extends Controller
 
         $data = [
             'page' => 'home',
-            'posts' => $posts
+            'posts' => is_array($posts) ? $posts : []
         ];
 
         return view('website.content.home', $data);
@@ -46,14 +46,15 @@ class WebsiteController extends Controller
 
         $data = [
             'page' => 'blog',
-            'posts' => $posts
+            'posts' => is_array($posts) ? $posts : []
         ];
 
         return view('website.content.blog', $data);
     }
 
     /**
-     *
+     * @param $post_id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function post($post_id)
     {
@@ -70,7 +71,7 @@ class WebsiteController extends Controller
     }
 
     /**
-     * 
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function notfound() 
     {        
@@ -78,7 +79,7 @@ class WebsiteController extends Controller
     }
 
     /**
-     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function building()
     {
@@ -86,7 +87,7 @@ class WebsiteController extends Controller
     }
 
     /**
-     * 
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function dashboard() 
     {
@@ -96,9 +97,19 @@ class WebsiteController extends Controller
         ]);
     }
 
+    /**
+     * @param $post_id
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function newComment($post_id, Request $request)
     {
         $post = $this->apiRepo->newComment($post_id, $request);
+
+        if (!$post) {
+            return redirect()->back()->withErrors(['error' => 'Erro ao criar comentário']);
+        }
+
         return redirect()->back();
     }
 }

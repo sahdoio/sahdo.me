@@ -2,7 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use App\Libs\MySession;
+use App\Libs\UserSession;
 use Closure;
 
 class CheckAuth
@@ -16,11 +16,17 @@ class CheckAuth
      */
     public function handle($request, Closure $next)
     {
-        $my_session = new MySession();
+        /*
+         * Pendente de implementação
+         *
+
+        $my_session = new UserSession();
 
         if (!$my_session->checkSession()) {
-            return redirect()->route('login');
+            return redirect()->route('website.login');
         }
+
+        */
 
         return $next($request);
     }   

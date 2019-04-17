@@ -32,9 +32,9 @@
                         </p>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarUsersDropdownMenuLink">
-                        <a class="dropdown-item" href="/admin/settings/user/{{ $user_id }}">Perfil</a>
-                        <a class="dropdown-item" href="/admin/settings/users">Usuários</a>
-                        <a class="dropdown-item" href="/admin/login/out">Sair</a>
+{{--                        <a class="dropdown-item" href="/admin/settings/user/{{ $user_id }}">Perfil</a>--}}
+{{--                        <a class="dropdown-item" href="/admin/settings/users">Usuários</a>--}}
+                        <a class="dropdown-item" href="{{ route('admin.login.out') }}">Sair</a>
                     </div>
                 </li>
             </ul>

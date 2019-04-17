@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Libs\UserSession;
+use App\Http\Controllers\Controller;
 use App\Repositories\ApiRepository;
 use Illuminate\Http\Request;
 use Session;
+use App\Libs\AdminUserSession;
 
 class LoginController extends Controller
 {
@@ -18,7 +19,7 @@ class LoginController extends Controller
      */
     function __construct($Cache = null)
     {
-        $this->my_session = new UserSession();
+        $this->my_session = new AdminUserSession();
         $this->apiRepo = new ApiRepository();
     }
 
@@ -28,10 +29,10 @@ class LoginController extends Controller
     public function index()
     {
         if ($this->my_session->checkSession()) {
-            return redirect()->route('home');
+            return redirect()->route('admin.dashboard');
         }
 
-        return view('website.login');
+        return view('admin.login');
     }
 
     /**
@@ -44,9 +45,9 @@ class LoginController extends Controller
         $token = $this->validateLogin($data['email'], $data['password']);
         if ($token) {
             $this->my_session->setSession($token);
-            return redirect()->route('home');
+            return redirect()->route('admin.dashboard');
         }
-        return view('website.login');
+        return view('admin.login');
     }
 
     /**
@@ -55,7 +56,7 @@ class LoginController extends Controller
     public function out()
     {
         $this->my_session->endSession();
-        return redirect()->route('website.login');
+        return redirect()->route('admin.login');
     }
 
     /**
@@ -65,6 +66,6 @@ class LoginController extends Controller
      */
     private function validateLogin($email, $password)
     {
-        return $this->apiRepo->authenticate($email, $password);
+        return $this->apiRepo->admin_authenticate($email, $password);
     }
 }

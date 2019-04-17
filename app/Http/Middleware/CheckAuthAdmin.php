@@ -2,10 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use App\Libs\Session;
+use App\Libs\AdminUserSession;
 use Closure;
 
-class SessionVerify
+class CheckAuthAdmin
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,12 @@ class SessionVerify
      */
     public function handle($request, Closure $next)
     {
-//        $session = new Session();
+        $my_session = new AdminUserSession();
+
+        if (!$my_session->checkSession()) {
+            return redirect()->route('admin.login');
+        }
+
         return $next($request);
-    }
+    }   
 }

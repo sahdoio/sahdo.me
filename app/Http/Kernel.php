@@ -5,6 +5,8 @@ namespace App\Http;
 use App\Http\Middleware\OnlyAdmin;
 use App\Http\Middleware\SessionVerify;
 use App\Http\Middleware\UserAndAdmin;
+use App\Http\Middleware\CheckAuth;
+use App\Http\Middleware\CheckAuthAdmin;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -34,7 +36,6 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
-
         'api' => [
             'throttle:60,1',
             'bindings',
@@ -50,13 +51,14 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
-        'check_auth' => \App\Http\Middleware\CheckAuth::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         // custom
+        'check_auth' => CheckAuth::class,
+        'check_auth_admin' => CheckAuthAdmin::class,
         'session_verify' => SessionVerify::class,
         'only_admin' => OnlyAdmin::class,
         'user_and_admin' => UserAndAdmin::class,

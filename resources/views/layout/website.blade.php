@@ -10,6 +10,8 @@
     @yield('styles')
 </head>
 <body>
+    @include('website.inc.errors')
+
     <div id="wrapper" class="{{ $page or 'default' }}">
         @include('website.inc.header')
 

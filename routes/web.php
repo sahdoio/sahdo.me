@@ -25,9 +25,9 @@ Route::group(['middleware' => 'session_verify'], function () {
 /**
  * Protected routes for logged users
  */
-
-Route::post('/posts/{post_id}/comments', ['as' => 'posts.comments.new', 'uses' => 'WebsiteController@newComment']);
-
+Route::group(['middleware' => 'check_auth'], function () {
+    Route::post('/posts/{post_id}/comments', ['as' => 'posts.comments.new', 'uses' => 'WebsiteController@newComment']);
+});
 
 /**
  * Mail
@@ -40,23 +40,31 @@ Route::post('sendMail', ['as' => 'sendMail', 'uses' => 'MailController@sendMail'
 //Route::get('/notfound', ['as' => 'notfound', 'uses' => 'WebsiteController@notfound']);
 Route::get('/building', ['as' => 'building', 'uses' => 'WebsiteController@building']);
 
+
 /**
- *  Admin Login routes
+ *  Admin user Login routes
  */
-Route::get('/login', ['as' => 'login', 'uses' => 'LoginController@index']);
-Route::post('/login/in', ['as' => 'login.in', 'uses' => 'LoginController@in']);
-Route::get('/login/out', ['as' => 'login.out', 'uses' => 'LoginController@out']);
+Route::get('/admin/login', ['as' => 'admin.login', 'uses' => 'Admin\LoginController@index']);
+Route::post('/admin/login/in', ['as' => 'admin.login.in', 'uses' => 'Admin\LoginController@in']);
+Route::get('/admin/login/out', ['as' => 'admin.login.out', 'uses' => 'Admin\LoginController@out']);
+
+/**
+ *  Website user Login routes
+ */
+Route::get('/login', ['as' => 'website.login', 'uses' => 'LoginController@index']);
+Route::post('/login/in', ['as' => 'website.login.in', 'uses' => 'LoginController@in']);
+Route::get('/login/out', ['as' => 'website.login.out', 'uses' => 'LoginController@out']);
 
 /**
  * Protected routes for logged admin users
  */
-Route::group(['middleware' => 'check_auth'], function() {
+Route::group(['middleware' => 'check_auth_admin'], function() {
     /**
      *  Analytics routes
      */
-    Route::get('/adm', ['as' => 'admin.dashboard', 'uses' => 'Admin\DashboardController@dashboard']);
-    Route::get('/panel', ['as' => 'admin.dashboard', 'uses' => 'Admin\DashboardController@dashboard']);
-    Route::get('/admin/dashboard', ['as' => 'admin.dashboard', 'uses' => 'Admin\DashboardController@dashboard']);
+    Route::get('/adm', ['as' => 'admin.dashboard', 'uses' => 'Admin\BlogController@blog']);
+    Route::get('/panel', ['as' => 'admin.dashboard', 'uses' => 'Admin\BlogController@blog']);
+    Route::get('/admin/dashboard', ['as' => 'admin.dashboard', 'uses' => 'Admin\BlogController@blog']);
 
     /**
      * Users
@@ -80,7 +88,7 @@ Route::group(['middleware' => 'check_auth'], function() {
 
     // views
     Route::get('/admin/blog', ['as' => 'admin.blog', 'uses' => 'Admin\BlogController@blog']);
-    Route::get('/admin/blog/blog', ['as' => 'admin.blog.new', 'uses' => 'Admin\BlogController@new']);
+    Route::get('/admin/blog/new', ['as' => 'admin.blog.new', 'uses' => 'Admin\BlogController@new']);
     Route::get('/admin/blog/edit/{id}', ['as' => 'admin.blog.edit', 'uses' => 'Admin\BlogController@edit']);
 
     // ajax and post and post
