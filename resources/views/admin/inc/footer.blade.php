@@ -6,7 +6,7 @@
                 document.write(new Date().getFullYear())
             </script>,.
             Designed and coded by
-            <a href="http://www.drekod.com" target="_blank">Drekod</a>.
+            <a href="https://github.com/lucassahdo" target="_blank">Lucas Sahdo</a>.
         </div>
     </div>
 </footer>
