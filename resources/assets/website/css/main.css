@@ -3161,6 +3161,7 @@ input, select, textarea {
 			-webkit-flex-direction: row;
 			-ms-flex-direction: row;
 			flex-direction: row;
+			text-align: center;
 		}
 
 			#footer > .inner > * > :last-child {
@@ -3168,8 +3169,9 @@ input, select, textarea {
 			}
 
 			#footer > .inner section:nth-child(1) {
-				width: calc(66% - 2.5em);
-				margin-right: 2.5em;
+				/*width: calc(66% - 2.5em);*/
+				width: 100%;
+				/*margin-right: 2.5em;*/
 			}
 
 			#footer > .inner section:nth-child(2) {
