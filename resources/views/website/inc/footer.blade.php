@@ -1,24 +1,24 @@
 <footer id="footer">
     <div class="inner">
-        <section>
-            <h2>Contato</h2>
-            <form method="post" action="#">
-                <div class="fields">
-                    <div class="field half">
-                        <input type="text" name="name" id="name" placeholder="Nome" />
-                    </div>
-                    <div class="field half">
-                        <input type="email" name="email" id="email" placeholder="Email" />
-                    </div>
-                    <div class="field">
-                        <textarea name="message" id="message" placeholder="Mensagem"></textarea>
-                    </div>
-                </div>
-                <ul class="actions">
-                    <li><input type="submit" value="Enviar" class="primary" /></li>
-                </ul>
-            </form>
-        </section>
+        {{--        <section>--}}
+        {{--            <h2>Contato</h2>--}}
+        {{--            <form method="post" action="#">--}}
+        {{--                <div class="fields">--}}
+        {{--                    <div class="field half">--}}
+        {{--                        <input type="text" name="name" id="name" placeholder="Nome" />--}}
+        {{--                    </div>--}}
+        {{--                    <div class="field half">--}}
+        {{--                        <input type="email" name="email" id="email" placeholder="Email" />--}}
+        {{--                    </div>--}}
+        {{--                    <div class="field">--}}
+        {{--                        <textarea name="message" id="message" placeholder="Mensagem"></textarea>--}}
+        {{--                    </div>--}}
+        {{--                </div>--}}
+        {{--                <ul class="actions">--}}
+        {{--                    <li><input type="submit" value="Enviar" class="primary" /></li>--}}
+        {{--                </ul>--}}
+        {{--            </form>--}}
+        {{--        </section>--}}
         <section>
             <h2>Me Siga!</h2>
             <ul class="icons">
