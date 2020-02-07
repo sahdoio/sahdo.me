@@ -26,7 +26,7 @@ Route::group(['middleware' => 'session_verify'], function () {
  * Protected routes for logged users
  */
 Route::group(['middleware' => 'check_auth'], function () {
-    Route::post('/posts/{post_id}/comments', ['as' => 'posts.comments.new', 'uses' => 'WebsiteController@newComment']);
+    // Route::post('/posts/{post_id}/comments', ['as' => 'posts.comments.new', 'uses' => 'WebsiteController@newComment']);
 });
 
 /**
