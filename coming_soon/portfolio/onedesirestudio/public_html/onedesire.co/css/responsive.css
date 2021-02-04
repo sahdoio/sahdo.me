@@ -1,0 +1,1194 @@
+/*
+  Theme Name: One Desire Page
+  Author: Lucas Sahdo
+  Version: 1.0
+*/
+
+/*
+====================================================
+=== responsive area
+====================================================
+*/
+
+/* md */
+@media (min-width: 1201px) and (max-width: 1399px) {
+
+  /*************************
+  ******* Home Page ********
+  **************************/
+
+  /*=================================================================
+    what-we-do
+  ==================================================================*/
+  #what-we-do {
+    padding: 120px 5px;
+  }
+
+  /*************************
+  ******* Services Page ********
+  **************************/
+
+  /*=================================================================
+    web services section
+  ==================================================================*/
+  #web-services {
+    padding: 40px 5px 40px 5px;
+  }
+
+  /*=================================================================
+    midia services section
+  ==================================================================*/
+  #midia-services {
+    padding: 40px 5px 40px 5px;
+  }
+
+  /*=================================================================
+    edition services section
+  ==================================================================*/
+  #edition-services {
+    padding: 40px 5px 40px 5px;
+  }
+
+  /*************************
+  ***** Contact Page *****
+  **************************/
+
+  /*=================================================================
+  contact-info section
+  ==================================================================*/
+  #contact-info {
+    padding: 120px 1px 80px 1px;
+  }
+  #contact-info .contact-area {
+    width: 400px;
+  }
+  #contact-info .contact-box {
+    width: 400px; 
+    height: 250px;
+    margin-bottom: 50px;
+    padding: 15px 15px;
+  }
+  #contact-info .contact-box .contact-icon {
+    font-size: 30px;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;  
+  }
+  #contact-info .contact-box .contact-info h3 {
+    font-size: 20px;
+  }
+  #contact-info .contact-box .contact-info p {
+    font-size: 17px;
+  }
+
+  /*=================================================================
+    quote section
+  ==================================================================*/
+  #quote {
+    padding: 0 10px 120px 10px;
+    background-color: #F8F8F8;
+  }
+  .form-group label {
+    font-size: 15px;
+  }
+
+
+  /*************************
+  ***** Product Page *****
+  **************************/
+
+  /*=================================================================
+    work section
+  ==================================================================*/
+  #work #work-item-1 .video-box {
+    width: 580px;
+    height: 300px;
+  }
+
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+  /*************************
+  ******* Home Page ********
+  **************************/
+
+  /*=================================================================
+    services
+  ==================================================================*/
+  #what-we-do {
+    padding: 120px 5px;
+  }
+  #what-we-do .what-we-do-box {
+    width: 282px; 
+    height: 300px; 
+  }
+  #what-we-do .what-we-do-box .what-we-do-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+  /*************************
+  ******* Services Page ********
+  **************************/
+
+  /*=================================================================
+    web services section
+  ==================================================================*/
+  #web-services {
+    padding: 40px 5px 40px 5px;
+  }
+  #web-services .services-box {
+    width: 282px; 
+    height: 300px; 
+  }
+  #web-services .services-box .services-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+
+  /*=================================================================
+    midia services section
+  ==================================================================*/
+  #midia-services {
+    padding: 40px 5px 40px 5px;
+  }
+  #midia-services .services-box {
+    width: 282px; 
+    height: 300px; 
+  }
+  #midia-services .services-box .services-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+  /*=================================================================
+    edition services section
+  ==================================================================*/
+  #edition-services {
+    padding: 40px 5px 40px 5px;
+  }
+  #edition-services .services-box {
+    width: 282px; 
+    height: 300px; 
+  }
+  #edition-services .services-box .services-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+
+  /*************************
+  ***** Contact Page *****
+  **************************/
+
+  /*=================================================================
+  contact-info section
+  ==================================================================*/
+  #contact-info {
+    padding: 120px 1px 80px 1px;
+  }
+  #contact-info .contact-area {
+    width: 400px;
+  }
+  #contact-info .contact-box {
+    width: 400px; 
+    height: 250px;
+    margin-bottom: 50px;
+    padding: 15px 15px;
+  }
+  #contact-info .contact-box .contact-icon {
+    font-size: 30px;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;  
+  }
+  #contact-info .contact-box .contact-info h3 {
+    font-size: 20px;
+  }
+  #contact-info .contact-box .contact-info p {
+    font-size: 17px;
+  }
+
+  /*=================================================================
+    quote section
+  ==================================================================*/
+  #quote {
+    padding: 0 10px 120px 10px;
+    background-color: #F8F8F8;
+  }
+  .form-group label {
+    font-size: 15px;
+  }
+
+
+  /*************************
+  ***** Product Page *****
+  **************************/
+
+  /*=================================================================
+    work section
+  ==================================================================*/
+  #work #work-item-1 .video-box {
+    width: 580px;
+    height: 300px;
+  }
+
+}
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+  /*************************
+  ******* ALL Pages ********
+  **************************/
+
+  /*=================================================================
+    Navigation Bar
+  ==================================================================*/
+  .navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 40px 20px;
+  }
+
+
+  /*=================================================================
+    load-more button
+  ==================================================================*/
+  .load-more .btn-loadmore {
+    padding: 15px 25px 15px 10px;
+  }
+
+
+  /*=================================================================
+    who-we-are
+  ==================================================================*/ 
+  #who-we-are h4 {
+    font-size: 16px
+  }
+  #who-we-are p {
+    font-size: 14px;
+  }
+  #who-we-are .media.who-we-are-box .pull-right > i {
+    font-size: 22px;
+    height: 54px;
+    line-height: 54px;
+    width: 54px;   
+  }
+  #who-we-are .media.who-we-are-box .pull-left > i {
+    font-size: 22px;
+    height: 54px;
+    line-height: 54px;
+    width: 54px;   
+  }
+
+  /*************************
+  ******* Home Page ********
+  **************************/
+
+  /*=================================================================
+    what-we-do
+  ==================================================================*/
+  #what-we-do .what-we-do-box {
+    width: 400px; 
+    height: 280px;  
+
+    margin: 15px auto;
+  }
+  #what-we-do .what-we-do-box .what-we-do-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+  /*************************
+  ***** Services Page ******
+  **************************/
+
+  /*=================================================================
+    web services section
+  ==================================================================*/
+  #web-services .services-box {
+    width: 400px; 
+    height: 280px;  
+
+    margin: 15px auto;
+  }
+  #web-services .services-box .services-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+
+  /*=================================================================
+    midia services section
+  ==================================================================*/
+  #midia-services .services-box {
+    width: 400px; 
+    height: 280px;  
+
+    margin: 15px auto;
+  }
+  #midia-services .services-box .services-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+
+  /*=================================================================
+    edition services section
+  ==================================================================*/
+  #edition-services .services-box {
+    width: 400px; 
+    height: 280px;  
+
+    margin: 15px auto;
+  }
+  #edition-services .services-box .services-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+  /*************************
+  ***** Contact Page *****
+  **************************/
+
+  /*=================================================================
+    contact-info section
+  ==================================================================*/
+  #contact-info {
+    padding: 120px 1px 80px 1px;
+  }
+  #contact-info .contact-area {
+    width: 400px;
+  }
+  #contact-info .contact-box {
+    width: 400px; 
+    height: 250px;
+    margin-bottom: 50px;
+    padding: 15px 15px;
+  }
+  #contact-info .contact-box .contact-icon {
+    font-size: 30px;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;  
+  }
+  #contact-info .contact-box .contact-info h3 {
+    font-size: 20px;
+  }
+  #contact-info .contact-box .contact-info p {
+    font-size: 17px;
+  }
+
+  /*=================================================================
+    quote section
+  ==================================================================*/
+  #quote {
+    padding: 1px 10px 120px 10px;
+  }
+  #quote .contact-wrap {
+    padding: 100px 5px;
+  }
+
+  /*************************
+  ***** Product Page *****
+  **************************/
+
+  /*=================================================================
+    work section
+  ==================================================================*/
+
+  #work {
+    padding: 100px 2px;
+    background-color: #F8F8F8;
+  }
+  #work #work-item-1 .video-box {
+    width: 450px;
+    height: 230px;
+  }
+  #work #work-item-2 {
+    padding-right: 1px;
+    padding-left: 5px;
+  }
+
+}
+
+/* xs */
+@media (min-width: 480px) and (max-width: 767px) {
+  /*************************
+  ******* ALL Pages ********
+  **************************/
+
+  /*=================================================================
+    Navigation Bar
+  ==================================================================*/
+  .navbar {
+    height: auto;
+  }
+  .navbar-fixed-top {
+    padding-bottom: 10px;
+  }
+  .navbar-header .navbar-brand {
+    height: auto;
+    padding: 10px 0 10px 20px;
+    margin-top: 0;
+    border-radius: 0;
+  } 
+  .navbar-header .navbar-brand:hover {
+    background-color: #2694c7;
+  }
+  .navbar-inverse .navbar-toggle {
+    border-color: #fff;
+    border-radius: 0;
+  }
+  .navbar-inverse .navbar-toggle:hover {
+    border-color: #fff;
+    border-radius: 0;
+  }
+  .navbar-collapse.in {
+    overflow-y: inherit;
+  }
+  .navbar-toggle {
+    margin-top: 40px;
+    margin-right: 25px;
+    background-color: #2694c7;  
+  }
+  .navbar-toggle:hover,
+  .navbar-toggle:focus {
+    background-color: #2ABBFF;
+  }
+  .navbar-inverse .navbar-nav > li > a {
+    line-height: 45px;
+    padding: 0;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+  }
+  .navbar-nav {
+    background-color: #2694c7;
+  }
+  .navbar-inverse .navbar-nav > li > a.current,
+  .navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #2ABBFF !important;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+  }
+  .navbar-inverse .navbar-nav>li {
+    padding-right: 0;
+  }
+  .navbar-inverse.smaller .navbar-nav > li > a {
+    padding: 0;
+  }
+
+  /*=================================================================
+    load-more button
+  ==================================================================*/
+  .load-more .btn-loadmore {
+    padding: 15px 40px 15px 25px;
+  }
+
+  /*************************
+  ******* Home Page ********
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #home #slitSlider .carousel-caption h2 {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  #home #slitSlider .carousel-caption p {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: -100px;
+  }
+  #home #slitSlider .carousel-caption img {
+    width: 200px;
+    height: 200px;
+  }
+  #home #slitSlider .btn-start {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 35px;
+    margin-top: 30px;
+  }
+
+  /*=================================================================
+    who-we-are
+  ==================================================================*/
+  #who-we-are .media.who-we-are-box {
+    height: 140px;
+  } 
+  #who-we-are .center-col {
+    width: 300px;
+    height: 600px;
+
+    margin: auto;
+  }
+  #who-we-are h4 {
+    font-size: 17px
+  }
+  #who-we-are p {
+    font-size: 14px;
+  }
+  #who-we-are .media.who-we-are-box .pull-right > i {
+    font-size: 22px;
+    height: 54px;
+    line-height: 54px;
+    width: 54px;   
+  }
+  #who-we-are .media.who-we-are-box .pull-left > i {
+    font-size: 22px;
+    height: 54px;
+    line-height: 54px;
+    width: 54px;    
+  }
+
+  /*=================================================================
+    what-we-do
+  ==================================================================*/
+  #what-we-do .what-we-do-box {
+    width: 350px; 
+    height: 280px;
+
+    margin: 15px auto;
+  }
+  #what-we-do .what-we-do-box .what-we-do-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+  /*************************
+  ****** Services Page ******
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #services-home #slitSlider .carousel-caption h2 {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  #services-home #slitSlider .carousel-caption p {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: -100px;
+  }
+  #services-home #slitSlider .carousel-caption img {
+    width: 200px;
+    height: 200px;
+  }
+  #services-home #slitSlider .btn-start {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 35px;
+    margin-top: 30px;
+  }
+
+  /*=================================================================
+    web services section
+  ==================================================================*/
+  #web-services .services-box {
+    width: 350px; 
+    height: 280px;
+
+    margin: 15px auto;
+  }
+  #web-services .services-box .services-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+  /*=================================================================
+    midia services section
+  ==================================================================*/
+  #midia-services .services-box {
+    width: 350px; 
+    height: 280px;
+
+    margin: 15px auto;
+  }
+  #midia-services .services-box .services-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+  /*=================================================================
+    edition services section
+  ==================================================================*/
+  #edition-services .services-box {
+    width: 350px; 
+    height: 280px;
+
+    margin: 15px auto;
+  }
+  #edition-services .services-box .services-icon {
+    font-size: 30px;
+    height: 80px; 
+    width: 80px;  
+    line-height: 80px;
+  }
+
+
+  /*************************
+  ***** Portfolio Page *****
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #portfolio-home #slitSlider .carousel-caption h2 {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  #portfolio-home #slitSlider .carousel-caption p {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: -100px;
+  }
+  #portfolio-home #slitSlider .carousel-caption img {
+    width: 200px;
+    height: 200px;
+  }
+  #portfolio-home #slitSlider .btn-start {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 35px;
+    margin-top: 30px;
+  }
+
+  /*************************
+  ***** Clients Page *****
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #clients-home #slitSlider .carousel-caption h2 {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  #clients-home #slitSlider .carousel-caption p {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: -100px;
+  }
+  #clients-home #slitSlider .carousel-caption img {
+    width: 200px;
+    height: 200px;
+  }
+  #clients-home #slitSlider .btn-start {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 35px;
+    margin-top: 30px;
+  }
+
+  /*************************
+  ***** Contact Page *****
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #contact-home #slitSlider .carousel-caption h2 {
+    font-size: 60px;
+    line-height: 75px;
+  }
+  #contact-home #slitSlider .carousel-caption p {
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: -100px;
+  }
+  #contact-home #slitSlider .carousel-caption img {
+    width: 200px;
+    height: 200px;
+  }
+  #contact-home #slitSlider .btn-start {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 35px;
+    margin-top: 30px;
+  }
+
+  /*=================================================================
+  contact-info section
+  ==================================================================*/
+  #contact-info {
+    padding: 120px 1px 80px 1px;
+  }
+  #contact-info .contact-area {
+    width: 400px;
+  }
+  #contact-info .contact-box {
+    width: 400px; 
+    height: 250px;
+    margin-bottom: 50px;
+    padding: 15px 15px;
+  }
+  #contact-info .contact-box .contact-icon {
+    font-size: 30px;
+    height: 70px;
+    line-height: 70px;
+    width: 70px;  
+  }
+  #contact-info .contact-box .contact-info h3 {
+    font-size: 20px;
+  }
+  #contact-info .contact-box .contact-info p {
+    font-size: 17px;
+  }
+
+
+  /*************************
+  ***** Product Page *****
+  **************************/
+
+  /*=================================================================
+    work section
+  ==================================================================*/
+
+  #work {
+    padding: 100px 10px;
+    background-color: #F8F8F8;
+  }
+  #work #work-item-1 .video-box {
+    width: 400px;
+    height: 210px;
+  }
+  #work #work-item-2 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+
+}
+
+/* XS Portrait */
+@media (max-width: 479px) {
+  /*************************
+  ******* ALL Pages ********
+  **************************/
+
+  /*=================================================================
+    Navigation Bar
+  ==================================================================*/
+  .navbar {
+    height: auto;
+  }
+  .navbar-fixed-top {
+    padding-bottom: 10px;
+  }
+  .navbar-header .navbar-brand {
+    height: auto;
+    padding: 10px 0 10px 20px;
+    margin-top: 0;
+    border-radius: 0;
+  } 
+  .navbar-header .navbar-brand:hover {
+    background-color: #2694c7;
+  }
+  .navbar-inverse .navbar-toggle {
+    border-color: #fff;
+    border-radius: 0;
+  }
+  .navbar-inverse .navbar-toggle:hover {
+    border-color: #fff;
+    border-radius: 0;
+  }
+  .navbar-collapse.in {
+    overflow-y: inherit;
+  }
+  .navbar-toggle {
+    margin-top: 40px;
+    margin-right: 25px;
+    background-color: #2694c7;  
+  }
+  .navbar-toggle:hover,
+  .navbar-toggle:focus {
+    background-color: #2ABBFF;
+  }
+  .navbar-inverse .navbar-nav > li > a {
+    line-height: 45px;
+    padding: 0;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+  }
+  .navbar-nav {
+    background-color: #2694c7;
+  }
+  .navbar-inverse .navbar-nav > li > a.current,
+  .navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #2ABBFF !important;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+  }
+  .navbar-inverse .navbar-nav>li {
+    padding-right: 0;
+  }
+  .navbar-inverse.smaller .navbar-nav > li > a {
+    padding: 0;
+  }
+
+  /*=================================================================
+    load-more button
+  ==================================================================*/
+  .load-more .btn-loadmore {
+    padding: 15px 40px 15px 25px;
+  }
+
+  /*=================================================================
+    Section Title
+  ==================================================================*/
+  .section-header .section-title {
+    font-size: 30px;
+  }
+  .section-subtitle {
+    font-size: 15px;
+  }
+
+  /*************************
+  ******* Home Page ********
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #home #slitSlider .carousel-caption h2 {
+    font-size: 30px;
+  }
+  #home #slitSlider .carousel-caption p {
+    font-size: 14px;
+    margin-top: -110px;
+  }
+  #home #slitSlider .carousel-caption img {
+    width: 130px;
+    height: 130px;
+  }
+  #home #slitSlider .btn-start {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 10px 30px;
+    margin-top: 10px;
+  }
+
+  /*=================================================================
+    who-we-are
+  ==================================================================*/
+  #who-we-are .media.who-we-are-box { 
+    height: 150px;
+  }
+  #who-we-are h4 {
+    font-size: 15px
+  }
+  #who-we-are p {
+    font-size: 13px;
+  }
+  #who-we-are .media.who-we-are-box .pull-right > i {
+    font-size: 20px;
+    height: 44px;
+    line-height: 44px;
+    width: 44px;   
+  }
+  #who-we-are .media.who-we-are-box .pull-left > i {
+    font-size: 20px;
+    height: 44px;
+    line-height: 44px;
+    width: 44px; 
+  }
+
+  /*=================================================================
+    what-we-do
+  ==================================================================*/
+  #what-we-do {
+    padding: 120px 1px;
+  }
+  #what-we-do .what-we-do-box {
+    width: 250px; 
+    height: 300px;
+
+    margin: 15px auto;
+  }
+  #what-we-do .what-we-do-box .what-we-do-icon {
+    font-size: 26px;
+    height: 70px; 
+    width: 70px;  
+    line-height: 70px;
+  }
+
+  /*************************
+  ****** Services Page ******
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #services-home #slitSlider .carousel-caption h2 {
+    font-size: 40px;
+  }
+  #services-home #slitSlider .carousel-caption p {
+    font-size: 15px;
+    margin-top: -90px;
+  }
+  #services-home #slitSlider .carousel-caption img {
+    width: 150px;
+    height: 150px;
+  }
+  #services-home #slitSlider .btn-start {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 10px 30px;
+    margin-top: 30px;
+  }
+
+  /*=================================================================
+    web services section
+  ==================================================================*/
+  #web-services {
+    padding: 120px 1px;
+  }
+  #web-services .services-box {
+    width: 250px; 
+    height: 300px;
+
+    margin: 15px auto;
+  }
+  #web-services .services-box .services-icon {
+    font-size: 26px;
+    height: 70px; 
+    width: 70px;  
+    line-height: 70px;
+  }
+
+  /*=================================================================
+    midia services section
+  ==================================================================*/  
+  #midia-services {
+    padding: 120px 1px;
+  }
+  #midia-services .services-box {
+    width: 250px; 
+    height: 300px;
+
+    margin: 15px auto;
+  }
+  #midia-services .services-box .services-icon {
+    font-size: 26px;
+    height: 70px; 
+    width: 70px;  
+    line-height: 70px;
+  }
+
+  /*=================================================================
+    edition services section
+  ==================================================================*/  
+  #edition-services {
+    padding: 120px 1px;
+  }
+  #edition-services .services-box {
+    width: 250px; 
+    height: 300px;
+
+    margin: 15px auto;
+  }
+  #edition-services .services-box .services-icon {
+    font-size: 26px;
+    height: 70px; 
+    width: 70px;  
+    line-height: 70px;
+  }
+
+  /*************************
+  ***** Portfolio Page *****
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #portfolio-home #slitSlider .carousel-caption h2 {
+    font-size: 40px;
+  }
+  #portfolio-home #slitSlider .carousel-caption p {
+    font-size: 15px;
+    margin-top: -90px;
+  }
+  #portfolio-home #slitSlider .carousel-caption img {
+    width: 150px;
+    height: 150px;
+  }
+  #portfolio-home #slitSlider .btn-start {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 10px 30px;
+    margin-top: 30px;
+  }
+
+  /*************************
+  ***** Clients Page *****
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #clients-home #slitSlider .carousel-caption h2 {
+    font-size: 40px;
+  }
+  #clients-home #slitSlider .carousel-caption p {
+    font-size: 15px;
+    margin-top: -90px;
+  }
+  #clients-home #slitSlider .carousel-caption img {
+    width: 150px;
+    height: 150px;
+  }
+  #clients-home #slitSlider .btn-start {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 10px 30px;
+    margin-top: 30px;
+  }
+
+  /*=================================================================
+  clients grid
+  ==================================================================*/
+  #clients {
+    padding: 120px 1px;
+  }
+
+  /*************************
+  ***** Contact Page *****
+  **************************/
+
+  /*=================================================================
+    Home Slider
+  ==================================================================*/
+  #contact-home #slitSlider .carousel-caption h2 {
+    font-size: 40px;
+  }
+  #contact-home #slitSlider .carousel-caption p {
+    font-size: 15px;
+    margin-top: -90px;
+  }
+  #contact-home #slitSlider .carousel-caption img {
+    width: 150px;
+    height: 150px;
+  }
+  #contact-home #slitSlider .btn-start {
+    font-size: 10px;
+    font-weight: 400;
+    padding: 10px 30px;
+    margin-top: 30px;
+  }
+
+  /*=================================================================
+  contact-info section
+  ==================================================================*/
+  #contact-info {
+    padding: 120px 1px 80px 1px;
+  }
+  #contact-info .contact-area {
+    width: 250px;
+  }
+  #contact-info .contact-box {
+    width: 250px; 
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 15px 15px;
+  }
+  #contact-info .contact-box .contact-icon {
+    font-size: 25px;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;  
+  }
+  #contact-info .contact-box .contact-info h3 {
+    font-size: 15px;
+  }
+  #contact-info .contact-box .contact-info p {
+    font-size: 14px;
+  }
+
+  /*=================================================================
+    quote section
+  ==================================================================*/
+  #quote {
+    padding: 0 10px 120px 10px;
+    background-color: #F8F8F8;
+  }
+  .form-group label {
+    font-size: 13px;
+  }
+
+
+
+
+  /*************************
+  ***** Product Page *****
+  **************************/
+
+  /*=================================================================
+    work section
+  ==================================================================*/
+
+  #work {
+    padding: 100px 5px;
+    background-color: #F8F8F8;
+  }
+  #work #work-item-1 .video-box {
+    width: 220px;
+    height: 150px;
+  }
+  #work #work-item-2 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /*************************
+  ****** Gallery Page ******
+  **************************/
+
+  /*=================================================================
+    gallery section
+  ==================================================================*/
+  #gallery {
+    padding: 100px 1px;
+    background-color: #F8F8F8;
+  }
+  #gallery .pagination li a {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  #gallery .pagination li:first-child a {
+    display: none;
+  } 
+  #gallery .pagination li:last-child a  {
+    display: none;
+  }
+
+}
+

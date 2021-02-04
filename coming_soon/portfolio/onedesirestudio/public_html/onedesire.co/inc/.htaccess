@@ -1,0 +1,22 @@
+#proibe listagem
+Options -Indexes
+
+#se arquivo não existir ou for css, manda para notfound
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f [OR]
+#RewriteCond %{REQUEST_FILENAME} \.css$
+#RewriteRule ^ http://www.onedesire.co/error_404.html
+
+#proibe acesso ao arquivo .htaccess
+<files ~ "^.*\.([Hh][Tt][Aa])">
+	order allow,deny
+	deny from all
+	satisfy all
+</files>
+
+#encaminha para página de erro
+ErrorDocument 400 http://onedesire.co/error_404.html
+ErrorDocument 401 http://onedesire.co/error_404.html
+ErrorDocument 403 http://onedesire.co/error_404.html
+ErrorDocument 404 http://onedesire.co/error_404.html
+ErrorDocument 500 http://onedesire.co/error_404.html

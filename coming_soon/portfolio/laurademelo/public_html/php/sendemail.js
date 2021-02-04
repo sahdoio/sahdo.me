@@ -1,0 +1,6 @@
+///////////////////////////////////////////
+// Display loading image while page loads
+///////////////////////////////////////////
+// Wait for script php finishs
+// Animate loader off screen
+//$(".email-sending").fadeOut("slow");
