@@ -126,7 +126,7 @@ ve.dm.citeExample.domToDataCases = {
 				'data-mw=\\&quot;{&amp;quot;name&amp;quot;:&amp;quot;ref&amp;quot;,&amp;quot;attrs&amp;quot;:{&amp;quot;group&amp;quot;:&amp;quot;g1&amp;quot;,&amp;quot;name&amp;quot;:&amp;quot;foo&amp;quot;},&amp;quot;body&amp;quot;:{&amp;quot;html&amp;quot;:&amp;quot;Ref in refs&amp;quot;}}' +
 				'\\&quot;><sup>[g1 3]</sup></span>&quot;}}">' +
 			'</div>',
-		head: '<base href="http://example.com" />',
+		head: '<base href="https://example.com" />',
 		data: [
 			{ type: 'paragraph' },
 			'F', 'o', 'o',
@@ -323,7 +323,7 @@ ve.dm.citeExample.domToDataCases = {
 			'{&quot;html&quot;:&quot;Foo<span rel=\\&quot;ve:Comment\\&quot; data-ve-comment=\\&quot; bar \\&quot;>&amp;nbsp;</span>&quot;},&quot;name&quot;:&quot;ref&quot;}" ' +
 			'>' +
 			'<sup>[1]</sup></span></p>',
-		head: '<base href="http://example.com" />',
+		head: '<base href="https://example.com" />',
 		data: [
 			{ type: 'paragraph' },
 			{

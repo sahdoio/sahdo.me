@@ -166,23 +166,23 @@ class ParserMethodsTest extends MediaWikiLangTestCase {
 		return [
 			[
 				'Escaping of unsafe characters',
-				'http://example.org/foo bar?param[]="value"&param[]=valüe',
-				'http://example.org/foo%20bar?param%5B%5D=%22value%22&param%5B%5D=val%C3%BCe',
+				'https://example.org/foo bar?param[]="value"&param[]=valüe',
+				'https://example.org/foo%20bar?param%5B%5D=%22value%22&param%5B%5D=val%C3%BCe',
 			],
 			[
 				'Case normalization of percent-encoded characters',
-				'http://example.org/%ab%cD%Ef%FF',
-				'http://example.org/%AB%CD%EF%FF',
+				'https://example.org/%ab%cD%Ef%FF',
+				'https://example.org/%AB%CD%EF%FF',
 			],
 			[
 				'Unescaping of safe characters',
-				'http://example.org/%3C%66%6f%6F%3E?%3C%66%6f%6F%3E#%3C%66%6f%6F%3E',
-				'http://example.org/%3Cfoo%3E?%3Cfoo%3E#%3Cfoo%3E',
+				'https://example.org/%3C%66%6f%6F%3E?%3C%66%6f%6F%3E#%3C%66%6f%6F%3E',
+				'https://example.org/%3Cfoo%3E?%3Cfoo%3E#%3Cfoo%3E',
 			],
 			[
 				'Context-sensitive replacement of sometimes-safe characters',
-				'http://example.org/%23%2F%3F%26%3D%2B%3B?%23%2F%3F%26%3D%2B%3B#%23%2F%3F%26%3D%2B%3B',
-				'http://example.org/%23%2F%3F&=+;?%23/?%26%3D%2B%3B#%23/?&=+;',
+				'https://example.org/%23%2F%3F%26%3D%2B%3B?%23%2F%3F%26%3D%2B%3B#%23%2F%3F%26%3D%2B%3B',
+				'https://example.org/%23%2F%3F&=+;?%23/?%26%3D%2B%3B#%23/?&=+;',
 			],
 		];
 	}

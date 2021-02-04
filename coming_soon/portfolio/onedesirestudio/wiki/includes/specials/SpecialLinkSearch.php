@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup SpecialPage
@@ -100,8 +100,8 @@ class LinkSearchPage extends QueryPage {
 		}
 
 		$target2 = $target;
-		// Get protocol, default is http://
-		$protocol = 'http://';
+		// Get protocol, default is https://
+		$protocol = 'https://';
 		$bits = wfParseUrl( $target );
 		if ( isset( $bits['scheme'] ) && isset( $bits['delimiter'] ) ) {
 			$protocol = $bits['scheme'] . $bits['delimiter'];
@@ -180,7 +180,7 @@ class LinkSearchPage extends QueryPage {
 	 * Return an appropriately formatted LIKE query and the clause
 	 *
 	 * @param string $query Search pattern to search for
-	 * @param string $prot Protocol, e.g. 'http://'
+	 * @param string $prot Protocol, e.g. 'https://'
 	 *
 	 * @return array
 	 */

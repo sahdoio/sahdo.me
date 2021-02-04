@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup MaintenanceLanguage
@@ -35,7 +35,7 @@ class GenerateNormalizerDataAr extends Maintenance {
 		parent::__construct();
 		$this->addDescription( 'Generate the normalizer data file for Arabic' );
 		$this->addOption( 'unicode-data-file', 'The local location of the data file ' .
-			'from http://unicode.org/Public/UNIDATA/UnicodeData.txt', false, true );
+			'from https://unicode.org/Public/UNIDATA/UnicodeData.txt', false, true );
 	}
 
 	public function getDbType() {
@@ -64,7 +64,7 @@ class GenerateNormalizerDataAr extends Maintenance {
 			exit( 1 );
 		}
 
-		// For the file format, see http://www.unicode.org/reports/tr44/
+		// For the file format, see https://www.unicode.org/reports/tr44/
 		$fieldNames = [
 			'Code',
 			'Name',

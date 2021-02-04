@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Maintenance
@@ -468,7 +468,7 @@ abstract class Maintenance {
 				. '"max" for no limit or "default" to avoid changing it'
 		);
 		$this->addOption( 'server', "The protocol and server name to use in URLs, e.g. " .
-			"http://en.wikipedia.org. This is sometimes necessary because " .
+			"https://en.wikipedia.org. This is sometimes necessary because " .
 			"server name detection may fail in command line scripts.", false, true );
 		$this->addOption( 'profiler', 'Profiler output format (usually "text")', false, true );
 

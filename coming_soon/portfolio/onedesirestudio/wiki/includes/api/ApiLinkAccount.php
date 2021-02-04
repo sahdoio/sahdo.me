@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -119,7 +119,7 @@ class ApiLinkAccount extends ApiBase {
 
 	protected function getExamplesMessages() {
 		return [
-			'action=linkaccount&provider=Example&linkreturnurl=http://example.org/&linktoken=123ABC'
+			'action=linkaccount&provider=Example&linkreturnurl=https://example.org/&linktoken=123ABC'
 				=> 'apihelp-linkaccount-example-link',
 		];
 	}

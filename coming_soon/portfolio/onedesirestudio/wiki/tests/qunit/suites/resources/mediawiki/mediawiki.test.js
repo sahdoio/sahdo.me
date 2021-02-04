@@ -230,9 +230,9 @@
 		assertMultipleFormats( [ 'mediawiki-test-version-entrypoints-index-php' ], [ 'plain', 'text', 'escaped' ], mw.messages.get( 'mediawiki-test-version-entrypoints-index-php' ), 'External link markup is unprocessed' );
 		assert.htmlEqual( mw.message( 'mediawiki-test-version-entrypoints-index-php' ).parse(), '<a href="https://www.mediawiki.org/wiki/Manual:index.php">index.php</a>', 'External link works correctly in parse mode' );
 
-		assertMultipleFormats( [ 'external-link-replace', 'http://example.org/?x=y&z' ], [ 'plain', 'text' ], 'Foo [http://example.org/?x=y&z bar]', 'Parameters are substituted but external link is not processed' );
-		assert.equal( mw.message( 'external-link-replace', 'http://example.org/?x=y&z' ).escaped(), 'Foo [http://example.org/?x=y&amp;z bar]', 'In escaped mode, parameters are substituted and ampersand is escaped, but external link is not processed' );
-		assert.htmlEqual( mw.message( 'external-link-replace', 'http://example.org/?x=y&z' ).parse(), 'Foo <a href="http://example.org/?x=y&amp;z">bar</a>', 'External link with replacement works in parse mode without double-escaping' );
+		assertMultipleFormats( [ 'external-link-replace', 'https://example.org/?x=y&z' ], [ 'plain', 'text' ], 'Foo [https://example.org/?x=y&z bar]', 'Parameters are substituted but external link is not processed' );
+		assert.equal( mw.message( 'external-link-replace', 'https://example.org/?x=y&z' ).escaped(), 'Foo [https://example.org/?x=y&amp;z bar]', 'In escaped mode, parameters are substituted and ampersand is escaped, but external link is not processed' );
+		assert.htmlEqual( mw.message( 'external-link-replace', 'https://example.org/?x=y&z' ).parse(), 'Foo <a href="https://example.org/?x=y&amp;z">bar</a>', 'External link with replacement works in parse mode without double-escaping' );
 
 		hello.parse();
 		assert.equal( hello.format, 'parse', 'Message.parse correctly updated the "format" property' );

@@ -13,7 +13,7 @@ class GlobalTest extends MediaWikiTestCase {
 		$this->setMwGlobals( [
 			'wgReadOnlyFile' => $readOnlyFile,
 			'wgUrlProtocols' => [
-				'http://',
+				'https://',
 				'https://',
 				'mailto:',
 				'//',
@@ -590,7 +590,7 @@ class GlobalTest extends MediaWikiTestCase {
 			[
 				'//example.org/test.cgi?id=12345',
 				[
-					'http://org.example./test.cgi?id=12345',
+					'https://org.example./test.cgi?id=12345',
 					'https://org.example./test.cgi?id=12345'
 				]
 			],

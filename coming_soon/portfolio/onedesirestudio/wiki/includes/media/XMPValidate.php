@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -40,8 +40,8 @@ use Psr\Log\LoggerAwareInterface;
  * These validation functions can also be used to modify the data. See the gps and flash one's
  * for example.
  *
- * @see http://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart1.pdf starting at pg 28
- * @see http://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart2.pdf starting at pg 11
+ * @see https://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart1.pdf starting at pg 28
+ * @see https://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart2.pdf starting at pg 11
  */
 class XMPValidate implements LoggerAwareInterface {
 
@@ -348,7 +348,7 @@ class XMPValidate implements LoggerAwareInterface {
 	 * translate the XMP DMS form of gps coords to
 	 * the decimal form we use.
 	 *
-	 * @see http://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart2.pdf
+	 * @see https://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart2.pdf
 	 *        section 1.2.7.4 on page 23
 	 *
 	 * @param array $info Unused (info about prop)

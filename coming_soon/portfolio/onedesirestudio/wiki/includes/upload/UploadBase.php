@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Upload
@@ -1317,45 +1317,45 @@ abstract class UploadBase {
 		list( $namespace, $strippedElement ) = $this->splitXmlNamespace( $element );
 
 		// We specifically don't include:
-		// http://www.w3.org/1999/xhtml (bug 60771)
+		// https://www.w3.org/1999/xhtml (bug 60771)
 		static $validNamespaces = [
 			'',
 			'adobe:ns:meta/',
-			'http://creativecommons.org/ns#',
-			'http://inkscape.sourceforge.net/dtd/sodipodi-0.dtd',
-			'http://ns.adobe.com/adobeillustrator/10.0/',
-			'http://ns.adobe.com/adobesvgviewerextensions/3.0/',
-			'http://ns.adobe.com/extensibility/1.0/',
-			'http://ns.adobe.com/flows/1.0/',
-			'http://ns.adobe.com/illustrator/1.0/',
-			'http://ns.adobe.com/imagereplacement/1.0/',
-			'http://ns.adobe.com/pdf/1.3/',
-			'http://ns.adobe.com/photoshop/1.0/',
-			'http://ns.adobe.com/saveforweb/1.0/',
-			'http://ns.adobe.com/variables/1.0/',
-			'http://ns.adobe.com/xap/1.0/',
-			'http://ns.adobe.com/xap/1.0/g/',
-			'http://ns.adobe.com/xap/1.0/g/img/',
-			'http://ns.adobe.com/xap/1.0/mm/',
-			'http://ns.adobe.com/xap/1.0/rights/',
-			'http://ns.adobe.com/xap/1.0/stype/dimensions#',
-			'http://ns.adobe.com/xap/1.0/stype/font#',
-			'http://ns.adobe.com/xap/1.0/stype/manifestitem#',
-			'http://ns.adobe.com/xap/1.0/stype/resourceevent#',
-			'http://ns.adobe.com/xap/1.0/stype/resourceref#',
-			'http://ns.adobe.com/xap/1.0/t/pg/',
-			'http://purl.org/dc/elements/1.1/',
-			'http://purl.org/dc/elements/1.1',
-			'http://schemas.microsoft.com/visio/2003/svgextensions/',
-			'http://sodipodi.sourceforge.net/dtd/sodipodi-0.dtd',
-			'http://taptrix.com/inkpad/svg_extensions',
-			'http://web.resource.org/cc/',
-			'http://www.freesoftware.fsf.org/bkchem/cdml',
-			'http://www.inkscape.org/namespaces/inkscape',
-			'http://www.opengis.net/gml',
-			'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
-			'http://www.w3.org/2000/svg',
-			'http://www.w3.org/tr/rec-rdf-syntax/',
+			'https://creativecommons.org/ns#',
+			'https://inkscape.sourceforge.net/dtd/sodipodi-0.dtd',
+			'https://ns.adobe.com/adobeillustrator/10.0/',
+			'https://ns.adobe.com/adobesvgviewerextensions/3.0/',
+			'https://ns.adobe.com/extensibility/1.0/',
+			'https://ns.adobe.com/flows/1.0/',
+			'https://ns.adobe.com/illustrator/1.0/',
+			'https://ns.adobe.com/imagereplacement/1.0/',
+			'https://ns.adobe.com/pdf/1.3/',
+			'https://ns.adobe.com/photoshop/1.0/',
+			'https://ns.adobe.com/saveforweb/1.0/',
+			'https://ns.adobe.com/variables/1.0/',
+			'https://ns.adobe.com/xap/1.0/',
+			'https://ns.adobe.com/xap/1.0/g/',
+			'https://ns.adobe.com/xap/1.0/g/img/',
+			'https://ns.adobe.com/xap/1.0/mm/',
+			'https://ns.adobe.com/xap/1.0/rights/',
+			'https://ns.adobe.com/xap/1.0/stype/dimensions#',
+			'https://ns.adobe.com/xap/1.0/stype/font#',
+			'https://ns.adobe.com/xap/1.0/stype/manifestitem#',
+			'https://ns.adobe.com/xap/1.0/stype/resourceevent#',
+			'https://ns.adobe.com/xap/1.0/stype/resourceref#',
+			'https://ns.adobe.com/xap/1.0/t/pg/',
+			'https://purl.org/dc/elements/1.1/',
+			'https://purl.org/dc/elements/1.1',
+			'https://schemas.microsoft.com/visio/2003/svgextensions/',
+			'https://sodipodi.sourceforge.net/dtd/sodipodi-0.dtd',
+			'https://taptrix.com/inkpad/svg_extensions',
+			'https://web.resource.org/cc/',
+			'https://www.freesoftware.fsf.org/bkchem/cdml',
+			'https://www.inkscape.org/namespaces/inkscape',
+			'https://www.opengis.net/gml',
+			'https://www.w3.org/1999/02/22-rdf-syntax-ns#',
+			'https://www.w3.org/2000/svg',
+			'https://www.w3.org/tr/rec-rdf-syntax/',
 		];
 
 		if ( !in_array( $namespace, $validNamespaces ) ) {
@@ -1375,8 +1375,8 @@ abstract class UploadBase {
 			return [ 'uploaded-script-svg', $strippedElement ];
 		}
 
-		# e.g., <svg xmlns="http://www.w3.org/2000/svg">
-		#  <handler xmlns:ev="http://www.w3.org/2001/xml-events" ev:event="load">alert(1)</handler> </svg>
+		# e.g., <svg xmlns="https://www.w3.org/2000/svg">
+		#  <handler xmlns:ev="https://www.w3.org/2001/xml-events" ev:event="load">alert(1)</handler> </svg>
 		if ( $strippedElement == 'handler' ) {
 			wfDebug( __METHOD__ . ": Found scriptable element '$element' in uploaded file.\n" );
 
@@ -1416,7 +1416,7 @@ abstract class UploadBase {
 				return [ 'uploaded-event-handler-on-svg', $attrib, $value ];
 			}
 
-			# href with non-local target (don't allow http://, javascript:, etc)
+			# href with non-local target (don't allow https://, javascript:, etc)
 			if ( $stripped == 'href'
 				&& strpos( $value, 'data:' ) !== 0
 				&& strpos( $value, '#' ) !== 0
@@ -1446,7 +1446,7 @@ abstract class UploadBase {
 				}
 			}
 
-			# Change href with animate from (http://html5sec.org/#137).
+			# Change href with animate from (https://html5sec.org/#137).
 			if ( $stripped === 'attributename'
 				&& $strippedElement === 'animate'
 				&& $this->stripXmlNamespace( $value ) == 'href'
@@ -1589,7 +1589,7 @@ abstract class UploadBase {
 	 * @return array Containing the namespace URI and prefix
 	 */
 	private static function splitXmlNamespace( $element ) {
-		// 'http://www.w3.org/2000/svg:script' -> array( 'http://www.w3.org/2000/svg', 'script' )
+		// 'https://www.w3.org/2000/svg:script' -> array( 'https://www.w3.org/2000/svg', 'script' )
 		$parts = explode( ':', strtolower( $element ) );
 		$name = array_pop( $parts );
 		$ns = implode( ':', $parts );
@@ -1602,7 +1602,7 @@ abstract class UploadBase {
 	 * @return string
 	 */
 	private function stripXmlNamespace( $name ) {
-		// 'http://www.w3.org/2000/svg:script' -> 'script'
+		// 'https://www.w3.org/2000/svg:script' -> 'script'
 		$parts = explode( ':', strtolower( $name ) );
 
 		return array_pop( $parts );

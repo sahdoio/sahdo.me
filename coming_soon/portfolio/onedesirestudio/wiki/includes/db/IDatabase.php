@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Database
@@ -300,7 +300,7 @@ interface IDatabase {
 
 	/**
 	 * Get the number of fields in a result object
-	 * @see http://www.php.net/mysql_num_fields
+	 * @see https://www.php.net/mysql_num_fields
 	 *
 	 * @param mixed $res A SQL result
 	 * @return int
@@ -309,7 +309,7 @@ interface IDatabase {
 
 	/**
 	 * Get a field name in a result object
-	 * @see http://www.php.net/mysql_field_name
+	 * @see https://www.php.net/mysql_field_name
 	 *
 	 * @param mixed $res A SQL result
 	 * @param int $n
@@ -333,7 +333,7 @@ interface IDatabase {
 
 	/**
 	 * Change the position of the cursor in a result object
-	 * @see http://www.php.net/mysql_data_seek
+	 * @see https://www.php.net/mysql_data_seek
 	 *
 	 * @param mixed $res A SQL result
 	 * @param int $row
@@ -342,7 +342,7 @@ interface IDatabase {
 
 	/**
 	 * Get the last error number
-	 * @see http://www.php.net/mysql_errno
+	 * @see https://www.php.net/mysql_errno
 	 *
 	 * @return int
 	 */
@@ -350,7 +350,7 @@ interface IDatabase {
 
 	/**
 	 * Get a description of the last error
-	 * @see http://www.php.net/mysql_error
+	 * @see https://www.php.net/mysql_error
 	 *
 	 * @return string
 	 */
@@ -369,7 +369,7 @@ interface IDatabase {
 
 	/**
 	 * Get the number of rows affected by the last write query
-	 * @see http://www.php.net/mysql_affected_rows
+	 * @see https://www.php.net/mysql_affected_rows
 	 *
 	 * @return int
 	 */
@@ -377,7 +377,7 @@ interface IDatabase {
 
 	/**
 	 * Returns a wikitext link to the DB's website, e.g.,
-	 *   return "[http://www.mysql.com/ MySQL]";
+	 *   return "[https://www.mysql.com/ MySQL]";
 	 * Should at least contain plain text, if for some reason
 	 * your database has no website.
 	 *
@@ -974,7 +974,7 @@ interface IDatabase {
 	 *
 	 * Any implementation of this function should *not* involve reusing
 	 * sequence numbers created for rolled-back transactions.
-	 * See http://bugs.mysql.com/bug.php?id=30767 for details.
+	 * See https://bugs.mysql.com/bug.php?id=30767 for details.
 	 * @param string $seqName
 	 * @return null|int
 	 */

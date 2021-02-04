@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -119,9 +119,9 @@ class JpegMetadataExtractor {
 				// only extract if XMP is enabled.
 				$temp = self::jpegExtractMarker( $fh );
 				// check what type of app segment this is.
-				if ( substr( $temp, 0, 29 ) === "http://ns.adobe.com/xap/1.0/\x00" && $showXMP ) {
+				if ( substr( $temp, 0, 29 ) === "https://ns.adobe.com/xap/1.0/\x00" && $showXMP ) {
 					$segments["XMP"] = substr( $temp, 29 );
-				} elseif ( substr( $temp, 0, 35 ) === "http://ns.adobe.com/xmp/extension/\x00" && $showXMP ) {
+				} elseif ( substr( $temp, 0, 35 ) === "https://ns.adobe.com/xmp/extension/\x00" && $showXMP ) {
 					$segments["XMP_ext"][] = substr( $temp, 35 );
 				} elseif ( substr( $temp, 0, 29 ) === "XMP\x00://ns.adobe.com/xap/1.0/\x00" && $showXMP ) {
 					// Some images (especially flickr images) seem to have this.

@@ -172,7 +172,7 @@ class ExprParser {
 	 * Evaluate a mathematical expression
 	 *
 	 * The algorithm here is based on the infix to RPN algorithm given in
-	 * http://montcs.bloomu.edu/~bobmon/Information/RPN/infix2rpn.shtml
+	 * https://montcs.bloomu.edu/~bobmon/Information/RPN/infix2rpn.shtml
 	 * It's essentially the same as Dijkstra's shunting yard algorithm.
 	 * @param $expr string
 	 * @throws ExprError

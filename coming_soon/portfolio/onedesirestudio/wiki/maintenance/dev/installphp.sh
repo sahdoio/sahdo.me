@@ -13,7 +13,7 @@ if [ "x$PHP" != "x" -a -x "$PHP" ]; then
 fi
 
 TAR=php5.4-latest.tar.gz
-PHPURL="http://snaps.php.net/$TAR"
+PHPURL="https://snaps.php.net/$TAR"
 
 cd "$DEV"
 

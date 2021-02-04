@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @since 1.20
@@ -90,7 +90,7 @@ class MWTimestamp {
 			# TS_MW
 		} elseif ( preg_match( '/^(-?\d{1,13})(\.\d+)?$/D', $ts, $m ) ) {
 			# TS_UNIX
-			$strtime = "@{$m[1]}"; // http://php.net/manual/en/datetime.formats.compound.php
+			$strtime = "@{$m[1]}"; // https://php.net/manual/en/datetime.formats.compound.php
 		} elseif ( preg_match( '/^\d{2}-\d{2}-\d{4} \d{2}:\d{2}:\d{2}.\d{6}$/', $ts ) ) {
 			# TS_ORACLE // session altered to DD-MM-YYYY HH24:MI:SS.FF6
 			$strtime = preg_replace( '/(\d\d)\.(\d\d)\.(\d\d)(\.(\d+))?/', "$1:$2:$3",
@@ -129,7 +129,7 @@ class MWTimestamp {
 			$ts
 		) ) {
 			# TS_RFC2822, accepting a trailing comment.
-			# See http://www.squid-cache.org/mail-archive/squid-users/200307/0122.html / r77171
+			# See https://www.squid-cache.org/mail-archive/squid-users/200307/0122.html / r77171
 			# The regex is a superset of rfc2822 for readability
 			$strtime = strtok( $ts, ';' );
 		} elseif ( preg_match( '/^[A-Z][a-z]{5,8}, \d\d-[A-Z][a-z]{2}-\d{2} \d\d:\d\d:\d\d/', $ts ) ) {

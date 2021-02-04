@@ -7,7 +7,7 @@
 			"Ainali"
 		]
 	},
-	"syntaxhighlight-desc": "Ger syntaxmarkering med [http://pygments.org/ Pygments] inuti <code>&lt;syntaxhighlight&gt;</code>-taggar",
+	"syntaxhighlight-desc": "Ger syntaxmarkering med [https://pygments.org/ Pygments] inuti <code>&lt;syntaxhighlight&gt;</code>-taggar",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kod",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "Språk",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(Ingen)",

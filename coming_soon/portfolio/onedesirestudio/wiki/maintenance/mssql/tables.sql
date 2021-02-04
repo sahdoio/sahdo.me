@@ -383,12 +383,12 @@ CREATE TABLE /*_*/externallinks (
   -- lower case. An extra dot is added to allow for matching of either
   -- example.com or *.example.com in a single scan.
   -- Example:
-  --      http://user:password@sub.example.com/page.html
+  --      https://user:password@sub.example.com/page.html
   --   becomes
-  --      http://com.example.sub./page.html
+  --      https://com.example.sub./page.html
   -- which allows for fast searching for all pages under example.com with the
   -- clause:
-  --      WHERE el_index LIKE 'http://com.example.%'
+  --      WHERE el_index LIKE 'https://com.example.%'
   el_index nvarchar(450) NOT NULL
 );
 
@@ -577,13 +577,13 @@ CREATE TABLE /*_*/image (
   img_media_type varchar(16) default null,
 
   -- major part of a MIME media type as defined by IANA
-  -- see http://www.iana.org/assignments/media-types/
+  -- see https://www.iana.org/assignments/media-types/
   img_major_mime varchar(16) not null default 'unknown',
 
   -- minor part of a MIME media type as defined by IANA
   -- the minor parts are not required to adher to any standard
   -- but should be consistent throughout the database
-  -- see http://www.iana.org/assignments/media-types/
+  -- see https://www.iana.org/assignments/media-types/
   img_minor_mime nvarchar(100) NOT NULL default 'unknown',
 
   -- Description field as entered by the uploader.
@@ -1277,7 +1277,7 @@ CREATE TABLE /*_*/sites (
   -- Language code of the sites primary language.
   site_language              nvarchar(32)       NOT NULL,
 
-  -- Protocol of the site, ie 'http://', 'irc://', '//'
+  -- Protocol of the site, ie 'https://', 'irc://', '//'
   -- This field is an index for lookups and is build from type specific data in site_data.
   site_protocol              nvarchar(32)       NOT NULL,
 

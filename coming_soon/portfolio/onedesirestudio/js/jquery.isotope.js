@@ -1,10 +1,10 @@
 /**
  * Isotope v1.5.25
  * An exquisite jQuery plugin for magical layouts
- * http://isotope.metafizzy.co
+ * https://isotope.metafizzy.co
  *
  * Commercial use requires one-time license fee
- * http://metafizzy.co/#licenses
+ * https://metafizzy.co/#licenses
  *
  * Copyright 2012 David DeSandro / Metafizzy
  */
@@ -26,7 +26,7 @@
   };
 
   // ========================= getStyleProperty by kangax ===============================
-  // http://perfectionkills.com/feature-testing-css-properties/
+  // https://perfectionkills.com/feature-testing-css-properties/
 
   var prefixes = 'Moz Webkit O Ms'.split(' ');
 
@@ -60,15 +60,15 @@
 
   /*!
    * Modernizr v1.6ish: miniModernizr for Isotope
-   * http://www.modernizr.com
+   * https://www.modernizr.com
    *
    * Developed by:
-   * - Faruk Ates  http://farukat.es/
-   * - Paul Irish  http://paulirish.com/
+   * - Faruk Ates  https://farukat.es/
+   * - Paul Irish  https://paulirish.com/
    *
    * Copyright (c) 2009-2010
    * Dual-licensed under the BSD or MIT licenses.
-   * http://www.modernizr.com/license/
+   * https://www.modernizr.com/license/
    */
 
   /*
@@ -1296,7 +1296,7 @@
   // ======================= imagesLoaded Plugin ===============================
   /*!
    * jQuery imagesLoaded plugin v1.1.0
-   * http://github.com/desandro/imagesloaded
+   * https://github.com/desandro/imagesloaded
    *
    * MIT License. by Paul Irish et al.
    */
@@ -1342,7 +1342,7 @@
     $images.bind( 'load.imagesLoaded error.imagesLoaded',  imgLoaded ).each( function() {
       // cached images don't fire load sometimes, so we reset src.
       var src = this.src;
-      // webkit hack from http://groups.google.com/group/jquery-dev/browse_thread/thread/eee6ab7b2da50e1f
+      // webkit hack from https://groups.google.com/group/jquery-dev/browse_thread/thread/eee6ab7b2da50e1f
       // data uri bypasses webkit log warning (thx doug jones)
       this.src = blank;
       this.src = src;

@@ -25,8 +25,8 @@
 			u20AC = '\u20AC',
 			// Character \U00024B62 (Han script) can't be represented in javascript as a single
 			// code point, instead it is composed as a surrogate pair of two separate code units.
-			// http://codepoints.net/U+24B62
-			// http://www.fileformat.info/info/unicode/char/24B62/index.htm
+			// https://codepoints.net/U+24B62
+			// https://www.fileformat.info/info/unicode/char/24B62/index.htm
 			u024B62 = '\uD852\uDF62';
 
 		assert.strictEqual( $.byteLength( u0024 ), 1, 'U+0024' );

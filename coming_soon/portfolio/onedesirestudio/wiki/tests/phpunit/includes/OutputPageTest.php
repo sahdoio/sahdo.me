@@ -143,20 +143,20 @@ class OutputPageTest extends MediaWikiTestCase {
 			[
 				[ 'test.foo', ResourceLoaderModule::TYPE_SCRIPTS ],
 				"<script>(window.RLQ=window.RLQ||[]).push(function(){"
-					. 'mw.loader.load("http://127.0.0.1:8080/w/load.php?debug=false\u0026lang=en\u0026modules=test.foo\u0026only=scripts\u0026skin=fallback");'
+					. 'mw.loader.load("https://127.0.0.1:8080/w/load.php?debug=false\u0026lang=en\u0026modules=test.foo\u0026only=scripts\u0026skin=fallback");'
 					. "});</script>"
 			],
 			[
 				// Don't condition wrap raw modules (like the startup module)
 				[ 'test.raw', ResourceLoaderModule::TYPE_SCRIPTS ],
-				'<script async="" src="http://127.0.0.1:8080/w/load.php?debug=false&amp;lang=en&amp;modules=test.raw&amp;only=scripts&amp;skin=fallback"></script>'
+				'<script async="" src="https://127.0.0.1:8080/w/load.php?debug=false&amp;lang=en&amp;modules=test.raw&amp;only=scripts&amp;skin=fallback"></script>'
 			],
 			// Load module styles only
 			// This also tests the order the modules are put into the url
 			[
 				[ [ 'test.baz', 'test.foo', 'test.bar' ], ResourceLoaderModule::TYPE_STYLES ],
 
-				'<link rel="stylesheet" href="http://127.0.0.1:8080/w/load.php?debug=false&amp;lang=en&amp;modules=test.bar%2Cbaz%2Cfoo&amp;only=styles&amp;skin=fallback"/>'
+				'<link rel="stylesheet" href="https://127.0.0.1:8080/w/load.php?debug=false&amp;lang=en&amp;modules=test.bar%2Cbaz%2Cfoo&amp;only=styles&amp;skin=fallback"/>'
 			],
 			// Load private module (only=scripts)
 			[
@@ -181,16 +181,16 @@ class OutputPageTest extends MediaWikiTestCase {
 			// noscript group
 			[
 				[ 'test.noscript', ResourceLoaderModule::TYPE_STYLES ],
-				'<noscript><link rel="stylesheet" href="http://127.0.0.1:8080/w/load.php?debug=false&amp;lang=en&amp;modules=test.noscript&amp;only=styles&amp;skin=fallback"/></noscript>'
+				'<noscript><link rel="stylesheet" href="https://127.0.0.1:8080/w/load.php?debug=false&amp;lang=en&amp;modules=test.noscript&amp;only=styles&amp;skin=fallback"/></noscript>'
 			],
 			// Load two modules in separate groups
 			[
 				[ [ 'test.group.foo', 'test.group.bar' ], ResourceLoaderModule::TYPE_COMBINED ],
 				"<script>(window.RLQ=window.RLQ||[]).push(function(){"
-					. 'mw.loader.load("http://127.0.0.1:8080/w/load.php?debug=false\u0026lang=en\u0026modules=test.group.bar\u0026skin=fallback");'
+					. 'mw.loader.load("https://127.0.0.1:8080/w/load.php?debug=false\u0026lang=en\u0026modules=test.group.bar\u0026skin=fallback");'
 					. "});</script>\n"
 					. "<script>(window.RLQ=window.RLQ||[]).push(function(){"
-					. 'mw.loader.load("http://127.0.0.1:8080/w/load.php?debug=false\u0026lang=en\u0026modules=test.group.foo\u0026skin=fallback");'
+					. 'mw.loader.load("https://127.0.0.1:8080/w/load.php?debug=false\u0026lang=en\u0026modules=test.group.foo\u0026skin=fallback");'
 					. "});</script>"
 			],
 		];
@@ -209,7 +209,7 @@ class OutputPageTest extends MediaWikiTestCase {
 	public function testMakeResourceLoaderLink( $args, $expectedHtml ) {
 		$this->setMwGlobals( [
 			'wgResourceLoaderDebug' => false,
-			'wgLoadScript' => 'http://127.0.0.1:8080/w/load.php',
+			'wgLoadScript' => 'https://127.0.0.1:8080/w/load.php',
 		] );
 		$class = new ReflectionClass( 'OutputPage' );
 		$method = $class->getMethod( 'makeResourceLoaderLink' );

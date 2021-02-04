@@ -35,8 +35,8 @@ class LinksUpdateTest extends MediaWikiLangTestCase {
 			[ 'iw_prefix' ],
 			[
 				'iw_prefix' => 'linksupdatetest',
-				'iw_url' => 'http://testing.com/wiki/$1',
-				'iw_api' => 'http://testing.com/w/api.php',
+				'iw_url' => 'https://testing.com/wiki/$1',
+				'iw_api' => 'https://testing.com/w/api.php',
 				'iw_local' => 0,
 				'iw_trans' => 0,
 				'iw_wikiid' => 'linksupdatetest',
@@ -122,7 +122,7 @@ class LinksUpdateTest extends MediaWikiLangTestCase {
 		/** @var ParserOutput $po */
 		list( $t, $po ) = $this->makeTitleAndParserOutput( "Testing", self::$testingPageId );
 
-		$po->addExternalLink( "http://testing.com/wiki/Foo" );
+		$po->addExternalLink( "https://testing.com/wiki/Foo" );
 
 		$this->assertLinksUpdate(
 			$t,
@@ -131,7 +131,7 @@ class LinksUpdateTest extends MediaWikiLangTestCase {
 			'el_to, el_index',
 			'el_from = ' . self::$testingPageId,
 			[
-				[ 'http://testing.com/wiki/Foo', 'http://com.testing./wiki/Foo' ],
+				[ 'https://testing.com/wiki/Foo', 'https://com.testing./wiki/Foo' ],
 			]
 		);
 	}

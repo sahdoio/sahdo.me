@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup SpecialPage
@@ -60,7 +60,7 @@ class SpecialUploadStash extends UnlistedSpecialPage {
 	 * Execute page -- can output a file directly or show a listing of them.
 	 *
 	 * @param string $subPage Subpage, e.g. in
-	 *   http://example.com/wiki/Special:UploadStash/foo.jpg, the "foo.jpg" part
+	 *   https://example.com/wiki/Special:UploadStash/foo.jpg, the "foo.jpg" part
 	 * @return bool Success
 	 */
 	public function execute( $subPage ) {

@@ -76,7 +76,7 @@ EOT
 	 * Test if unicode quotes in article links make its search index empty
 	 */
 	public function testUnicodeLinkSearchIndexError() {
-		$text = "text „http://example.com“ text";
+		$text = "text „https://example.com“ text";
 		$result = $this->updateText( $text );
 		$processed = preg_replace( '/Q/u', 'Q', $result );
 		$this->assertTrue(

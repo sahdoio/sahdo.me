@@ -9,7 +9,7 @@
 			"Chris TR"
 		]
 	},
-	"syntaxhighlight-desc": "Permite resaltar el código fuente usando la etiqueta <code>&lt;syntaxhighlight&gt;</code>. Esta extensión usa [http://pygments.org/ Pygments - Resaltador de sintaxis en Python]",
+	"syntaxhighlight-desc": "Permite resaltar el código fuente usando la etiqueta <code>&lt;syntaxhighlight&gt;</code>. Esta extensión usa [https://pygments.org/ Pygments - Resaltador de sintaxis en Python]",
 	"syntaxhighlight-error-category": "Páginas con errores de resaltado de sintaxis",
 	"syntaxhighlight-error-category-desc": "Hubo un error al intentar resaltar el código que se incluye en la página.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Código",

@@ -7,15 +7,15 @@
  *
  * @ingroup Extensions
  *
- * @link http://www.mediawiki.org/wiki/Extension:Cite/Cite.php Documentation
- * @link http://www.w3.org/TR/html4/struct/text.html#edef-CITE <cite> definition in HTML
- * @link http://www.w3.org/TR/2005/WD-xhtml2-20050527/mod-text.html#edef_text_cite <cite> definition in XHTML 2.0
+ * @link https://www.mediawiki.org/wiki/Extension:Cite/Cite.php Documentation
+ * @link https://www.w3.org/TR/html4/struct/text.html#edef-CITE <cite> definition in HTML
+ * @link https://www.w3.org/TR/2005/WD-xhtml2-20050527/mod-text.html#edef_text_cite <cite> definition in XHTML 2.0
  *
  * @bug 4579
  *
  * @author Ævar Arnfjörð Bjarmason <avarab@gmail.com>
  * @copyright Copyright © 2005, Ævar Arnfjörð Bjarmason
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license https://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 // @codingStandardsIgnoreEnd
 

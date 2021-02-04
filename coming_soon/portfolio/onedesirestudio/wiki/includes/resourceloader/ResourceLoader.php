@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @author Roan Kattouw
@@ -66,7 +66,7 @@ class ResourceLoader implements LoggerAwareInterface {
 	protected $testModuleNames = [];
 
 	/**
-	 * E.g. array( 'source-id' => 'http://.../load.php' )
+	 * E.g. array( 'source-id' => 'https://.../load.php' )
 	 * @var array
 	 */
 	protected $sources = [];
@@ -636,7 +636,7 @@ class ResourceLoader implements LoggerAwareInterface {
 		// back for subsequent output, resulting in invalid GZIP. So we have to wrap
 		// the whole thing in our own output buffer to be sure the active buffer
 		// doesn't use ob_gzhandler.
-		// See http://bugs.php.net/bug.php?id=36514
+		// See https://bugs.php.net/bug.php?id=36514
 		ob_start();
 
 		// Find out which modules are missing and instantiate the others
@@ -682,7 +682,7 @@ class ResourceLoader implements LoggerAwareInterface {
 		}
 
 		// See RFC 2616 § 3.11 Entity Tags
-		// http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11
+		// https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11
 		$etag = 'W/"' . $versionHash . '"';
 
 		// Try the client-side cache first
@@ -786,7 +786,7 @@ class ResourceLoader implements LoggerAwareInterface {
 			header( 'Content-Type: text/javascript; charset=utf-8' );
 		}
 		// See RFC 2616 § 14.19 ETag
-		// http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19
+		// https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19
 		header( 'ETag: ' . $etag );
 		if ( $context->getDebug() ) {
 			// Do not cache debug responses
@@ -811,7 +811,7 @@ class ResourceLoader implements LoggerAwareInterface {
 	 */
 	protected function tryRespondNotModified( ResourceLoaderContext $context, $etag ) {
 		// See RFC 2616 § 14.26 If-None-Match
-		// http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.26
+		// https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.26
 		$clientKeys = $context->getRequest()->getHeader( 'If-None-Match', WebRequest::GETHEADER_LIST );
 		// Never send 304s in debug mode
 		if ( $clientKeys !== false && !$context->getDebug() && in_array( $etag, $clientKeys ) ) {
@@ -821,7 +821,7 @@ class ResourceLoader implements LoggerAwareInterface {
 			// response (because the gzip header is always there). This is
 			// a problem because 304 responses have to be completely empty
 			// per the HTTP spec, and Firefox behaves buggily when they're not.
-			// See also http://bugs.php.net/bug.php?id=51579
+			// See also https://bugs.php.net/bug.php?id=51579
 			// To work around this, we tear down all output buffering before
 			// sending the 304.
 			wfResetOutputBuffers( /* $resetGzipEncoding = */ true );

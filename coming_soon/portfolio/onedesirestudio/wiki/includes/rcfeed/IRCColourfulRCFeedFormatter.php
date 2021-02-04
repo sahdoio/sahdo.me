@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -114,7 +114,7 @@ class IRCColourfulRCFeedFormatter implements RCFeedFormatter {
 			$titleString = "\00314[[\00307$title\00314]]";
 		}
 
-		# see http://www.irssi.org/documentation/formats for some colour codes. prefix is \003,
+		# see https://www.irssi.org/documentation/formats for some colour codes. prefix is \003,
 		# no colour (\003) switches back to the term default
 		$fullString = "$titleString\0034 $flag\00310 " .
 			"\00302$url\003 \0035*\003 \00303$user\003 \0035*\003 $szdiff \00310$comment\003\n";

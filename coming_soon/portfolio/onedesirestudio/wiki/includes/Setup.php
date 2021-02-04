@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -432,7 +432,7 @@ if ( $wgUseFileCache || $wgUseSquid ) {
 // We always output HTML5 since 1.22, overriding these is no longer supported
 // we set them here for extensions that depend on its value.
 $wgHtml5 = true;
-$wgXhtmlDefaultNamespace = 'http://www.w3.org/1999/xhtml';
+$wgXhtmlDefaultNamespace = 'https://www.w3.org/1999/xhtml';
 $wgJsMimeType = 'text/javascript';
 
 // Blacklisted file extensions shouldn't appear on the "allowed" list

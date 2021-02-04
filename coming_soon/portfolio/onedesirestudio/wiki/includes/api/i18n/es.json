@@ -481,7 +481,7 @@
 	"apihelp-query+exturlusage-paramvalue-prop-title": "Agrega el título y el identificador del espacio de nombres de la página.",
 	"apihelp-query+exturlusage-param-protocol": "Protocolo del URL. Si está vacío y se establece <var>$1query</var>, el protocolo es <kbd>http</kbd>. Deja vacío esto y <var>$1query</var> para listar todos los enlaces externos.",
 	"apihelp-query+exturlusage-param-limit": "Cuántas páginas se devolverán.",
-	"apihelp-query+exturlusage-example-simple": "Mostrar páginas que enlacen con <kbd>http://www.mediawiki.org</kbd>.",
+	"apihelp-query+exturlusage-example-simple": "Mostrar páginas que enlacen con <kbd>https://www.mediawiki.org</kbd>.",
 	"apihelp-query+filearchive-param-from": "El título de imagen para comenzar la enumeración",
 	"apihelp-query+filearchive-param-to": "El título de imagen para detener la enumeración.",
 	"apihelp-query+filearchive-param-prefix": "Buscar todos los títulos de las imágenes que comiencen con este valor.",

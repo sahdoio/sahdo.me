@@ -15,14 +15,14 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
  * @author "Derk-Jan Hartman <hartman _at_ videolan d0t org>"
  * @author Brion Vibber
  * @copyright Copyright © 2010-2010 Brion Vibber, Derk-Jan Hartman
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @license https://www.gnu.org/copyleft/gpl.html GNU General Public License
  */
 
 /**
@@ -42,7 +42,7 @@ class SVGMetadataExtractor {
 class SVGReader {
 	const DEFAULT_WIDTH = 512;
 	const DEFAULT_HEIGHT = 512;
-	const NS_SVG = 'http://www.w3.org/2000/svg';
+	const NS_SVG = 'https://www.w3.org/2000/svg';
 	const LANG_PREFIX_MATCH = 1;
 	const LANG_FULL_MATCH = 2;
 
@@ -264,7 +264,7 @@ class SVGReader {
 			) {
 				$sysLang = $this->reader->getAttribute( 'systemLanguage' );
 				if ( !is_null( $sysLang ) && $sysLang !== '' ) {
-					// See http://www.w3.org/TR/SVG/struct.html#SystemLanguageAttribute
+					// See https://www.w3.org/TR/SVG/struct.html#SystemLanguageAttribute
 					$langList = explode( ',', $sysLang );
 					foreach ( $langList as $langItem ) {
 						$langItem = trim( $langItem );
@@ -369,7 +369,7 @@ class SVGReader {
 
 	/**
 	 * Return a rounded pixel equivalent for a labeled CSS/SVG length.
-	 * http://www.w3.org/TR/SVG11/coords.html#UnitIdentifiers
+	 * https://www.w3.org/TR/SVG11/coords.html#UnitIdentifiers
 	 *
 	 * @param string $length CSS/SVG length.
 	 * @param float|int $viewportSize Optional scale for percentage units...

@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Language
@@ -29,7 +29,7 @@
 class LanguageMl extends Language {
 	/**
 	 * Temporary hack for the issue described at
-	 * http://permalink.gmane.org/gmane.science.linguistics.wikipedia.technical/46396
+	 * https://permalink.gmane.org/gmane.science.linguistics.wikipedia.technical/46396
 	 * Convert Unicode 5.0 style Malayalam input to Unicode 5.1. Similar to
 	 * bug 9413. Also fixes miscellaneous problems due to mishandling of ZWJ,
 	 * e.g. bug 11162.

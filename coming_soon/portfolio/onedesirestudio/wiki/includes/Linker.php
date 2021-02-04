@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -187,7 +187,7 @@ class Linker {
 	 *       cons.
 	 *     'forcearticlepath': Use the article path always, even with a querystring.
 	 *       Has compatibility issues on some setups, so avoid wherever possible.
-	 *     'http': Force a full URL with http:// as the scheme.
+	 *     'http': Force a full URL with https:// as the scheme.
 	 *     'https': Force a full URL with https:// as the scheme.
 	 *     'stubThreshold' => (int): Stub threshold to use when determining link classes.
 	 * @return string HTML <a> attribute

@@ -5,7 +5,7 @@
 			"Tacsipacsi"
 		]
 	},
-	"syntaxhighlight-desc": "Lehetőséget nyújt szintaxiskiemelésre a <code>&lt;syntaxhighlight&gt;</code> tag-gel, a [http://pygments.org/ Pygments - Python kódkiemelő] használatával",
+	"syntaxhighlight-desc": "Lehetőséget nyújt szintaxiskiemelésre a <code>&lt;syntaxhighlight&gt;</code> tag-gel, a [https://pygments.org/ Pygments - Python kódkiemelő] használatával",
 	"syntaxhighlight-error-category": "Lapok kódkiemelési hibákkal",
 	"syntaxhighlight-error-category-desc": "Hiba történt a lapon található kód kiemelése közben.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kód",

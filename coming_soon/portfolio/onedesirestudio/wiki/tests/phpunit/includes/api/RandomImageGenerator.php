@@ -245,7 +245,7 @@ class RandomImageGenerator {
 	 */
 	public function writeSvg( $spec, $format, $filename ) {
 		$svg = new SimpleXmlElement( '<svg/>' );
-		$svg->addAttribute( 'xmlns', 'http://www.w3.org/2000/svg' );
+		$svg->addAttribute( 'xmlns', 'https://www.w3.org/2000/svg' );
 		$svg->addAttribute( 'version', '1.1' );
 		$svg->addAttribute( 'width', $spec['width'] );
 		$svg->addAttribute( 'height', $spec['height'] );

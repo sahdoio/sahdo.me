@@ -95,9 +95,9 @@
 
 		assert.equal(
 			mw.html.element( 'a', {
-				href: 'http://mediawiki.org/w/index.php?title=RL&action=history'
+				href: 'https://mediawiki.org/w/index.php?title=RL&action=history'
 			}, 'a' ),
-			'<a href="http://mediawiki.org/w/index.php?title=RL&amp;action=history">a</a>',
+			'<a href="https://mediawiki.org/w/index.php?title=RL&amp;action=history">a</a>',
 			'Andhor tag with attributes and content'
 		);
 	} );

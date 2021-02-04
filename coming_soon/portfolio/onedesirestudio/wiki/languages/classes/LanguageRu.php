@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Language
@@ -70,7 +70,7 @@ class LanguageRu extends Language {
 
 	/**
 	 * Four-digit number should be without group commas (spaces)
-	 * See manual of style at http://ru.wikipedia.org/wiki/Википедия:Оформление_статей
+	 * See manual of style at https://ru.wikipedia.org/wiki/Википедия:Оформление_статей
 	 * So "1 234 567", "12 345" but "1234"
 	 *
 	 * @param string $_

@@ -35,7 +35,7 @@ class StringUtilsTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * See also "UTF-8 decoder capability and stress test" by
 	 * Markus Kuhn:
-	 * http://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-test.txt
+	 * https://www.cl.cam.ac.uk/~mgk25/ucs/examples/UTF-8-test.txt
 	 */
 	public static function provideStringsForIsUtf8Check() {
 		// Expected return values for StringUtils::isUtf8()

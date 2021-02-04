@@ -15,7 +15,7 @@
 			'<input id="input-type-search" type="search" placeholder="Search this site...">' +
 			'<input id="input-type-text" type="text" placeholder="e.g. John Doe">' +
 			'<input id="input-type-email" type="email" placeholder="e.g. address@example.ext">' +
-			'<input id="input-type-url" type="url" placeholder="e.g. http://mathiasbynens.be/">' +
+			'<input id="input-type-url" type="url" placeholder="e.g. https://mathiasbynens.be/">' +
 			'<input id="input-type-tel" type="tel" placeholder="e.g. +32 472 77 69 88">' +
 			'<input id="input-type-password" type="password" placeholder="e.g. hunter2">' +
 			'<textarea id="textarea" name="message" placeholder="Your message goes here"></textarea>' +

@@ -706,8 +706,8 @@ class IEContentAnalyzer {
 			'plaintext',
 			'table'
 		];
-		$rdfUrl = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#';
-		$rdfPurl = 'http://purl.org/rss/1.0/';
+		$rdfUrl = 'https://www.w3.org/1999/02/22-rdf-syntax-ns#';
+		$rdfPurl = 'https://purl.org/rss/1.0/';
 		$xbmMagic1 = '#define';
 		$xbmMagic2 = '_width';
 		$xbmMagic3 = '_bits';

@@ -71,22 +71,22 @@ class AuthenticationResponseTest extends \MediaWikiTestCase {
 				new \InvalidArgumentException( '$reqs may not be empty' )
 			],
 
-			[ 'newRedirect', [ [ $req ], 'http://example.org/redir' ], [
+			[ 'newRedirect', [ [ $req ], 'https://example.org/redir' ], [
 				'status' => AuthenticationResponse::REDIRECT,
 				'neededRequests' => [ $req ],
-				'redirectTarget' => 'http://example.org/redir',
+				'redirectTarget' => 'https://example.org/redir',
 			] ],
 			[
 				'newRedirect',
-				[ [ $req ], 'http://example.org/redir', [ 'foo' => 'bar' ] ],
+				[ [ $req ], 'https://example.org/redir', [ 'foo' => 'bar' ] ],
 				[
 					'status' => AuthenticationResponse::REDIRECT,
 					'neededRequests' => [ $req ],
-					'redirectTarget' => 'http://example.org/redir',
+					'redirectTarget' => 'https://example.org/redir',
 					'redirectApiData' => [ 'foo' => 'bar' ],
 				]
 			],
-			[ 'newRedirect', [ [], 'http://example.org/redir' ],
+			[ 'newRedirect', [ [], 'https://example.org/redir' ],
 				new \InvalidArgumentException( '$reqs may not be empty' )
 			],
 		];

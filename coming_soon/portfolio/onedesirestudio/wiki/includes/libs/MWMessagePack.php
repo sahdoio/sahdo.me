@@ -26,8 +26,8 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  *
- * @see <http://msgpack.org/>
- * @see <http://wiki.msgpack.org/display/MSGPACK/Format+specification>
+ * @see <https://msgpack.org/>
+ * @see <https://wiki.msgpack.org/display/MSGPACK/Format+specification>
  *
  * @since 1.23
  * @file

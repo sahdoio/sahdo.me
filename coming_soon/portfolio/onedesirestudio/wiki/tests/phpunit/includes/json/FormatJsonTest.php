@@ -280,7 +280,7 @@ class FormatJsonTest extends MediaWikiTestCase {
 			[ '', '' ],
 			[ '/*c', '' ],
 			[ '//c', '' ],
-			[ '"http://example.com"', '"http://example.com"' ],
+			[ '"https://example.com"', '"https://example.com"' ],
 			[ "\0", "\0" ],
 			[ '"Blåbærsyltetøy"', '"Blåbærsyltetøy"' ],
 		];

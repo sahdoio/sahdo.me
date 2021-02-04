@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Parser
@@ -41,7 +41,7 @@ class Sanitizer {
 
 	/**
 	 * Acceptable tag name charset from HTML5 parsing spec
-	 * http://www.w3.org/TR/html5/syntax.html#tag-open-state
+	 * https://www.w3.org/TR/html5/syntax.html#tag-open-state
 	 */
 	const ELEMENT_BITS_REGEX = '!^(/?)([A-Za-z][^\t\n\v />\0]*+)([^>]*?)(/?>)([^<]*)$!';
 
@@ -51,14 +51,14 @@ class Sanitizer {
 	 * for security reasons. There are NUMEROUS[1] ways to bypass blacklisting, the
 	 * only way to be secure from javascript: uri based xss vectors is to whitelist
 	 * things that you know are safe and deny everything else.
-	 * [1]: http://ha.ckers.org/xss.html
+	 * [1]: https://ha.ckers.org/xss.html
 	 */
 	const EVIL_URI_PATTERN = '!(^|\s|\*/\s*)(javascript|vbscript)([^\w]|$)!i';
 	const XMLNS_ATTRIBUTE_PATTERN = "/^xmlns:[:A-Z_a-z-.0-9]+$/";
 
 	/**
 	 * List of all named character entities defined in HTML 4.01
-	 * http://www.w3.org/TR/html4/sgml/entities.html
+	 * https://www.w3.org/TR/html4/sgml/entities.html
 	 * As well as &apos; which is only defined starting in XHTML1.
 	 */
 	private static $htmlEntities = [
@@ -333,7 +333,7 @@ class Sanitizer {
 	/**
 	 * Regular expression to match HTML/XML attribute pairs within a tag.
 	 * Allows some... latitude. Based on,
-	 * http://www.w3.org/TR/html5/syntax.html#before-attribute-value-state
+	 * https://www.w3.org/TR/html5/syntax.html#before-attribute-value-state
 	 * Used in Sanitizer::fixTagAttributes and Sanitizer::decodeTagAttributes
 	 * @return string
 	 */
@@ -764,7 +764,7 @@ class Sanitizer {
 			}
 
 			# Strip javascript "expression" from stylesheets.
-			# http://msdn.microsoft.com/workshop/author/dhtml/overview/recalc.asp
+			# https://msdn.microsoft.com/workshop/author/dhtml/overview/recalc.asp
 			if ( $attribute == 'style' ) {
 				$value = Sanitizer::checkCss( $value );
 			}
@@ -1110,11 +1110,11 @@ class Sanitizer {
 	 * ambiguous if it's part of something that looks like a percent escape
 	 * (which don't work reliably in fragments cross-browser).
 	 *
-	 * @see http://www.w3.org/TR/html401/types.html#type-name Valid characters
+	 * @see https://www.w3.org/TR/html401/types.html#type-name Valid characters
 	 *   in the id and name attributes
-	 * @see http://www.w3.org/TR/html401/struct/links.html#h-12.2.3 Anchors with
+	 * @see https://www.w3.org/TR/html401/struct/links.html#h-12.2.3 Anchors with
 	 *   the id attribute
-	 * @see http://www.whatwg.org/html/elements.html#the-id-attribute
+	 * @see https://www.whatwg.org/html/elements.html#the-id-attribute
 	 *   HTML5 definition of id attribute
 	 *
 	 * @param string $id Id to escape
@@ -1200,7 +1200,7 @@ class Sanitizer {
 	 *
 	 * @todo For extra validity, input should be validated UTF-8.
 	 *
-	 * @see http://www.w3.org/TR/CSS21/syndata.html Valid characters/format
+	 * @see https://www.w3.org/TR/CSS21/syndata.html Valid characters/format
 	 *
 	 * @param string $class
 	 * @return string
@@ -1313,7 +1313,7 @@ class Sanitizer {
 		} elseif ( !isset( $set[2] ) ) {
 			# In XHTML, attributes must have a value so return an empty string.
 			# See "Empty attribute syntax",
-			# http://www.w3.org/TR/html5/syntax.html#syntax-attribute-name
+			# https://www.w3.org/TR/html5/syntax.html#syntax-attribute-name
 			return "";
 		} else {
 			throw new MWException( "Tag conditions not met. This should never happen and is a bug." );
@@ -1583,7 +1583,7 @@ class Sanitizer {
 
 			# RDFa
 			# These attributes are specified in section 9 of
-			# http://www.w3.org/TR/2008/REC-rdfa-syntax-20081014
+			# https://www.w3.org/TR/2008/REC-rdfa-syntax-20081014
 			'about',
 			'property',
 			'resource',
@@ -1591,7 +1591,7 @@ class Sanitizer {
 			'typeof',
 
 			# Microdata. These are specified by
-			# http://www.whatwg.org/html/microdata.html#the-microdata-model
+			# https://www.whatwg.org/html/microdata.html#the-microdata-model
 			'itemid',
 			'itemprop',
 			'itemref',
@@ -1615,7 +1615,7 @@ class Sanitizer {
 		];
 
 		# Numbers refer to sections in HTML 4.01 standard describing the element.
-		# See: http://www.w3.org/TR/html4/
+		# See: https://www.w3.org/TR/html4/
 		$whitelist = [
 			# 7.5.4
 			'div'        => $block,
@@ -1662,7 +1662,7 @@ class Sanitizer {
 			# 9.3.2
 			'br'         => array_merge( $common, [ 'clear' ] ),
 
-			# http://www.whatwg.org/html/text-level-semantics.html#the-wbr-element
+			# https://www.whatwg.org/html/text-level-semantics.html#the-wbr-element
 			'wbr'        => $common,
 
 			# 9.3.4
@@ -1737,7 +1737,7 @@ class Sanitizer {
 			'hr'         => array_merge( $common, [ 'width' ] ),
 
 			# HTML Ruby annotation text module, simple ruby only.
-			# http://www.whatwg.org/html/text-level-semantics.html#the-ruby-element
+			# https://www.whatwg.org/html/text-level-semantics.html#the-ruby-element
 			'ruby'       => $common,
 			# rbc
 			'rb'         => $common,
@@ -1747,14 +1747,14 @@ class Sanitizer {
 
 			# MathML root element, where used for extensions
 			# 'title' may not be 100% valid here; it's XHTML
-			# http://www.w3.org/TR/REC-MathML/
+			# https://www.w3.org/TR/REC-MathML/
 			'math'       => [ 'class', 'style', 'id', 'title' ],
 
 			# HTML 5 section 4.6
 			'bdi' => $common,
 
 			# HTML5 elements, defined by:
-			# http://www.whatwg.org/html/
+			# https://www.whatwg.org/html/
 			'data' => array_merge( $common, [ 'value' ] ),
 			'time' => array_merge( $common, [ 'datetime' ] ),
 			'mark' => $common,
@@ -1829,7 +1829,7 @@ class Sanitizer {
 			list( /* $whole */, $protocol, $host, $rest ) = $matches;
 
 			// Characters that will be ignored in IDNs.
-			// http://tools.ietf.org/html/3454#section-3.1
+			// https://tools.ietf.org/html/3454#section-3.1
 			// Strip them before further processing so blacklists and such work.
 			$strip = "/
 				\\s|          # general whitespace
@@ -1876,7 +1876,7 @@ class Sanitizer {
 	 * Does a string look like an e-mail address?
 	 *
 	 * This validates an email address using an HTML5 specification found at:
-	 * http://www.whatwg.org/html/states-of-the-type-attribute.html#valid-e-mail-address
+	 * https://www.whatwg.org/html/states-of-the-type-attribute.html#valid-e-mail-address
 	 * Which as of 2011-01-24 says:
 	 *
 	 *   A valid e-mail address is a string that matches the ABNF production

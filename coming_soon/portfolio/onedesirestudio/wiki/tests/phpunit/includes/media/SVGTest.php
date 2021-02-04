@@ -33,7 +33,7 @@ class SvgTest extends MediaWikiMediaTestCase {
 			[ 'Tux.svg', [
 				'ObjectName' => 'Tux',
 				'ImageDescription' =>
-					'For more information see: http://commons.wikimedia.org/wiki/Image:Tux.svg',
+					'For more information see: https://commons.wikimedia.org/wiki/Image:Tux.svg',
 			] ],
 			[ 'Wikimedia-logo.svg', [] ]
 		];

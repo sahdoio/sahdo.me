@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -217,7 +217,7 @@ class ApiOpenSearch extends ApiBase {
 
 		switch ( $this->getFormat() ) {
 			case 'json':
-				// http://www.opensearch.org/Specifications/OpenSearch/Extensions/Suggestions/1.1
+				// https://www.opensearch.org/Specifications/OpenSearch/Extensions/Suggestions/1.1
 				$result->addArrayType( null, 'array' );
 				$result->addValue( null, 0, strval( $search ) );
 				$terms = [];
@@ -234,7 +234,7 @@ class ApiOpenSearch extends ApiBase {
 				break;
 
 			case 'xml':
-				// http://msdn.microsoft.com/en-us/library/cc891508%28v=vs.85%29.aspx
+				// https://msdn.microsoft.com/en-us/library/cc891508%28v=vs.85%29.aspx
 				$imageKeys = [
 					'source' => true,
 					'alt' => true,
@@ -259,7 +259,7 @@ class ApiOpenSearch extends ApiBase {
 				}
 				ApiResult::setIndexedTagName( $items, 'Item' );
 				$result->addValue( null, 'version', '2.0' );
-				$result->addValue( null, 'xmlns', 'http://opensearch.org/searchsuggest2' );
+				$result->addValue( null, 'xmlns', 'https://opensearch.org/searchsuggest2' );
 				$result->addValue( null, 'Query', strval( $search ) );
 				$result->addSubelementsList( null, 'Query' );
 				$result->addValue( null, 'Section', $items );

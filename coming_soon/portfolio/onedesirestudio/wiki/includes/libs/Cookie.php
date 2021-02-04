@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup HTTP
@@ -77,9 +77,9 @@ class Cookie {
 	 * Return the true if the cookie is valid is valid.  Otherwise,
 	 * false.  The uses a method similar to IE cookie security
 	 * described here:
-	 * http://kuza55.blogspot.com/2008/02/understanding-cookie-security.html
+	 * https://kuza55.blogspot.com/2008/02/understanding-cookie-security.html
 	 * A better method might be to use a blacklist like
-	 * http://publicsuffix.org/
+	 * https://publicsuffix.org/
 	 *
 	 * @todo fixme fails to detect 3-letter top-level domains
 	 * @todo fixme fails to detect 2-letter top-level domains for single-domain use (probably

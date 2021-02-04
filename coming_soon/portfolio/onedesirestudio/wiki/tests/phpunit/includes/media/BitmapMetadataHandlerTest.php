@@ -152,7 +152,7 @@ class BitmapMetadataHandlerTest extends MediaWikiTestCase {
 	public function testPNGNative() {
 		$handler = new BitmapMetadataHandler();
 		$result = $handler->PNG( $this->filePath . 'Png-native-test.png' );
-		$expected = 'http://example.com/url';
+		$expected = 'https://example.com/url';
 		$this->assertEquals( $expected, $result['metadata']['Identifier']['x-default'] );
 	}
 

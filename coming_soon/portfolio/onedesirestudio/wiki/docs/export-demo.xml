@@ -1,4 +1,4 @@
-<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
+<mediawiki xmlns="https://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.mediawiki.org/xml/export-0.10/ https://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
   
   <!-- Optional global configuration info -->
   <siteinfo>
@@ -9,7 +9,7 @@
     <dbname>demowiki</dbname>
     
     <!-- Forgot where you got this set? -->
-    <base>http://example.com/wiki/Main_Page</base>
+    <base>https://example.com/wiki/Main_Page</base>
     
     <!-- Source software version -->
     <generator>MediaWiki 1.24</generator>
@@ -137,7 +137,7 @@
       <contributor><username>Foobar</username><id>42</id></contributor>
       <comment>My awesomeest image!</comment>
       <filename>Some_image.jpg</filename>
-      <src>http://upload.wikimedia.org/commons/2/22/Some_image.jpg</src>
+      <src>https://upload.wikimedia.org/commons/2/22/Some_image.jpg</src>
       <size>12345</size>
     </upload>
   </page>

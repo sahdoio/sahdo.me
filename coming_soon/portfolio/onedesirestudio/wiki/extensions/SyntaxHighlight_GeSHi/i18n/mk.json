@@ -4,7 +4,7 @@
 			"Bjankuloski06"
 		]
 	},
-	"syntaxhighlight-desc": "Овозможува потцртување на синтакса <code>&lt;syntaxhighlight&gt;</code> со помош на [http://pygments.org/ Pygments — подвлекувач на Python-синтакса]",
+	"syntaxhighlight-desc": "Овозможува потцртување на синтакса <code>&lt;syntaxhighlight&gt;</code> со помош на [https://pygments.org/ Pygments — подвлекувач на Python-синтакса]",
 	"syntaxhighlight-error-category": "Страници со грешки при подвлекување на синтаксата",
 	"syntaxhighlight-error-category-desc": "Се појави грешка при обидот да се подвлече кодот вклучен во страницава.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Код",

@@ -3,7 +3,7 @@
  * Collection of methods to generate HTML content
  *
  * Copyright © 2009 Aryeh Gregor
- * http://www.mediawiki.org/
+ * https://www.mediawiki.org/
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -157,10 +157,10 @@ class Html {
 	 * @param string $contents The raw HTML contents of the element: *not*
 	 *   escaped!
 	 * @param array $attrs Associative array of attributes, e.g., array(
-	 *   'href' => 'http://www.mediawiki.org/' ). See expandAttributes() for
+	 *   'href' => 'https://www.mediawiki.org/' ). See expandAttributes() for
 	 *   further documentation.
 	 * @param string[] $modifiers classes to add to the button
-	 * @see http://tools.wmflabs.org/styleguide/desktop/index.html for guidance on available modifiers
+	 * @see https://tools.wmflabs.org/styleguide/desktop/index.html for guidance on available modifiers
 	 * @return string Raw HTML
 	 */
 	public static function linkButton( $contents, array $attrs, array $modifiers = [] ) {
@@ -177,10 +177,10 @@ class Html {
 	 * @param string $contents The raw HTML contents of the element: *not*
 	 *   escaped!
 	 * @param array $attrs Associative array of attributes, e.g., array(
-	 *   'href' => 'http://www.mediawiki.org/' ). See expandAttributes() for
+	 *   'href' => 'https://www.mediawiki.org/' ). See expandAttributes() for
 	 *   further documentation.
 	 * @param string[] $modifiers classes to add to the button
-	 * @see http://tools.wmflabs.org/styleguide/desktop/index.html for guidance on available modifiers
+	 * @see https://tools.wmflabs.org/styleguide/desktop/index.html for guidance on available modifiers
 	 * @return string Raw HTML
 	 */
 	public static function submitButton( $contents, array $attrs, array $modifiers = [] ) {
@@ -201,7 +201,7 @@ class Html {
 	 *
 	 * @param string $element The element's name, e.g., 'a'
 	 * @param array $attribs Associative array of attributes, e.g., array(
-	 *   'href' => 'http://www.mediawiki.org/' ). See expandAttributes() for
+	 *   'href' => 'https://www.mediawiki.org/' ). See expandAttributes() for
 	 *   further documentation.
 	 * @param string $contents The raw HTML contents of the element: *not*
 	 *   escaped!
@@ -322,7 +322,7 @@ class Html {
 	 *
 	 * @param string $element Name of the element, e.g., 'a'
 	 * @param array $attribs Associative array of attributes, e.g., array(
-	 *   'href' => 'http://www.mediawiki.org/' ).  See expandAttributes() for
+	 *   'href' => 'https://www.mediawiki.org/' ).  See expandAttributes() for
 	 *   further documentation.
 	 * @return array An array of attributes functionally identical to $attribs
 	 */
@@ -433,8 +433,8 @@ class Html {
 	/**
 	 * Given an associative array of element attributes, generate a string
 	 * to stick after the element name in HTML output.  Like array( 'href' =>
-	 * 'http://www.mediawiki.org/' ) becomes something like
-	 * ' href="http://www.mediawiki.org"'.  Again, this is like
+	 * 'https://www.mediawiki.org/' ) becomes something like
+	 * ' href="https://www.mediawiki.org"'.  Again, this is like
 	 * Xml::expandAttributes(), but it implements some HTML-specific logic.
 	 *
 	 * Attributes that can contain space-separated lists ('class', 'accesskey' and 'rel') array
@@ -460,7 +460,7 @@ class Html {
 	 * @endcode
 	 *
 	 * @param array $attribs Associative array of attributes, e.g., array(
-	 *   'href' => 'http://www.mediawiki.org/' ).  Values will be HTML-escaped.
+	 *   'href' => 'https://www.mediawiki.org/' ).  Values will be HTML-escaped.
 	 *   A value of false means to omit the attribute.  For boolean attributes,
 	 *   you can omit the key, e.g., array( 'checked' ) instead of
 	 *   array( 'checked' => 'checked' ) or such.
@@ -503,8 +503,8 @@ class Html {
 				continue;
 			}
 
-			// http://www.w3.org/TR/html401/index/attributes.html ("space-separated")
-			// http://www.w3.org/TR/html5/index.html#attributes-1 ("space-separated")
+			// https://www.w3.org/TR/html401/index/attributes.html ("space-separated")
+			// https://www.w3.org/TR/html5/index.html#attributes-1 ("space-separated")
 			$spaceSeparatedListAttributes = [
 				'class', // html4, html5
 				'accesskey', // as of html5, multiple space-separated values allowed
@@ -930,7 +930,7 @@ class Html {
 			$ret .= "<?xml version=\"1.0\" encoding=\"UTF-8\" ?" . ">\n";
 
 			// Add the standard xmlns
-			$attribs['xmlns'] = 'http://www.w3.org/1999/xhtml';
+			$attribs['xmlns'] = 'https://www.w3.org/1999/xhtml';
 
 			// And support custom namespaces
 			foreach ( $wgXhtmlNamespaces as $tag => $ns ) {
@@ -963,7 +963,7 @@ class Html {
 	 * @return bool
 	 */
 	public static function isXmlMimeType( $mimetype ) {
-		# http://www.whatwg.org/html/infrastructure.html#xml-mime-type
+		# https://www.whatwg.org/html/infrastructure.html#xml-mime-type
 		# * text/xml
 		# * application/xml
 		# * Any MIME type with a subtype ending in +xml (this implicitly includes application/xhtml+xml)
@@ -1012,7 +1012,7 @@ class Html {
 	 *
 	 * @note srcset width and height values are not supported.
 	 *
-	 * @see http://www.whatwg.org/html/embedded-content-1.html#attr-img-srcset
+	 * @see https://www.whatwg.org/html/embedded-content-1.html#attr-img-srcset
 	 *
 	 * @par Example:
 	 * @code

@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -81,7 +81,7 @@ class IcuCollation extends Collation {
 	 * characters (or character groups) to use as headings.
 	 *
 	 * Initially generated based on the primary level of Unicode collation
-	 * tailorings available at http://developer.mimer.com/charts/tailorings.htm ,
+	 * tailorings available at https://developer.mimer.com/charts/tailorings.htm ,
 	 * later modified.
 	 *
 	 * Empty arrays are intended; this signifies that the data for the language is
@@ -321,7 +321,7 @@ class IcuCollation extends Collation {
 		 * element should be a prefix of some other element, so I think
 		 * this is safe. See:
 		 * - https://ssl.icu-project.org/repos/icu/icuhtml/trunk/design/collation/ICU_collation_design.htm
-		 * - http://site.icu-project.org/design/collation/uca-weight-allocation
+		 * - https://site.icu-project.org/design/collation/uca-weight-allocation
 		 *
 		 * Additionally, there is something called primary compression to
 		 * worry about. Basically, if you have two primary elements that
@@ -458,7 +458,7 @@ class IcuCollation extends Collation {
 		}
 
 		$versionPrefix = substr( $icuVersion, 0, 3 );
-		// Source: http://site.icu-project.org/download
+		// Source: https://site.icu-project.org/download
 		$map = [
 			'50.' => '6.2',
 			'49.' => '6.1',

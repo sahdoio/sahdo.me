@@ -13,7 +13,7 @@ class WikiMapTest extends MediaWikiLangTestCase {
 		$conf = new SiteConfiguration();
 		$conf->settings = [
 			'wgServer' => [
-				'enwiki' => 'http://en.example.org',
+				'enwiki' => 'https://en.example.org',
 				'ruwiki' => '//ru.example.org',
 			],
 			'wgArticlePath' => [
@@ -31,7 +31,7 @@ class WikiMapTest extends MediaWikiLangTestCase {
 
 	public function provideGetWiki() {
 		// As provided by $wgConf
-		$enwiki = new WikiReference( 'http://en.example.org', '/w/$1' );
+		$enwiki = new WikiReference( 'https://en.example.org', '/w/$1' );
 		$ruwiki = new WikiReference( '//ru.example.org', '/wiki/$1' );
 
 		// Created from site objects
@@ -83,7 +83,7 @@ class WikiMapTest extends MediaWikiLangTestCase {
 			'unknown' => [ false, 'xyzzy', 'Foo' ],
 			'enwiki' => [
 				'<a class="external" rel="nofollow" ' .
-					'href="http://en.example.org/w/Foo">Foo</a>',
+					'href="https://en.example.org/w/Foo">Foo</a>',
 				'enwiki',
 				'Foo'
 			],
@@ -119,7 +119,7 @@ class WikiMapTest extends MediaWikiLangTestCase {
 			'unknown' => [ false, 'xyzzy', 'Foo' ],
 			'enwiki' => [
 				'<a class="external" rel="nofollow" ' .
-					'href="http://en.example.org/w/User:Foo">User:Foo</a>',
+					'href="https://en.example.org/w/User:Foo">User:Foo</a>',
 				'enwiki',
 				'Foo'
 			],
@@ -150,7 +150,7 @@ class WikiMapTest extends MediaWikiLangTestCase {
 	public function provideGetForeignURL() {
 		return [
 			'unknown' => [ false, 'xyzzy', 'Foo' ],
-			'enwiki' => [ 'http://en.example.org/w/Foo', 'enwiki', 'Foo' ],
+			'enwiki' => [ 'https://en.example.org/w/Foo', 'enwiki', 'Foo' ],
 			'enwiktionary (sites)' => [
 				'https://en.wiktionary.org/wiki/Testme',
 				'enwiktionary',

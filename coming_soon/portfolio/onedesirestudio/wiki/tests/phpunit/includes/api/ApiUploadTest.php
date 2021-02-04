@@ -423,7 +423,7 @@ class ApiUploadTest extends ApiTestCaseUpload {
 		// (using RandomImageGenerator for large files is not stable)
 		// @todo Don't download files from wikimedia.org
 		$mimeType = 'image/jpeg';
-		$url = 'http://upload.wikimedia.org/wikipedia/commons/'
+		$url = 'https://upload.wikimedia.org/wikipedia/commons/'
 			. 'e/ed/Oberaargletscher_from_Oberaar%2C_2010_07.JPG';
 		$filePath = $this->getNewTempDirectory() . '/Oberaargletscher_from_Oberaar.jpg';
 		try {

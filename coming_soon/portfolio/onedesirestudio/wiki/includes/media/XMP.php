@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -115,8 +115,8 @@ class XMPReader implements LoggerAwareInterface {
 	const MODE_ALT = 15; // non-language alt. Currently not implemented, and not needed atm.
 	const MODE_BAGSTRUCT = 16; // A BAG of Structs.
 
-	const NS_RDF = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#';
-	const NS_XML = 'http://www.w3.org/XML/1998/namespace';
+	const NS_RDF = 'https://www.w3.org/1999/02/22-rdf-syntax-ns#';
+	const NS_XML = 'https://www.w3.org/XML/1998/namespace';
 
 	// States used while determining if XML is safe to parse
 	const PARSABLE_UNKNOWN = 0;
@@ -306,7 +306,7 @@ class XMPReader implements LoggerAwareInterface {
 		try {
 
 			// detect encoding by looking for BOM which is supposed to be in processing instruction.
-			// see page 12 of http://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart3.pdf
+			// see page 12 of https://www.adobe.com/devnet/xmp/pdfs/XMPSpecificationPart3.pdf
 			if ( !$this->charset ) {
 				$bom = [];
 				if ( preg_match( '/\xEF\xBB\xBF|\xFE\xFF|\x00\x00\xFE\xFF|\xFF\xFE\x00\x00|\xFF\xFE/',
@@ -411,7 +411,7 @@ class XMPReader implements LoggerAwareInterface {
 	/** Entry point for XMPExtended blocks in jpeg files
 	 *
 	 * @todo In serious need of testing
-	 * @see http://www.adobe.ge/devnet/xmp/pdfs/XMPSpecificationPart3.pdf XMP spec part 3 page 20
+	 * @see https://www.adobe.ge/devnet/xmp/pdfs/XMPSpecificationPart3.pdf XMP spec part 3 page 20
 	 * @param string $content XMPExtended block minus the namespace signature
 	 * @return bool If it succeeded.
 	 */
@@ -1279,7 +1279,7 @@ class XMPReader implements LoggerAwareInterface {
 	 *
 	 * @par Example:
 	 * @code
-	 * <rdf:Description rdf:about="" xmlns:exif="http://ns.adobe.com/exif/1.0/" exif:DigitalZoomRatio="0/10">
+	 * <rdf:Description rdf:about="" xmlns:exif="https://ns.adobe.com/exif/1.0/" exif:DigitalZoomRatio="0/10">
 	 * @endcode
 	 *
 	 * @param array $attribs Array attribute=>value

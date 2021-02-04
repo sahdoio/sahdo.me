@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Deployment
@@ -282,7 +282,7 @@ class MssqlInstaller extends DatabaseInstaller {
 		// Check to ensure we can grant everything needed as well
 		// We can't actually tell if we have WITH GRANT OPTION for a given permission, so we assume we do
 		// and just check for the permission
-		// http://technet.microsoft.com/en-us/library/ms178569.aspx
+		// https://technet.microsoft.com/en-us/library/ms178569.aspx
 		// The following array sets up which permissions imply whatever permissions we specify
 		$implied = [
 			// schema           database  server

@@ -81,7 +81,7 @@ class UploadFromUrlTest extends ApiTestCase {
 		try {
 			$this->doApiRequest( [
 				'action' => 'upload',
-				'url' => 'http://www.example.com/test.png',
+				'url' => 'https://www.example.com/test.png',
 				'token' => $token,
 			], $data );
 		} catch ( UsageException $e ) {
@@ -95,7 +95,7 @@ class UploadFromUrlTest extends ApiTestCase {
 		try {
 			$this->doApiRequest( [
 				'action' => 'upload',
-				'url' => 'http://www.example.com/test.png',
+				'url' => 'https://www.example.com/test.png',
 				'filename' => 'UploadFromUrlTest.png',
 				'token' => $token,
 			], $data );
@@ -119,7 +119,7 @@ class UploadFromUrlTest extends ApiTestCase {
 		$data = $this->doApiRequest( [
 			'action' => 'upload',
 			'filename' => 'UploadFromUrlTest.png',
-			'url' => 'http://upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png',
+			'url' => 'https://upload.wikimedia.org/wikipedia/mediawiki/b/bc/Wiki.png',
 			'ignorewarnings' => true,
 			'token' => $token,
 		], $data );

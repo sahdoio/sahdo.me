@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -106,7 +106,7 @@ class WebRequest {
 	 */
 	public static function getPathInfo( $want = 'all' ) {
 		global $wgUsePathInfo;
-		// PATH_INFO is mangled due to http://bugs.php.net/bug.php?id=31892
+		// PATH_INFO is mangled due to https://bugs.php.net/bug.php?id=31892
 		// And also by Apache 2.x, double slashes are converted to single slashes.
 		// So we will use REQUEST_URI if possible.
 		$matches = [];
@@ -114,7 +114,7 @@ class WebRequest {
 			// Slurp out the path portion to examine...
 			$url = $_SERVER['REQUEST_URI'];
 			if ( !preg_match( '!^https?://!', $url ) ) {
-				$url = 'http://unused' . $url;
+				$url = 'https://unused' . $url;
 			}
 			MediaWiki\suppressWarnings();
 			$a = parse_url( $url );
@@ -168,7 +168,7 @@ class WebRequest {
 		} elseif ( $wgUsePathInfo ) {
 			if ( isset( $_SERVER['ORIG_PATH_INFO'] ) && $_SERVER['ORIG_PATH_INFO'] != '' ) {
 				// Mangled PATH_INFO
-				// http://bugs.php.net/bug.php?id=31892
+				// https://bugs.php.net/bug.php?id=31892
 				// Also reported when ini_get('cgi.fix_pathinfo')==false
 				$matches['title'] = substr( $_SERVER['ORIG_PATH_INFO'], 1 );
 
@@ -372,7 +372,7 @@ class WebRequest {
 	 */
 	private function getGPCVal( $arr, $name, $default ) {
 		# PHP is so nice to not touch input data, except sometimes:
-		# http://us2.php.net/variables.external#language.variables.external.dot-in-names
+		# https://us2.php.net/variables.external#language.variables.external.dot-in-names
 		# Work around PHP *feature* to avoid *bugs* elsewhere.
 		$name = strtr( $name, '.', '_' );
 		if ( isset( $arr[$name] ) ) {
@@ -1096,7 +1096,7 @@ HTML;
 	 */
 	public function getAcceptLang() {
 		// Modified version of code found at
-		// http://www.thefutureoftheweb.com/blog/use-accept-language-header
+		// https://www.thefutureoftheweb.com/blog/use-accept-language-header
 		$acceptLang = $this->getHeader( 'Accept-Language' );
 		if ( !$acceptLang ) {
 			return [];

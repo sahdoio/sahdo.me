@@ -400,7 +400,7 @@
 	"italic_tip": "ཡིག་གཟུགས་གསེག་མ།",
 	"link_sample": "མཚམས་སྦྱོར་ཁ་ཡིག",
 	"link_tip": "ཕྱི་རོལ་མཐུད་སྦྲེལ།",
-	"extlink_sample": "Http://www.example.com སྦྲེལ་མཐུད་ཁ་བྱང་།",
+	"extlink_sample": "https://www.example.com སྦྲེལ་མཐུད་ཁ་བྱང་།",
 	"extlink_tip": "ཕྱི་ཕྱོགས་དྲ་འབྲེལ།",
 	"headline_sample": "འགོ་བརྗོད་ཡིག་གཟུགས།",
 	"headline_tip": "རིམ་པ། ༢ འགོ་ཕྲེང་།",

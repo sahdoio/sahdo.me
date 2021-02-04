@@ -62,7 +62,7 @@ class RenameUserJob extends Job {
 		if ( $logId ) {
 			# Block until the transaction that inserted this job commits.
 			# The atomic section is for sanity as FOR UPDATE does not lock in auto-commit mode
-			# per http://dev.mysql.com/doc/refman/5.7/en/innodb-locking-reads.html.
+			# per https://dev.mysql.com/doc/refman/5.7/en/innodb-locking-reads.html.
 			$dbw->startAtomic( __METHOD__ );
 			$committed = $dbw->selectField( 'logging',
 				'1',

@@ -5,7 +5,7 @@
 			"Liuxinyu970226"
 		]
 	},
-	"syntaxhighlight-desc": "使用[http://pygments.org/ Pygments - Python syntax highlighter]以提供语法高亮<code>&lt;syntaxhighlight&gt;</code>",
+	"syntaxhighlight-desc": "使用[https://pygments.org/ Pygments - Python syntax highlighter]以提供语法高亮<code>&lt;syntaxhighlight&gt;</code>",
 	"syntaxhighlight-error-category": "有语法高亮错误的页面",
 	"syntaxhighlight-error-category-desc": "尝试高亮包含在页面中的代码时出错。",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "代码",

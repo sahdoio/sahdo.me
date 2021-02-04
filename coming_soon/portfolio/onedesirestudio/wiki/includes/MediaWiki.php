@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -693,7 +693,7 @@ class MediaWiki {
 			)
 		) {
 			$oldUrl = $request->getFullRequestURL();
-			$redirUrl = preg_replace( '#^http://#', 'https://', $oldUrl );
+			$redirUrl = preg_replace( '#^https://#', 'https://', $oldUrl );
 
 			// ATTENTION: This hook is likely to be removed soon due to overall design of the system.
 			if ( Hooks::run( 'BeforeHttpsRedirect', [ $this->context, &$redirUrl ] ) ) {

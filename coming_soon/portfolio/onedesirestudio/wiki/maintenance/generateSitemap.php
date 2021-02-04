@@ -18,12 +18,12 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Maintenance
- * @see http://www.sitemaps.org/
- * @see http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+ * @see https://www.sitemaps.org/
+ * @see https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
  */
 
 require_once __DIR__ . '/Maintenance.php';
@@ -40,7 +40,7 @@ class GenerateSitemap extends Maintenance {
 	/**
 	 * The maximum amount of urls in a sitemap file
 	 *
-	 * @link http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+	 * @link https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
 	 *
 	 * @var int
 	 */
@@ -49,7 +49,7 @@ class GenerateSitemap extends Maintenance {
 	/**
 	 * The maximum size of a sitemap file
 	 *
-	 * @link http://www.sitemaps.org/faq.php#faq_sitemap_size
+	 * @link https://www.sitemaps.org/faq.php#faq_sitemap_size
 	 *
 	 * @var int
 	 */
@@ -468,7 +468,7 @@ class GenerateSitemap extends Maintenance {
 	 * @return string
 	 */
 	function xmlSchema() {
-		return 'http://www.sitemaps.org/schemas/sitemap/0.9';
+		return 'https://www.sitemaps.org/schemas/sitemap/0.9';
 	}
 
 	/**

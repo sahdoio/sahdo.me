@@ -14,7 +14,7 @@ class ApiFormatXmlTest extends ApiFormatTestBase {
 		$page = WikiPage::factory( Title::newFromText( 'MediaWiki:ApiFormatXmlTest.xsl' ) );
 		// @codingStandardsIgnoreStart Generic.Files.LineLength
 		$page->doEditContent( new WikitextContent(
-			'<?xml version="1.0"?><xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" />'
+			'<?xml version="1.0"?><xsl:stylesheet version="1.0" xmlns:xsl="https://www.w3.org/1999/XSL/Transform" />'
 		), 'Summary' );
 		// @codingStandardsIgnoreEnd
 		$page = WikiPage::factory( Title::newFromText( 'MediaWiki:ApiFormatXmlTest' ) );
@@ -101,7 +101,7 @@ class ApiFormatXmlTest extends ApiFormatTestBase {
 				'<?xml version="1.0"?><api><_foo.20.bar>a</_foo.20.bar><_foo.20.bar>b</_foo.20.bar></api>' ],
 
 			// includenamespace param
-			[ [ 'x' => 'foo' ], '<?xml version="1.0"?><api x="foo" xmlns="http://www.mediawiki.org/xml/api/" />',
+			[ [ 'x' => 'foo' ], '<?xml version="1.0"?><api x="foo" xmlns="https://www.mediawiki.org/xml/api/" />',
 				[ 'includexmlnamespace' => 1 ] ],
 
 			// xslt param

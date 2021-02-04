@@ -459,7 +459,7 @@ class HtmlTest extends MediaWikiTestCase {
 
 	/**
 	 * List of input element types values introduced by HTML5
-	 * Full list at http://www.w3.org/TR/html-markup/input.html
+	 * Full list at https://www.w3.org/TR/html-markup/input.html
 	 */
 	public static function provideHtml5InputTypes() {
 		$types = [
@@ -602,7 +602,7 @@ class HtmlTest extends MediaWikiTestCase {
 		];
 
 		# <button> specific handling
-		# see remarks on http://msdn.microsoft.com/en-us/library/ie/ms535211%28v=vs.85%29.aspx
+		# see remarks on https://msdn.microsoft.com/en-us/library/ie/ms535211%28v=vs.85%29.aspx
 		$cases[] = [ '<button type="submit"></button>',
 			'button', [ 'type' => 'submit' ],
 			'According to standard the default type is "submit". '

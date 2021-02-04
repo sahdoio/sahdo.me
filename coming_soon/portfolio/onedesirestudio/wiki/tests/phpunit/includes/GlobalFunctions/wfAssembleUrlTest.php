@@ -27,7 +27,7 @@ class WfAssembleUrlTest extends MediaWikiTestCase {
 			'//' => [
 				'delimiter' => '//',
 			],
-			'http://' => [
+			'https://' => [
 				'scheme' => 'http',
 				'delimiter' => '://',
 			],
@@ -100,7 +100,7 @@ class WfAssembleUrlTest extends MediaWikiTestCase {
 			}
 		}
 
-		$complexURL = 'http://id:key@example.org:321' .
+		$complexURL = 'https://id:key@example.org:321' .
 			'/over/there?name=ferret&foo=bar#nose';
 		$cases[] = [
 			wfParseUrl( $complexURL ),

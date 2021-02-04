@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -31,7 +31,7 @@ use Cdb\Writer;
  * space. The performance advantage is greater when the DBA extension is
  * available than it is with the PHP port.
  *
- * See Cdb.php and http://cr.yp.to/cdb.html
+ * See Cdb.php and https://cr.yp.to/cdb.html
  */
 class LCStoreCDB implements LCStore {
 

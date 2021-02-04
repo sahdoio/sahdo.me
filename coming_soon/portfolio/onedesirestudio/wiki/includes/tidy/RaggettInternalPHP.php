@@ -32,7 +32,7 @@ class RaggettInternalPHP extends RaggettBase {
 		$retval = $tidy->getStatus();
 		if ( $retval == 2 ) {
 			// 2 is magic number for fatal error
-			// http://www.php.net/manual/en/function.tidy-get-status.php
+			// https://www.php.net/manual/en/function.tidy-get-status.php
 			$cleansource = null;
 		} else {
 			$cleansource = tidy_get_output( $tidy );

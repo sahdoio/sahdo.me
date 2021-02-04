@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "https://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
  <!ATTLIST svg
-  xmlns:xlink CDATA #FIXED "http://www.w3.org/1999/xlink">
+  xmlns:xlink CDATA #FIXED "https://www.w3.org/1999/xlink">
 ]>
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" version="1" x="0.00000000" y="0.00000000" width="60.0000000" height="60.0000000" viewBox="0 0 256 256" id="svg548">
+<!-- Created with Sodipodi ("https://www.sodipodi.com/") -->
+<svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:a="https://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" version="1" x="0.00000000" y="0.00000000" width="60.0000000" height="60.0000000" viewBox="0 0 256 256" id="svg548">
   <defs id="defs572"/>
   <g style="font-size:12;stroke:#000000;" id="Layer_1">
     <path d="M 256 256 L 0 256 L 0 0 L 256 0 L 256 256 z " style="fill:none;stroke:none;" id="path550"/>

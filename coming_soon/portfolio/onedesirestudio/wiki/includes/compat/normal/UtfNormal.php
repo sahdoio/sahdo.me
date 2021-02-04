@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup UtfNormal
@@ -40,7 +40,7 @@ use UtfNormal\Validator;
  *
  * All functions can be called static.
  *
- * See description of forms at http://www.unicode.org/reports/tr15/
+ * See description of forms at https://www.unicode.org/reports/tr15/
  *
  * @deprecated since 1.25, use UtfNormal\Validator directly
  * @ingroup UtfNormal

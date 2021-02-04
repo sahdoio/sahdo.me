@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup LockManager
@@ -258,7 +258,7 @@ class MySqlLockManager extends DBLockManager {
 
 	/**
 	 * Get a connection to a lock DB and acquire locks on $paths.
-	 * This does not use GET_LOCK() per http://bugs.mysql.com/bug.php?id=1118.
+	 * This does not use GET_LOCK() per https://bugs.mysql.com/bug.php?id=1118.
 	 *
 	 * @see DBLockManager::getLocksOnServer()
 	 * @param string $lockSrv

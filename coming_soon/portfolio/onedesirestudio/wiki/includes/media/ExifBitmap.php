@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -228,7 +228,7 @@ class ExifBitmapHandler extends BitmapHandler {
 		$data = unserialize( $data );
 		MediaWiki\restoreWarnings();
 		if ( isset( $data['Orientation'] ) ) {
-			# See http://sylvana.net/jpegcrop/exif_orientation.html
+			# See https://sylvana.net/jpegcrop/exif_orientation.html
 			switch ( $data['Orientation'] ) {
 				case 8:
 					return 90;

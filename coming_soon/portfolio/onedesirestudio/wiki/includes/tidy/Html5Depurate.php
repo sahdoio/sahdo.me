@@ -8,7 +8,7 @@ use Exception;
 class Html5Depurate extends TidyDriverBase {
 	public function __construct( array $config ) {
 		parent::__construct( $config + [
-			'url' => 'http://localhost:4339/document',
+			'url' => 'https://localhost:4339/document',
 			'timeout' => 10,
 			'connectTimeout' => 0.5,
 		] );

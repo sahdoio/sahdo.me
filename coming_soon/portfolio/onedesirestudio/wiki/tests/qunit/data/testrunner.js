@@ -49,7 +49,7 @@
 	 * SinonJS
 	 *
 	 * Glue code for nicer integration with QUnit setup/teardown
-	 * Inspired by http://sinonjs.org/releases/sinon-qunit-1.0.0.js
+	 * Inspired by https://sinonjs.org/releases/sinon-qunit-1.0.0.js
 	 * Fixes:
 	 * - Work properly with asynchronous QUnit by using module setup/teardown
 	 *   instead of synchronously wrapping QUnit.test.
@@ -500,14 +500,14 @@
 
 	QUnit.test( 'htmlEqual', 8, function ( assert ) {
 		assert.htmlEqual(
-			'<div><p class="some classes" data-length="10">Child paragraph with <a href="http://example.com">A link</a></p>Regular text<span>A span</span></div>',
-			'<div><p data-length=\'10\'  class=\'some classes\'>Child paragraph with <a href=\'http://example.com\' >A link</a></p>Regular text<span>A span</span></div>',
+			'<div><p class="some classes" data-length="10">Child paragraph with <a href="https://example.com">A link</a></p>Regular text<span>A span</span></div>',
+			'<div><p data-length=\'10\'  class=\'some classes\'>Child paragraph with <a href=\'https://example.com\' >A link</a></p>Regular text<span>A span</span></div>',
 			'Attribute order, spacing and quotation marks (equal)'
 		);
 
 		assert.notHtmlEqual(
-			'<div><p class="some classes" data-length="10">Child paragraph with <a href="http://example.com">A link</a></p>Regular text<span>A span</span></div>',
-			'<div><p data-length=\'10\'  class=\'some more classes\'>Child paragraph with <a href=\'http://example.com\' >A link</a></p>Regular text<span>A span</span></div>',
+			'<div><p class="some classes" data-length="10">Child paragraph with <a href="https://example.com">A link</a></p>Regular text<span>A span</span></div>',
+			'<div><p data-length=\'10\'  class=\'some more classes\'>Child paragraph with <a href=\'https://example.com\' >A link</a></p>Regular text<span>A span</span></div>',
 			'Attribute order, spacing and quotation marks (not equal)'
 		);
 
@@ -535,14 +535,14 @@
 		);
 
 		assert.htmlEqual(
-			'foo<a href="http://example.com">example</a>bar',
-			'foo<a href="http://example.com">example</a>bar',
+			'foo<a href="https://example.com">example</a>bar',
+			'foo<a href="https://example.com">example</a>bar',
 			'Outer text nodes are compared (equal)'
 		);
 
 		assert.notHtmlEqual(
-			'foo<a href="http://example.com">example</a>bar',
-			'foo<a href="http://example.com">example</a>quux',
+			'foo<a href="https://example.com">example</a>bar',
+			'foo<a href="https://example.com">example</a>quux',
 			'Outer text nodes are compared (last text node different)'
 		);
 

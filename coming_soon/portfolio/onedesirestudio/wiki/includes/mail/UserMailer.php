@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @author <brion@pobox.com>
@@ -283,7 +283,7 @@ class UserMailer {
 			->getFullURL( '', false, PROTO_CANONICAL ) . '>';
 
 		// Line endings need to be different on Unix and Windows due to
-		// the bug described at http://trac.wordpress.org/ticket/2603
+		// the bug described at https://trac.wordpress.org/ticket/2603
 		$endl = PHP_EOL;
 
 		if ( is_array( $body ) ) {

@@ -29,7 +29,7 @@
  * CHANGELOG
  * =========
  * Init - This localisation is based on a file kindly donated by the folks at MIMOS
- * http://www.asiaosc.org/enwiki/page/Knowledgebase_Home.html
+ * https://www.asiaosc.org/enwiki/page/Knowledgebase_Home.html
  * Sep 2007 - Rewritten by the folks at ms.wikipedia.org
  */
 

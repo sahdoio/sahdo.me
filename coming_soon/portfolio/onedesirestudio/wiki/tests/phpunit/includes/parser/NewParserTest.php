@@ -69,7 +69,7 @@ class NewParserTest extends MediaWikiTestCase {
 		$tmpGlobals['wgLanguageCode'] = 'en';
 		$tmpGlobals['wgContLang'] = Language::factory( 'en' );
 		$tmpGlobals['wgSitename'] = 'MediaWiki';
-		$tmpGlobals['wgServer'] = 'http://example.org';
+		$tmpGlobals['wgServer'] = 'https://example.org';
 		$tmpGlobals['wgServerName'] = 'example.org';
 		$tmpGlobals['wgScriptPath'] = '';
 		$tmpGlobals['wgScript'] = '/index.php';
@@ -85,7 +85,7 @@ class NewParserTest extends MediaWikiTestCase {
 		$tmpGlobals['wgLocalFileRepo'] = [
 			'class' => 'LocalRepo',
 			'name' => 'local',
-			'url' => 'http://example.com/images',
+			'url' => 'https://example.com/images',
 			'hashLevels' => 2,
 			'transformVia404' => false,
 			'backend' => 'local-backend'
@@ -418,7 +418,7 @@ class NewParserTest extends MediaWikiTestCase {
 			'wgLocalFileRepo' => [
 				'class' => 'LocalRepo',
 				'name' => 'local',
-				'url' => 'http://example.com/images',
+				'url' => 'https://example.com/images',
 				'hashLevels' => 2,
 				'transformVia404' => false,
 				'backend' => $backend
@@ -551,7 +551,7 @@ class NewParserTest extends MediaWikiTestCase {
 
 		// No helpful SVG file to copy, so make one ourselves
 		$data = '<?xml version="1.0" encoding="utf-8"?>' .
-			'<svg xmlns="http://www.w3.org/2000/svg"' .
+			'<svg xmlns="https://www.w3.org/2000/svg"' .
 			' version="1.1" width="240" height="180"/>';
 
 		$backend->prepare( [ 'dir' => "$base/local-public/f/ff" ] );

@@ -24,7 +24,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @author Chris Steipp
  * @file
@@ -75,7 +75,7 @@ class MWCryptHKDF {
 
 	/**
 	 * a "context information" string CTXinfo (which may be null)
-	 * See http://eprint.iacr.org/2010/264.pdf Section 4.1
+	 * See https://eprint.iacr.org/2010/264.pdf Section 4.1
 	 */
 	protected $context = [];
 
@@ -144,7 +144,7 @@ class MWCryptHKDF {
 				// 16 bytes from MWCryptRand, which will use a small amount of
 				// entropy from our pool. Note, "XTR may be deterministic or keyed
 				// via an optional “salt value”  (i.e., a non-secret random
-				// value)..." - http://eprint.iacr.org/2010/264.pdf. However, we
+				// value)..." - https://eprint.iacr.org/2010/264.pdf. However, we
 				// use a strongly random value since we can.
 				$lastSalt = MWCryptRand::generate( 16 );
 			}
@@ -215,7 +215,7 @@ class MWCryptHKDF {
 
 	/**
 	 * RFC5869 defines HKDF in 2 steps, extraction and expansion.
-	 * From http://eprint.iacr.org/2010/264.pdf:
+	 * From https://eprint.iacr.org/2010/264.pdf:
 	 *
 	 * The scheme HKDF is specifed as:
 	 * 	HKDF(XTS, SKM, CTXinfo, L) = K(1) || K(2) || ... || K(t)
@@ -231,7 +231,7 @@ class MWCryptHKDF {
 	 * XTS is the "extractor salt"
 	 * SKM is the "secret keying material"
 	 *
-	 * N.B. http://eprint.iacr.org/2010/264.pdf seems to differ from RFC 5869 in that the test
+	 * N.B. https://eprint.iacr.org/2010/264.pdf seems to differ from RFC 5869 in that the test
 	 * vectors from RFC 5869 only work if K(0) = '' and K(1) = HMAC(PRK, K(0) || CTXinfo || 1)
 	 *
 	 * @param string $hash The hashing function to use (e.g., sha256)

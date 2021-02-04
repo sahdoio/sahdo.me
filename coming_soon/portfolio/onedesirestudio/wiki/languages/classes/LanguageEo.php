@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @author Brion Vibber <brion@pobox.com>
@@ -43,8 +43,8 @@ class LanguageEo extends Language {
 	 *     ux = ŭ     uxx = ux
 	 *     xx = x
 	 *
-	 *   http://en.wikipedia.org/wiki/Esperanto_orthography#X-system
-	 *   http://eo.wikipedia.org/wiki/X-sistemo
+	 *   https://en.wikipedia.org/wiki/Esperanto_orthography#X-system
+	 *   https://eo.wikipedia.org/wiki/X-sistemo
 	 *
 	 * X-conversion is applied, in either direction, between "utf-8" and "x" charsets;
 	 * this comes into effect when input is run through $wgRequest->getText() and the

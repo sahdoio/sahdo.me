@@ -5,7 +5,7 @@
 			"Xuacu"
 		]
 	},
-	"syntaxhighlight-desc": "Proporciona resaltáu de sintaxis <code>&lt;syntaxhighlight&gt;</code> usando [http://pygments.org/ Pygments - Resaltador de sintaxis en Python]",
+	"syntaxhighlight-desc": "Proporciona resaltáu de sintaxis <code>&lt;syntaxhighlight&gt;</code> usando [https://pygments.org/ Pygments - Resaltador de sintaxis en Python]",
 	"syntaxhighlight-error-category": "Páxines con errores de resaltáu de sintaxis",
 	"syntaxhighlight-error-category-desc": "Hebo un error al intentar resaltar el códigu incluyíu na páxina.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Códigu",

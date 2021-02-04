@@ -23,7 +23,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup FileRepo
@@ -743,18 +743,18 @@ class FileRepo {
 	public function getDescriptionUrl( $name ) {
 		$encName = wfUrlencode( $name );
 		if ( !is_null( $this->descBaseUrl ) ) {
-			# "http://example.com/wiki/File:"
+			# "https://example.com/wiki/File:"
 			return $this->descBaseUrl . $encName;
 		}
 		if ( !is_null( $this->articleUrl ) ) {
-			# "http://example.com/wiki/$1"
+			# "https://example.com/wiki/$1"
 			# We use "Image:" as the canonical namespace for
 			# compatibility across all MediaWiki versions.
 			return str_replace( '$1',
 				"Image:$encName", $this->articleUrl );
 		}
 		if ( !is_null( $this->scriptDirUrl ) ) {
-			# "http://example.com/w"
+			# "https://example.com/w"
 			# We use "Image:" as the canonical namespace for
 			# compatibility across all MediaWiki versions,
 			# and just sort of hope index.php is right. ;)

@@ -2,7 +2,7 @@
 /**
  * Quick demo hack to generate a plaintext link dump,
  * per the proposed wiki link database standard:
- * http://www.usemod.com/cgi-bin/mb.pl?LinkDatabase
+ * https://www.usemod.com/cgi-bin/mb.pl?LinkDatabase
  *
  * Includes all (live and broken) intra-wiki links.
  * Does not include interwiki or URL links.
@@ -24,7 +24,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Maintenance

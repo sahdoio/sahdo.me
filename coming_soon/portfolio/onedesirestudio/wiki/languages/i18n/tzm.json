@@ -213,7 +213,7 @@
 	"italic_tip": "Italic text",
 	"link_sample": "ⴰⵣⵡⵉⵍ ⵏ ⵓⵣⴷⴰⵢ",
 	"link_tip": "ⴰⵣⴷⴰⵢ ⵏ ⵓⴳⵏⵙⵓ",
-	"extlink_sample": "http://www.example.com ⴰⵣⵡⵉⵍ ⵓⵣⴷⴰⵢ",
+	"extlink_sample": "https://www.example.com ⴰⵣⵡⵉⵍ ⵓⵣⴷⴰⵢ",
 	"image_sample": "Example.jpg",
 	"media_sample": "Example.ogg",
 	"media_tip": "ⴰⵣⴷⴰⵢ ⵓⵙⴷⴰⵡ",

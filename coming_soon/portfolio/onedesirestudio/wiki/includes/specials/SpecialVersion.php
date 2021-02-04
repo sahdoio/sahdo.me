@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup SpecialPage
@@ -217,14 +217,14 @@ class SpecialVersion extends SpecialPage {
 		$software = [];
 		$software['[https://www.mediawiki.org/ MediaWiki]'] = self::getVersionLinked();
 		if ( wfIsHHVM() ) {
-			$software['[http://hhvm.com/ HHVM]'] = HHVM_VERSION . " (" . PHP_SAPI . ")";
+			$software['[https://hhvm.com/ HHVM]'] = HHVM_VERSION . " (" . PHP_SAPI . ")";
 		} else {
 			$software['[https://php.net/ PHP]'] = PHP_VERSION . " (" . PHP_SAPI . ")";
 		}
 		$software[$dbr->getSoftwareLink()] = $dbr->getServerInfo();
 
 		if ( IcuCollation::getICUVersion() ) {
-			$software['[http://site.icu-project.org/ ICU]'] = IcuCollation::getICUVersion();
+			$software['[https://site.icu-project.org/ ICU]'] = IcuCollation::getICUVersion();
 		}
 
 		// Allow a hook to add/remove items.

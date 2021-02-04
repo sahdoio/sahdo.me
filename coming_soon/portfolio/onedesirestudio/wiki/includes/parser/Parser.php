@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Parser
@@ -1349,8 +1349,8 @@ class Parser {
 			# attempt to sanitize at least some nesting problems
 			# (bug #2702 and quite a few others)
 			$tidyregs = [
-				# ''Something [http://www.cool.com cool''] -->
-				# <i>Something</i><a href="http://www.cool.com"..><i>cool></i></a>
+				# ''Something [https://www.cool.com cool''] -->
+				# <i>Something</i><a href="https://www.cool.com"..><i>cool></i></a>
 				'/(<([bi])>)(<([bi])>)?([^<]*)(<\/?a[^<]*>)([^<]*)(<\/\\4>)?(<\/\\2>)/' =>
 				'\\1\\3\\5\\8\\9\\6\\1\\3\\7\\8\\9',
 				# fix up an anchor inside another anchor, only
@@ -1812,14 +1812,14 @@ class Parser {
 			# Set linktype for CSS - if URL==text, link is essentially free
 			$linktype = ( $text === $url ) ? 'free' : 'text';
 
-			# No link text, e.g. [http://domain.tld/some.link]
+			# No link text, e.g. [https://domain.tld/some.link]
 			if ( $text == '' ) {
 				# Autonumber
 				$langObj = $this->getTargetLanguage();
 				$text = '[' . $langObj->formatNum( ++$this->mAutonumber ) . ']';
 				$linktype = 'autonumber';
 			} else {
-				# Have link text, e.g. [http://domain.tld/some.link text]s
+				# Have link text, e.g. [https://domain.tld/some.link text]s
 				# Check for trail
 				list( $dtrail, $trail ) = Linker::splitTrail( $trail );
 			}
@@ -2131,7 +2131,7 @@ class Parser {
 			if ( preg_match( $e1, $line, $m ) ) { # page with normal text or alt
 				$text = $m[2];
 				# If we get a ] at the beginning of $m[3] that means we have a link that's something like:
-				# [[Image:Foo.jpg|[http://example.com desc]]] <- having three ] in a row fucks up,
+				# [[Image:Foo.jpg|[https://example.com desc]]] <- having three ] in a row fucks up,
 				# the real problem is with the $e1 regex
 				# See bug 1300.
 				# Still some problems for cases where the ] is meant to be outside punctuation,
@@ -4638,7 +4638,7 @@ class Parser {
 
 			# HTML names must be case-insensitively unique (bug 10721).
 			# This does not apply to Unicode characters per
-			# http://www.w3.org/TR/html5/infrastructure.html#case-sensitivity-and-string-comparison
+			# https://www.w3.org/TR/html5/infrastructure.html#case-sensitivity-and-string-comparison
 			# @todo FIXME: We may be changing them depending on the current locale.
 			$arrayKey = strtolower( $safeHeadline );
 			if ( $legacyHeadline === false ) {

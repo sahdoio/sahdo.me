@@ -38,8 +38,8 @@ class ExternalStoreTest extends MediaWikiTestCase {
 			'Deny path /example.txt'
 		);
 		$this->assertFalse(
-			ExternalStore::fetchFromURL( 'http://' ),
-			'Deny protocol http://'
+			ExternalStore::fetchFromURL( 'https://' ),
+			'Deny protocol https://'
 		);
 	}
 }

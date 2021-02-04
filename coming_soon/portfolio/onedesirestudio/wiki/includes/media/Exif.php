@@ -15,13 +15,13 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @ingroup Media
  * @author Ævar Arnfjörð Bjarmason <avarab@gmail.com>
  * @copyright Copyright © 2005, Ævar Arnfjörð Bjarmason, 2009 Brent Garber
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @see http://exif.org/Exif2-2.PDF The Exif 2.2 specification
+ * @license https://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @see https://exif.org/Exif2-2.PDF The Exif 2.2 specification
  * @file
  */
 
@@ -114,7 +114,7 @@ class Exif {
 		 * Note, Exif::UNDEFINED is treated as a string, not as an array of bytes
 		 * so don't put a count parameter for any UNDEFINED values.
 		 *
-		 * @link http://exif.org/Exif2-2.PDF The Exif 2.2 specification
+		 * @link https://exif.org/Exif2-2.PDF The Exif 2.2 specification
 		 */
 		$this->mExifTags = [
 			# TIFF Rev. 6.0 Attribute Information (p22)

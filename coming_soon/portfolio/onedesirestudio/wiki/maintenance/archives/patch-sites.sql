@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS /*_*/sites (
   -- Language code of the sites primary language.
   site_language              varbinary(32)       NOT NULL,
 
-  -- Protocol of the site, ie 'http://', 'irc://', '//'
+  -- Protocol of the site, ie 'https://', 'irc://', '//'
   -- This field is an index for lookups and is build from type specific data in site_data.
   site_protocol              varbinary(32)       NOT NULL,
 

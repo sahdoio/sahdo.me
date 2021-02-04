@@ -142,7 +142,7 @@ class AbstractPrimaryAuthenticationProviderTest extends \MediaWikiTestCase {
 				function ( $prefix, &$iwdata ) {
 					if ( $prefix === 'interwiki' ) {
 						$iwdata = [
-							'iw_url' => 'http://example.com/',
+							'iw_url' => 'https://example.com/',
 							'iw_local' => 0,
 							'iw_trans' => 0,
 						];

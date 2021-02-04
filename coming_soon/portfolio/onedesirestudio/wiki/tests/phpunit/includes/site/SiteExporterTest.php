@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  *
@@ -45,7 +45,7 @@ class SiteExporterTest extends PHPUnit_Framework_TestCase {
 		$acme->setGlobalId( 'acme.com' );
 		$acme->setGroup( 'Test' );
 		$acme->addLocalId( Site::ID_INTERWIKI, 'acme' );
-		$acme->setPath( Site::PATH_LINK, 'http://acme.com/' );
+		$acme->setPath( Site::PATH_LINK, 'https://acme.com/' );
 
 		$tmp = tmpfile();
 		$exporter = new SiteExporter( $tmp );
@@ -62,7 +62,7 @@ class SiteExporterTest extends PHPUnit_Framework_TestCase {
 		$this->assertContains( '<globalid>acme.com</globalid>', $xml );
 		$this->assertContains( '<group>Test</group>', $xml );
 		$this->assertContains( '<localid type="interwiki">acme</localid>', $xml );
-		$this->assertContains( '<path type="link">http://acme.com/</path>', $xml );
+		$this->assertContains( '<path type="link">https://acme.com/</path>', $xml );
 		$this->assertContains( '</sites>', $xml );
 
 		// NOTE: HHVM (at least on wmf Jenkins) doesn't like file URLs.
@@ -100,7 +100,7 @@ class SiteExporterTest extends PHPUnit_Framework_TestCase {
 		$acme->setGlobalId( 'acme.com' );
 		$acme->setGroup( 'Test' );
 		$acme->addLocalId( Site::ID_INTERWIKI, 'acme' );
-		$acme->setPath( Site::PATH_LINK, 'http://acme.com/' );
+		$acme->setPath( Site::PATH_LINK, 'https://acme.com/' );
 
 		$dewiki = Site::newForType( Site::TYPE_MEDIAWIKI );
 		$dewiki->setGlobalId( 'dewiki' );
@@ -108,8 +108,8 @@ class SiteExporterTest extends PHPUnit_Framework_TestCase {
 		$dewiki->setForward( true );
 		$dewiki->addLocalId( Site::ID_INTERWIKI, 'wikipedia' );
 		$dewiki->addLocalId( Site::ID_EQUIVALENT, 'de' );
-		$dewiki->setPath( Site::PATH_LINK, 'http://de.wikipedia.org/w/' );
-		$dewiki->setPath( MediaWikiSite::PATH_PAGE, 'http://de.wikipedia.org/wiki/' );
+		$dewiki->setPath( Site::PATH_LINK, 'https://de.wikipedia.org/w/' );
+		$dewiki->setPath( MediaWikiSite::PATH_PAGE, 'https://de.wikipedia.org/wiki/' );
 		$dewiki->setSource( 'meta.wikimedia.org' );
 
 		return [

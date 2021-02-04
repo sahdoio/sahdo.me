@@ -17,7 +17,7 @@
 # You should have received a copy of the GNU General Public License along
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
-# http://www.gnu.org/copyleft/gpl.html
+# https://www.gnu.org/copyleft/gpl.html
 #
 # Further tweaks by Brion Vibber <brion@pobox.com>:
 # 2006-01-26: Add command-line options for the various parameters
@@ -41,7 +41,7 @@ try:
 	import ImageOps
 	import ImageMath
 except:
-	sys.exit("This script requires the Python Imaging Library - http://www.pythonware.com/products/pil/")
+	sys.exit("This script requires the Python Imaging Library - https://www.pythonware.com/products/pil/")
 
 nonalpha = re.compile('[^a-z]') # regex to test for suitability of words
 

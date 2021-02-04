@@ -31,7 +31,7 @@
 		mw.language.setData( 'en', 'separatorTransformTable', null );
 
 		mw.config.set( 'wgUserLanguage', 'en' );
-		// Number grouping patterns are as per http://cldr.unicode.org/translation/number-patterns
+		// Number grouping patterns are as per https://cldr.unicode.org/translation/number-patterns
 		assert.equal( mw.language.commafy( 1234.567, '###0.#####' ), '1234.567', 'Pattern with no digit grouping separator defined' );
 		assert.equal( mw.language.commafy( 123456789.567, '###0.#####' ), '123456789.567', 'Pattern with no digit grouping separator defined, bigger decimal part' );
 		assert.equal( mw.language.commafy( 0.567, '###0.#####' ), '0.567', 'Decimal part 0' );

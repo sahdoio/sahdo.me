@@ -1,6 +1,6 @@
                          The First 1,000 Primes
                           (the 1,000th is 7919)
-         For more information on primes see http://primes.utm.edu/
+         For more information on primes see https://primes.utm.edu/
 
       2      3      5      7     11     13     17     19     23     29
      31     37     41     43     47     53     59     61     67     71

@@ -15,13 +15,13 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @ingroup Media
  * @author Ævar Arnfjörð Bjarmason <avarab@gmail.com>
  * @copyright Copyright © 2005, Ævar Arnfjörð Bjarmason, 2009 Brent Garber, 2010 Brian Wolff
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @see http://exif.org/Exif2-2.PDF The Exif 2.2 specification
+ * @license https://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @see https://exif.org/Exif2-2.PDF The Exif 2.2 specification
  * @file
  */
 

@@ -16,7 +16,7 @@ This is a maintenance release of the MediaWiki 1.26 branch.
 === Changes since 1.26.0 ===
 * (T117899) SECURITY: $wgArticlePath can no longer be set to relative paths
   that do not begin with a slash. This enabled trivial XSS attacks.
-  Configuration values such as "http://my.wiki.com/wiki/$1" are fine, as are
+  Configuration values such as "https://my.wiki.com/wiki/$1" are fine, as are
   "/wiki/$1". A value such as "$1" or "wiki/$1" is not and will now throw an
   error.
 * (T119309) SECURITY: Use hash_compare() for edit token comparison
@@ -294,7 +294,7 @@ This is a security and maintenance release of the MediaWiki 1.25 branch.
 === Changes since 1.25.3 ===
 * (T117899) SECURITY: $wgArticlePath can no longer be set to relative paths
   that do not begin with a slash. This enabled trivial XSS attacks.
-  Configuration values such as "http://my.wiki.com/wiki/$1" are fine, as are
+  Configuration values such as "https://my.wiki.com/wiki/$1" are fine, as are
   "/wiki/$1". A value such as "$1" or "wiki/$1" is not and will now throw an
   error.
 * (T119309) SECURITY: Use hash_compare() for edit token comparison
@@ -501,7 +501,7 @@ This is a bug fix release of the MediaWiki 1.25 branch.
   https://www.mediawiki.org/wiki/Download_from_Git#Fetch_external_libraries
 * The following libraries are now required:
 ** psr/log
-   This library provides the interfaces set by the PSR-3 standard (http://www.php-fig.org/psr/psr-3/)
+   This library provides the interfaces set by the PSR-3 standard (https://www.php-fig.org/psr/psr-3/)
    which are used by MediaWiki internally via the
    MediaWiki\Logger\LoggerFactory class.
    See the structured logging RfC (https://www.mediawiki.org/wiki/Requests_for_comment/Structured_logging)
@@ -885,7 +885,7 @@ This is a security and maintenance release of the MediaWiki 1.23 branch.
 === Changes since 1.24.4 ===
 * (T117899) SECURITY: $wgArticlePath can no longer be set to relative paths
   that do not begin with a slash. This enabled trivial XSS attacks.
-  Configuration values such as "http://my.wiki.com/wiki/$1" are fine, as are
+  Configuration values such as "https://my.wiki.com/wiki/$1" are fine, as are
   "/wiki/$1". A value such as "$1" or "wiki/$1" is not and will now throw an
   error.
 * (T119309) SECURITY: Use hash_compare() for edit token comparison
@@ -1680,7 +1680,7 @@ This is a security and maintenance release of the MediaWiki 1.23 branch.
 === Changes since 1.23.11 ===
 * (T117899) SECURITY: $wgArticlePath can no longer be set to relative paths
   that do not begin with a slash. This enabled trivial XSS attacks.
-  Configuration values such as "http://my.wiki.com/wiki/$1" are fine, as are
+  Configuration values such as "https://my.wiki.com/wiki/$1" are fine, as are
   "/wiki/$1". A value such as "$1" or "wiki/$1" is not and will now throw an
   error.
 * (T119309) SECURITY: Use hash_compare() for edit token comparison
@@ -2590,7 +2590,7 @@ This is a security and maintenance release of the MediaWiki 1.22 branch.
   well.
 * (bug 45535) introduced the new 'LanguageLinks' hook for manipulating the
   language links associated with a page before display.
-* Chosen (http://harvesthq.github.io/chosen/) was added as module 'jquery.chosen'
+* Chosen (https://harvesthq.github.io/chosen/) was added as module 'jquery.chosen'
 * HTMLForm will turn multiselect checkboxes into a Chosen interface when setting cssclass 'mw-chosen'
 * rebuildLocalisationCache learned --lang option. Let you rebuild l10n caches
   of the specified languages instead of all of them.
@@ -2618,7 +2618,7 @@ This is a security and maintenance release of the MediaWiki 1.22 branch.
   Requires Oracle DB 11gR1 or above, enabled DRCP inside the DB itself and a
   propper connect string.
   More about DRCP can be found at:
-  http://www.oracle-base.com/articles/11g/database-resident-connection-pool-11gr1.php
+  https://www.oracle-base.com/articles/11g/database-resident-connection-pool-11gr1.php
 * Add a new parameter $patrolFooterShown to hook ArticleViewFooter so the hook
   handlers can take further action based on the status of the patrol footer
 * A new hook TitleQuickPermissions was added to allow overriding of quick
@@ -2719,7 +2719,7 @@ This is a security and maintenance release of the MediaWiki 1.22 branch.
    declared for all LESS files. Additional variables may be registered by
    adding keys to the array.
 ** $wgResourceLoaderLESSFunctions is an associative array of custom LESS
-   function names to PHP callables. See <http://leafo.net/lessphp/docs/#custom_functions>
+   function names to PHP callables. See <https://leafo.net/lessphp/docs/#custom_functions>
    for more details regarding custom functions.
 ** $wgResourceLoaderLESSImportPaths is an array of file system paths. Files
    referenced in LESS '@import' statements are looked up here first.
@@ -3469,7 +3469,7 @@ This is a security and maintenance release of the MediaWiki 1.20 branch.
 === Changes since 1.20.4 ===
 * (bug 46590) Add hook AbortChangePassword to Special:ChangePassword
 * (bug 47304) SECURITY: Check SVG xml encoding against whitelist
-* Localisation updates from http://translatewiki.net.
+* Localisation updates from https://translatewiki.net.
 * mwdocgen.php: Implement --version option.
 * Remove svnstat stuff used in Doxygen generation
 * (bug 43594) Correctly supress warnings that were missed after the upstream
@@ -3643,7 +3643,7 @@ upgrade PHP if you have not done so prior to upgrading MediaWiki.
 * (bug 39376) jquery.form upgraded to 3.14.
 * SVG files will now show the actual width in the SVG's specified units
   in the metadata box.
-* Added ResourceLoader module "jquery.jStorage" (v0.3.0, http://jStorage.info/).
+* Added ResourceLoader module "jquery.jStorage" (v0.3.0, https://jStorage.info/).
 * (bug 39273) Added AJAX support for "Show changes" (diff) in LivePreview.
 * Added ResourceLoader module "jquery.badge".
 * mw.util.$content now points to the overall content area in the skin rather than just
@@ -3652,7 +3652,7 @@ upgrade PHP if you have not done so prior to upgrading MediaWiki.
   with auto-hide, multi-message support, and message replacement tags.
 * jquery.messageBox which appears to be unused by both core and extensions has
   been removed.
-* (bug 34939) Made link parsing insensitive ([HttP://]).
+* (bug 34939) Made link parsing insensitive ([https://]).
 * (bug 40072) Add CSS classes to items in output of ChangesList pages.
 * Added $wgCopyUploadProxy global to define which proxy to use for copy
   uploads.
@@ -4001,7 +4001,7 @@ This is a security and maintenance release of the MediaWiki 1.19 branch
 === Changes since 1.19.5 ===
 * (bug 47304) SECURITY: Check SVG xml encoding against whitelist
 * (bug 46590) Added AbortChangePassword hook to allow extensions to abort password changes from Special:ChangePassword
-* Localisation updates from http://translatewiki.net.
+* Localisation updates from https://translatewiki.net.
 * mwdocgen.php: Implement --version option.
 * Remove svnstat stuff used in Doxygen generation
 * E_USER_DEPRECATED undefined prior to php 5.3
@@ -4039,7 +4039,7 @@ This is a security release of the MediaWiki 1.19 branch
 * (bug 40995) Prevent session fixation in Special:UserLogin (CVE-2012-5391)
 * (bug 41400) Prevent linker regex from exceeding PCRE backtrack limit
 * Increase permitted runtime for testParserTest (only used for continuous integration).
-* Updated messages translations from http://translatewiki.net/
+* Updated messages translations from https://translatewiki.net/
 
 == MediaWiki 1.19.2 ==
 
@@ -6810,7 +6810,7 @@ comment from another wiki.
 * (bug 21559) "logempty" message is now wrapped in a div with class
   "mw-warning-logempty" when used in log extract
 * (bug 20549) Parser tests were broken on SQLite backend
-* (bug 21776) Interwiki urls like http://en.wikibooks.org/wiki/cs: should give
+* (bug 21776) Interwiki urls like https://en.wikibooks.org/wiki/cs: should give
   a redirect instead of a baderror.
 * (bug 21803) Special:MyContributions now keeps the query string parameters
 * Redirecting special pages now keep query string parameters set to "0" (e.g.
@@ -8991,7 +8991,7 @@ it from source control: https://www.mediawiki.org/wiki/Download_from_SVN
 
 For help with migration to the MediaWiki 1.12 parser, please visit:
 
-http://meta.wikimedia.org/wiki/Migration_to_the_new_preprocessor
+https://meta.wikimedia.org/wiki/Migration_to_the_new_preprocessor
 
 The parser pass order has changed from
 
@@ -9771,7 +9771,7 @@ it from source control: https://www.mediawiki.org/wiki/Download_from_SVN
 * (bugs 5051, 5376) Tooltips and accesskeys no longer require JavaScript
 * Added SkinTemplateOutputPageBeforeExec hook before SkinTemplate::outputPage()
   starts page output
-  (http://lists.wikimedia.org/pipermail/wikitech-l/2007-January/028554.html)
+  (https://lists.wikimedia.org/pipermail/wikitech-l/2007-January/028554.html)
 * Introduce "cascading protection" -- implicit protection on pages transcluded
   into a page protected with this option enabled
 * (bug 8567) Added hook RawPageViewBeforeOutput just before the text is blown
@@ -9988,7 +9988,7 @@ it from source control: https://www.mediawiki.org/wiki/Download_from_SVN
     This fixes an issue with the Ajax interface error message on MSIE when
   $wgUseAjax is enabled (not default configuration); this UTF-7 variant
   on a previously fixed attack vector was discovered by Moshe BA from BugSec:
-  http://www.bugsec.com/articles.php?Security=24
+  https://www.bugsec.com/articles.php?Security=24
 * Trackback responses now specify XML content type
 * (bug 9044) Send a comment with action=raw pages in CSS/JS output mode
   to work around IE/Mac bug where empty pages time out verrrrryyyyy slowly,
@@ -10202,7 +10202,7 @@ it from source control: https://www.mediawiki.org/wiki/Download_from_SVN
 MediaWiki 1.10 requires PHP 5 (5.1 recommended). PHP 4 is no longer supported.
 
 PHP 5.0.x fails on 64-bit systems due to serious bugs with array processing:
-http://bugs.php.net/bug.php?id=34879
+https://bugs.php.net/bug.php?id=34879
 Upgrade affected systems to PHP 5.1 or higher.
 
 MySQL 3.23.x is no longer supported; some older hosts may need to upgrade.
@@ -10265,7 +10265,7 @@ setting since version 1.2.0. If you have it on, turn it *off* if you can.
   alias for compatibility
 * (bug 4525) Move section links down visually to same level as headings
   (editsection links are now inside the heading elements)
-* Workaround for http://bugs.php.net/bug.php?id=31892 , PATH_INFO and hence
+* Workaround for https://bugs.php.net/bug.php?id=31892 , PATH_INFO and hence
   URLs of the style /index.php/Main_Page were broken on some CGI installations.
 * (bug 7623) Validate custom HTML id's correctly in Monobook interface
 * (bug 2241) Fix collision of 'w' and 'd' accesskeys
@@ -12115,7 +12115,7 @@ Security:
 * Added detection for WMF files (application/x-msmetafile), added this
   MIME type to the default blacklist. Prevented inline display of images
   which are not of known image types. This is in response to
-  http://en.wikipedia.org/wiki/Windows_Metafile_vulnerability
+  https://en.wikipedia.org/wiki/Windows_Metafile_vulnerability
 * Blocked users can no longer roll back, change the protection of, or delete/undelete pages
 * Protect against spoofing of X-Forwarded-For header
 * XSS issue : now sanitize search query input (fixed in 1.5rc3)
@@ -12398,7 +12398,7 @@ fully support the editing toolbar, but was found to be too confusing.
 * Add ".deps.php" include-file preloaders for some dynamically-loaded
   language and skin classes. Should help with the broken base-class
   problem under PHP 5 with APC as opcode cache. See details:
-  http://mail.wikipedia.org/pipermail/wikitech-l/2006-January/033660.html
+  https://mail.wikipedia.org/pipermail/wikitech-l/2006-January/033660.html
 * Small changes to tabs in Monobook skin c/o Chris Ware
 * (bug 4679) Work around buggy basename() function in PHP5, which breaks
   uploads of files starting with multibyte characters on Linux.
@@ -12567,7 +12567,7 @@ password to be equal to the password of the new account.
 
 Anyone affected by this bug will need to change the root password back
 manually. For information about how to change passwords in MySQL please see:
-http://dev.mysql.com/doc/refman/5.1/en/passwords.html
+https://dev.mysql.com/doc/refman/5.1/en/passwords.html
 
 This version includes fixes for compatibility with Internet Explorer 7
 beta 2, and various other bugs; see the full changelog at the end of
@@ -12607,7 +12607,7 @@ that malicious .wmf files can't be uploaded with a fake extension;
 such files could put visitors to the site at risk.
 
 For more details on this, see:
-http://en.wikipedia.org/wiki/Windows_Metafile_vulnerability
+https://en.wikipedia.org/wiki/Windows_Metafile_vulnerability
 
 Additionally, a maintenance script removeUnusedAccounts.php has been added;
 this replaces an older Perl script which had not been updated for the new
@@ -12831,7 +12831,7 @@ Backups:
   as maintenance/dumpBackup.php.
 
   For more information on how we run our own public data dumps at Wikimedia,
-  see http://meta.wikimedia.org/wiki/Data_dumps
+  see https://meta.wikimedia.org/wiki/Data_dumps
 
 PostgreSQL:
   The table definitions for PostgreSQL install are out of date. PostgreSQL
@@ -13024,7 +13024,7 @@ Various bugfixes, small features, and a few experimental things:
 * (bug 1352) Images on description pages now get thumbnailed regardless of whether the thumbnail is larger than the original.
 * (bug 1662) A new magicword, {{CURRENTMONTHABBREV}} returns the abbreviation of the current month
 * (bug 1668) 'Date format' supported for other languages than English, see:
-  http://mail.wikipedia.org/pipermail/wikitech-l/2005-March/028364.html
+  https://mail.wikipedia.org/pipermail/wikitech-l/2005-March/028364.html
 * (bug 1739) A new magicword, {{REVISIONID}} give you the article or diff database
   revision id, useful for proper citation.
 * (bug 1998) Updated the Russian translation.
@@ -13591,7 +13591,7 @@ of MediaWiki:Newpagetext) to &action=edit, if page is new.
 * Added detection for WMF files (application/x-msmetafile), added this
   MIME type to the default blacklist. Prevented inline display of images
   which are not of known image types. This is in response to
-  http://en.wikipedia.org/wiki/Windows_Metafile_vulnerability
+  https://en.wikipedia.org/wiki/Windows_Metafile_vulnerability
 
 === Changes since 1.5.5 ===
 
@@ -13725,7 +13725,7 @@ MySQL 4.1 has changed the authentication protocol in an incompatible
 way; many PHP installations still use the older client libraries and
 CANNOT CONNECT TO THE SERVER WITH A PASSWORD without some changes.
 
-See: http://dev.mysql.com/doc/mysql/en/Old_client.html
+See: https://dev.mysql.com/doc/mysql/en/Old_client.html
 
 If MySQL is set with utf-8 as the default character set, installation
 may fail with "key too long" errors. Set the default charset to 'latin1'
@@ -13745,7 +13745,7 @@ try running under Apache on Windows, or on a Unix/Linux box instead.
 
 If you're having trouble with blank pages on IIS and can't switch,
 try the workaround suggested in this bug report:
-http://bugzilla.wikimedia.org/show_bug.cgi?id=1763
+https://bugzilla.wikimedia.org/show_bug.cgi?id=1763
 
 
 === New features ===
@@ -13768,7 +13768,7 @@ LocalSettings.php:
 
 For background information on nofollow see:
 
-  http://www.google.com/googleblog/2005/01/preventing-comment-spam.html
+  https://www.google.com/googleblog/2005/01/preventing-comment-spam.html
 
 
 === Installation and compatibility ===
@@ -14245,10 +14245,10 @@ License:
 A MediaWiki-l mailing list has been set up distinct from the Wikipedia
 wikitech-l list:
 
-  http://lists.wikimedia.org/mailman/listinfo/mediawiki-l
+  https://lists.wikimedia.org/mailman/listinfo/mediawiki-l
 
 A low-traffic announcements-only list is also available:
-  http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce
+  https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce
 
 It's highly recommended that you sign up for one of these lists if you're
 going to run a public MediaWiki, so you can be notified of security fixes.

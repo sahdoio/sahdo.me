@@ -33,7 +33,7 @@ class WebRequestTest extends MediaWikiTestCase {
 	public static function provideDetectServer() {
 		return [
 			[
-				'http://x',
+				'https://x',
 				[
 					'HTTP_HOST' => 'x'
 				],
@@ -48,7 +48,7 @@ class WebRequestTest extends MediaWikiTestCase {
 				'Host header with secure'
 			],
 			[
-				'http://x',
+				'https://x',
 				[
 					'HTTP_HOST' => 'x',
 					'SERVER_PORT' => 80,
@@ -56,7 +56,7 @@ class WebRequestTest extends MediaWikiTestCase {
 				'Default SERVER_PORT',
 			],
 			[
-				'http://x',
+				'https://x',
 				[
 					'HTTP_HOST' => 'x',
 					'HTTPS' => 'off',
@@ -64,14 +64,14 @@ class WebRequestTest extends MediaWikiTestCase {
 				'Secure off'
 			],
 			[
-				'http://y',
+				'https://y',
 				[
 					'SERVER_NAME' => 'y',
 				],
 				'Server name'
 			],
 			[
-				'http://x',
+				'https://x',
 				[
 					'HTTP_HOST' => 'x',
 					'SERVER_NAME' => 'y',
@@ -79,7 +79,7 @@ class WebRequestTest extends MediaWikiTestCase {
 				'Host server name precedence'
 			],
 			[
-				'http://[::1]:81',
+				'https://[::1]:81',
 				[
 					'HTTP_HOST' => '[::1]',
 					'SERVER_NAME' => '::1',
@@ -88,14 +88,14 @@ class WebRequestTest extends MediaWikiTestCase {
 				'Apache bug 26005'
 			],
 			[
-				'http://localhost',
+				'https://localhost',
 				[
 					'SERVER_NAME' => '[2001'
 				],
 				'Kind of like lighttpd per commit message in MW r83847',
 			],
 			[
-				'http://[2a01:e35:2eb4:1::2]:777',
+				'https://[2a01:e35:2eb4:1::2]:777',
 				[
 					'SERVER_NAME' => '[2a01:e35:2eb4:1::2]:777'
 				],

@@ -189,18 +189,18 @@
 		);
 
 		assert.equal(
-			formatParse( 'external-link-replace', 'http://example.org/?x=y&z' ),
-			'Foo <a href="http://example.org/?x=y&amp;z">bar</a>',
+			formatParse( 'external-link-replace', 'https://example.org/?x=y&z' ),
+			'Foo <a href="https://example.org/?x=y&amp;z">bar</a>',
 			'Href is not double-escaped in wikilink function'
 		);
 		assert.equal(
-			formatParse( 'external-link-plural', 1, 'http://example.org' ),
-			'Foo is <a href="http://example.org">one</a> things.',
+			formatParse( 'external-link-plural', 1, 'https://example.org' ),
+			'Foo is <a href="https://example.org">one</a> things.',
 			'Link is expanded inside plural and is not escaped html'
 		);
 		assert.equal(
-			formatParse( 'external-link-plural', 2, 'http://example.org' ),
-			'Foo <a href=\"http://example.org\">two</a> things.',
+			formatParse( 'external-link-plural', 2, 'https://example.org' ),
+			'Foo <a href=\"https://example.org\">two</a> things.',
 			'Link is expanded inside an explicit plural form and is not escaped html'
 		);
 		assert.equal(
@@ -209,13 +209,13 @@
 			'A simple explicit plural form co-existing with complex explicit plural forms'
 		);
 		assert.equal(
-			formatParse( 'external-link-plural', 4, 'http://example.org' ),
+			formatParse( 'external-link-plural', 4, 'https://example.org' ),
 			'Foo a=b things.',
 			'Only first equal sign is used as delimiter for explicit plural form. Repeated equal signs does not create issue'
 		);
 		assert.equal(
-			formatParse( 'external-link-plural', 6, 'http://example.org' ),
-			'Foo are <a href="http://example.org">some</a> things.',
+			formatParse( 'external-link-plural', 6, 'https://example.org' ),
+			'Foo are <a href="https://example.org">some</a> things.',
 			'Plural fallback to the "other" plural form'
 		);
 		assert.equal(
@@ -471,13 +471,13 @@
 		testCases = [
 			[
 				'extlink-html-full',
-				'asd [http://example.org <strong>Example</strong>] asd',
-				'asd <a href="http://example.org"><strong>Example</strong></a> asd'
+				'asd [https://example.org <strong>Example</strong>] asd',
+				'asd <a href="https://example.org"><strong>Example</strong></a> asd'
 			],
 			[
 				'extlink-html-partial',
-				'asd [http://example.org foo <strong>Example</strong> bar] asd',
-				'asd <a href="http://example.org">foo <strong>Example</strong> bar</a> asd'
+				'asd [https://example.org foo <strong>Example</strong> bar] asd',
+				'asd <a href="https://example.org">foo <strong>Example</strong> bar</a> asd'
 			],
 			[
 				'wikilink-html-full',
@@ -510,32 +510,32 @@
 			[
 				'extlink-param-href-full',
 				'asd [$1 Example] asd',
-				'asd <a href="http://example.com">Example</a> asd'
+				'asd <a href="https://example.com">Example</a> asd'
 			],
 			[
 				'extlink-param-href-partial',
 				'asd [$1/example Example] asd',
-				'asd <a href="http://example.com/example">Example</a> asd'
+				'asd <a href="https://example.com/example">Example</a> asd'
 			],
 			[
 				'extlink-param-text-full',
-				'asd [http://example.org $2] asd',
-				'asd <a href="http://example.org">Text</a> asd'
+				'asd [https://example.org $2] asd',
+				'asd <a href="https://example.org">Text</a> asd'
 			],
 			[
 				'extlink-param-text-partial',
-				'asd [http://example.org Example $2] asd',
-				'asd <a href="http://example.org">Example Text</a> asd'
+				'asd [https://example.org Example $2] asd',
+				'asd <a href="https://example.org">Example Text</a> asd'
 			],
 			[
 				'extlink-param-both-full',
 				'asd [$1 $2] asd',
-				'asd <a href="http://example.com">Text</a> asd'
+				'asd <a href="https://example.com">Text</a> asd'
 			],
 			[
 				'extlink-param-both-partial',
 				'asd [$1/example Example $2] asd',
-				'asd <a href="http://example.com/example">Example Text</a> asd'
+				'asd <a href="https://example.com/example">Example Text</a> asd'
 			],
 			[
 				'wikilink-param-href-full',
@@ -584,7 +584,7 @@
 				key = this[ 0 ],
 				input = this[ 1 ],
 				output = this[ 2 ],
-				paramHref = key.slice( 0, 8 ) === 'wikilink' ? 'Example' : 'http://example.com',
+				paramHref = key.slice( 0, 8 ) === 'wikilink' ? 'Example' : 'https://example.com',
 				paramText = 'Text';
 			mw.messages.set( key, input );
 			assert.htmlEqual(
@@ -636,13 +636,13 @@
 
 		// External link with parameter
 		assert.equal(
-			formatText( 'external-link-replace', 'http://example.com' ),
-			'Foo [http://example.com bar]',
+			formatText( 'external-link-replace', 'https://example.com' ),
+			'Foo [https://example.com bar]',
 			'External link message only substitutes parameter when format is \'text\''
 		);
 		assert.htmlEqual(
-			formatParse( 'external-link-replace', 'http://example.com' ),
-			'Foo <a href="http://example.com">bar</a>',
+			formatParse( 'external-link-replace', 'https://example.com' ),
+			'Foo <a href="https://example.com">bar</a>',
 			'External link message processed when format is \'parse\''
 		);
 		assert.htmlEqual(
@@ -977,17 +977,17 @@
 			'Mismatched HTML start and end tag treated as text'
 		);
 
-		mw.messages.set( 'jquerymsg-script-and-external-link', '<script>alert( "jquerymsg-script-and-external-link test" );</script> [http://example.com <i>Foo</i> bar]' );
+		mw.messages.set( 'jquerymsg-script-and-external-link', '<script>alert( "jquerymsg-script-and-external-link test" );</script> [https://example.com <i>Foo</i> bar]' );
 		assert.htmlEqual(
 			formatParse( 'jquerymsg-script-and-external-link' ),
-			'&lt;script&gt;alert( "jquerymsg-script-and-external-link test" );&lt;/script&gt; <a href="http://example.com"><i>Foo</i> bar</a>',
+			'&lt;script&gt;alert( "jquerymsg-script-and-external-link test" );&lt;/script&gt; <a href="https://example.com"><i>Foo</i> bar</a>',
 			'HTML tags in external links not interfering with escaping of other tags'
 		);
 
-		mw.messages.set( 'jquerymsg-link-script', '[http://example.com <script>alert( "jquerymsg-link-script test" );</script>]' );
+		mw.messages.set( 'jquerymsg-link-script', '[https://example.com <script>alert( "jquerymsg-link-script test" );</script>]' );
 		assert.htmlEqual(
 			formatParse( 'jquerymsg-link-script' ),
-			'<a href="http://example.com">&lt;script&gt;alert( "jquerymsg-link-script test" );&lt;/script&gt;</a>',
+			'<a href="https://example.com">&lt;script&gt;alert( "jquerymsg-link-script test" );&lt;/script&gt;</a>',
 			'Non-whitelisted HTML tag in external link anchor treated as text'
 		);
 
@@ -1020,10 +1020,10 @@
 			'Escaped attributes are parsed correctly'
 		);
 
-		mw.messages.set( 'jquerymsg-wikitext-contents-parsed', '<i>[http://example.com Example]</i>' );
+		mw.messages.set( 'jquerymsg-wikitext-contents-parsed', '<i>[https://example.com Example]</i>' );
 		assert.htmlEqual(
 			formatParse( 'jquerymsg-wikitext-contents-parsed' ),
-			'<i><a href="http://example.com">Example</a></i>',
+			'<i><a href="https://example.com">Example</a></i>',
 			'Contents of valid tag are treated as wikitext, so external link is parsed'
 		);
 
@@ -1139,12 +1139,12 @@
 		mw.messages.set( 'integration-test-extlink', '[$1 Link]' );
 		msg = mw.message(
 			'integration-test-extlink',
-			$( '<a>' ).attr( 'href', 'http://example.com/' )
+			$( '<a>' ).attr( 'href', 'https://example.com/' )
 		);
 		msg.parse(); // Not a no-op
 		assert.equal(
 			msg.parse(),
-			'<a href="http://example.com/">Link</a>',
+			'<a href="https://example.com/">Link</a>',
 			'Calling .parse() multiple times does not duplicate link contents'
 		);
 	} );

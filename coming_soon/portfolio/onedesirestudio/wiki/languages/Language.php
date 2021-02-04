@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Language
@@ -268,7 +268,7 @@ class Language {
 	 * language, script or variant codes actually exist in the repositories.
 	 *
 	 * Based on regexes by Mark Davis of the Unicode Consortium:
-	 * http://unicode.org/repos/cldr/trunk/tools/java/org/unicode/cldr/util/data/langtagRegex.txt
+	 * https://unicode.org/repos/cldr/trunk/tools/java/org/unicode/cldr/util/data/langtagRegex.txt
 	 *
 	 * @param string $code
 	 * @param bool $lenient Whether to allow '_' as separator. The default is only '-'.
@@ -295,7 +295,7 @@ class Language {
 		# Since these are limited, this is safe even later changes to the registry --
 		# the only oddity is that it might change the type of the tag, and thus
 		# the results from the capturing groups.
-		# http://www.iana.org/assignments/language-subtag-registry
+		# https://www.iana.org/assignments/language-subtag-registry
 
 		$grandfathered = "en{$s}GB{$s}oed"
 			. "|i{$s}(?:ami|bnn|default|enochian|hak|klingon|lux|mingo|navajo|pwn|tao|tay|tsu)"
@@ -1549,7 +1549,7 @@ class Language {
 	 * is released under the terms of GNU Lesser General Public
 	 * License. Conversion to PHP was performed by Niklas Laxström.
 	 *
-	 * Link: http://www.farsiweb.info/jalali/jalali.c
+	 * Link: https://www.farsiweb.info/jalali/jalali.c
 	 *
 	 * @param string $ts
 	 *
@@ -1607,7 +1607,7 @@ class Language {
 	 *
 	 * Based on a PHP-Nuke block by Sharjeel which is released under GNU/GPL license
 	 *
-	 * @see http://phpnuke.org/modules.php?name=News&file=article&sid=8234&mode=thread&order=0&thold=0
+	 * @see https://phpnuke.org/modules.php?name=News&file=article&sid=8234&mode=thread&order=0&thold=0
 	 *
 	 * @param string $ts
 	 *
@@ -1654,7 +1654,7 @@ class Language {
 	 * Converting Gregorian dates to Hebrew dates.
 	 *
 	 * Based on a JavaScript code by Abu Mami and Yisrael Hersch
-	 * (abu-mami@kaluach.net, http://www.kaluach.net), who permitted
+	 * (abu-mami@kaluach.net, https://www.kaluach.net), who permitted
 	 * to translate the relevant functions into PHP and release them under
 	 * GNU GPL.
 	 *
@@ -1836,9 +1836,9 @@ class Language {
 	 * Algorithm to convert Gregorian dates to Thai solar dates,
 	 * Minguo dates or Minguo dates.
 	 *
-	 * Link: http://en.wikipedia.org/wiki/Thai_solar_calendar
-	 *       http://en.wikipedia.org/wiki/Minguo_calendar
-	 *       http://en.wikipedia.org/wiki/Japanese_era_name
+	 * Link: https://en.wikipedia.org/wiki/Thai_solar_calendar
+	 *       https://en.wikipedia.org/wiki/Minguo_calendar
+	 *       https://en.wikipedia.org/wiki/Japanese_era_name
 	 *
 	 * @param string $ts 14-character timestamp
 	 * @param string $cName Calender name
@@ -1921,8 +1921,8 @@ class Language {
 	 * Gets directionality of the first strongly directional codepoint, for embedBidi()
 	 *
 	 * This is the rule the BIDI algorithm uses to determine the directionality of
-	 * paragraphs ( http://unicode.org/reports/tr9/#The_Paragraph_Level ) and
-	 * FSI isolates ( http://unicode.org/reports/tr9/#Explicit_Directional_Isolates ).
+	 * paragraphs ( https://unicode.org/reports/tr9/#The_Paragraph_Level ) and
+	 * FSI isolates ( https://unicode.org/reports/tr9/#Explicit_Directional_Isolates ).
 	 *
 	 * TODO: Does not handle BIDI control characters inside the text.
 	 * TODO: Does not handle unallocated characters.
@@ -2580,7 +2580,7 @@ class Language {
 
 		# Even with //IGNORE iconv can whine about illegal characters in
 		# *input* string. We just ignore those too.
-		# REF: http://bugs.php.net/bug.php?id=37166
+		# REF: https://bugs.php.net/bug.php?id=37166
 		# REF: https://phabricator.wikimedia.org/T18885
 		MediaWiki\suppressWarnings();
 		$text = iconv( $in, $out . '//IGNORE', $string );
@@ -3315,7 +3315,7 @@ class Language {
 			// default grouping is at thousands,  use the same for ###,###,### pattern too.
 			return strrev( (string)preg_replace( '/(\d{3})(?=\d)(?!\d*\.)/', '$1,', strrev( $number ) ) );
 		} else {
-			// Ref: http://cldr.unicode.org/translation/number-patterns
+			// Ref: https://cldr.unicode.org/translation/number-patterns
 			$sign = "";
 			if ( intval( $number ) < 0 ) {
 				// For negative numbers apply the algorithm like positive number and add sign.

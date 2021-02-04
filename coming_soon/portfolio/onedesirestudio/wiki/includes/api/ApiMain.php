@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @defgroup API API
@@ -595,8 +595,8 @@ class ApiMain extends ApiBase {
 	 * If the parameter and the header do match, the header is checked against $wgCrossSiteAJAXdomains
 	 * and $wgCrossSiteAJAXdomainExceptions, and if the origin qualifies, the appropriate CORS
 	 * headers are set.
-	 * http://www.w3.org/TR/cors/#resource-requests
-	 * http://www.w3.org/TR/cors/#resource-preflight-requests
+	 * https://www.w3.org/TR/cors/#resource-requests
+	 * https://www.w3.org/TR/cors/#resource-preflight-requests
 	 *
 	 * @return bool False if the caller should abort (403 case), true otherwise (all other cases)
 	 */
@@ -660,7 +660,7 @@ class ApiMain extends ApiBase {
 
 			$response->header( "Access-Control-Allow-Origin: $originHeader" );
 			$response->header( 'Access-Control-Allow-Credentials: true' );
-			// http://www.w3.org/TR/resource-timing/#timing-allow-origin
+			// https://www.w3.org/TR/resource-timing/#timing-allow-origin
 			$response->header( "Timing-Allow-Origin: $originHeader" );
 
 			if ( !$preflight ) {

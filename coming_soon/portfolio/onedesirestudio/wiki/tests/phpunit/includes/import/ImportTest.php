@@ -40,7 +40,7 @@ class ImportTest extends MediaWikiLangTestCase {
 		return [
 			[
 				<<< EOF
-<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
+<mediawiki xmlns="https://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.mediawiki.org/xml/export-0.10/ https://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
   <page unknown="123" dontknow="533">
     <title>TestImportPage</title>
     <unknowntag>Should be ignored</unknowntag>
@@ -105,7 +105,7 @@ EOF
 		return [
 			[
 				<<< EOF
-<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
+<mediawiki xmlns="https://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.mediawiki.org/xml/export-0.10/ https://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
 	<page>
 		<title>Test</title>
 		<ns>0</ns>
@@ -132,7 +132,7 @@ EOF
 			],
 			[
 				<<< EOF
-<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.9/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.9/ http://www.mediawiki.org/xml/export-0.9.xsd" version="0.9" xml:lang="en">
+<mediawiki xmlns="https://www.mediawiki.org/xml/export-0.9/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.mediawiki.org/xml/export-0.9/ https://www.mediawiki.org/xml/export-0.9.xsd" version="0.9" xml:lang="en">
 	<page>
 		<title>Test</title>
 		<ns>0</ns>
@@ -188,7 +188,7 @@ EOF
 		return [
 			[
 				<<< EOF
-<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
+<mediawiki xmlns="https://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://www.mediawiki.org/xml/export-0.10/ https://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="en">
   <siteinfo>
     <namespaces>
       <namespace key="-2" case="first-letter">Media</namespace>

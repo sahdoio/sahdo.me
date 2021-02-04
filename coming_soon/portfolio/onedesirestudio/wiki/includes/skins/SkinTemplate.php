@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -22,9 +22,9 @@
  * Base class for template-based skins.
  *
  * Template-filler skin base class
- * Formerly generic PHPTal (http://phptal.sourceforge.net/) skin
+ * Formerly generic PHPTal (https://phptal.sourceforge.net/) skin
  * Based on Brion's smarty skin
- * @copyright Copyright © Gabriel Wicke -- http://www.aulinx.de/
+ * @copyright Copyright © Gabriel Wicke -- https://www.aulinx.de/
  *
  * @todo Needs some serious refactoring into functions that correspond
  * to the computations individual esi snippets need. Most importantly no body

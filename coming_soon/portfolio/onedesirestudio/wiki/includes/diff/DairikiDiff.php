@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup DifferenceEngine
@@ -196,10 +196,10 @@ class DiffOpChange extends DiffOp {
  *
  * The algorithm used here is mostly lifted from the perl module
  * Algorithm::Diff (version 1.06) by Ned Konz, which is available at:
- *     http://www.perl.com/CPAN/authors/id/N/NE/NEDKONZ/Algorithm-Diff-1.06.zip
+ *     https://www.perl.com/CPAN/authors/id/N/NE/NEDKONZ/Algorithm-Diff-1.06.zip
  *
  * More ideas are taken from:
- *     http://www.ics.uci.edu/~eppstein/161/960229.html
+ *     https://www.ics.uci.edu/~eppstein/161/960229.html
  *
  * Some ideas (and a bit of code) are from analyze.c, from GNU
  * diffutils-2.7, which can be found at:

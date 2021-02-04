@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -146,7 +146,7 @@ class TraditionalImageGallery extends ImageGalleryBase {
 						# Auto-margin centering for block-level elements. Needed
 						# now that we have video handlers since they may emit block-
 						# level elements as opposed to simple <img> tags. ref
-						# http://css-discuss.incutio.com/?page=CenteringBlockElement
+						# https://css-discuss.incutio.com/?page=CenteringBlockElement
 						. '<div style="margin:' . $vpad . 'px auto;">'
 						. $thumb->toHtml( $imageParameters ) . '</div></div>';
 

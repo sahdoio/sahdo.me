@@ -28,15 +28,15 @@ class GIFMetadataExtractorTest extends MediaWikiTestCase {
 		$xmpNugget = <<<EOF
 <?xpacket begin='﻿' id='W5M0MpCehiHzreSzNTczkc9d'?>
 <x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='Image::ExifTool 7.30'>
-<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+<rdf:RDF xmlns:rdf='https://www.w3.org/1999/02/22-rdf-syntax-ns#'>
 
  <rdf:Description rdf:about=''
-  xmlns:Iptc4xmpCore='http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/'>
+  xmlns:Iptc4xmpCore='https://iptc.org/std/Iptc4xmpCore/1.0/xmlns/'>
   <Iptc4xmpCore:Location>The interwebs</Iptc4xmpCore:Location>
  </rdf:Description>
 
  <rdf:Description rdf:about=''
-  xmlns:tiff='http://ns.adobe.com/tiff/1.0/'>
+  xmlns:tiff='https://ns.adobe.com/tiff/1.0/'>
   <tiff:Artist>Bawolff</tiff:Artist>
   <tiff:ImageDescription>
    <rdf:Alt>

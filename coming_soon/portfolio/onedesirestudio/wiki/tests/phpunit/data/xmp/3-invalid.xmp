@@ -3,10 +3,10 @@
 <!--
 This file has an invalid flash compoenent (one of the values are a qualifier)
 -->
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> 
+<rdf:RDF xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#"> 
 <rdf:Description
  rdf:about=""
- xmlns:exif="http://ns.adobe.com/exif/1.0/"
+ xmlns:exif="https://ns.adobe.com/exif/1.0/"
 >
 <exif:DigitalZoomRatio>
 

@@ -15,7 +15,7 @@ class FetcherFactory {
 
 		if ( strpos( $path, 'https://raw.github.com/' ) === 0 ) {
 			return new GitHubFetcher();
-		} elseif ( strpos( $path, 'http://' ) === 0 ) {
+		} elseif ( strpos( $path, 'https://' ) === 0 ) {
 			return new HttpFetcher();
 		} elseif ( strpos( $path, 'https://' ) === 0 ) {
 			return new HttpFetcher();

@@ -1,9 +1,9 @@
-<ns0:svg height="592.78998" id="svg2275" version="1.0" width="958.69" ns1:docbase="C:\Users\Adam\Desktop" ns1:docname="Blank_US_Map_with_borders.svg" ns1:version="0.32" ns2:output_extension="org.inkscape.output.svg.inkscape" ns2:version="0.46" xmlns:ns0="http://www.w3.org/2000/svg" xmlns:ns1="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="http://www.inkscape.org/namespaces/inkscape">
+<ns0:svg height="592.78998" id="svg2275" version="1.0" width="958.69" ns1:docbase="C:\Users\Adam\Desktop" ns1:docname="Blank_US_Map_with_borders.svg" ns1:version="0.32" ns2:output_extension="org.inkscape.output.svg.inkscape" ns2:version="0.46" xmlns:ns0="https://www.w3.org/2000/svg" xmlns:ns1="https://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns2="https://www.inkscape.org/namespaces/inkscape">
   <ns0:metadata id="metadata2625">
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <ns4:Work rdf:about="" xmlns:ns4="http://creativecommons.org/ns#">
-        <ns5:format xmlns:ns5="http://purl.org/dc/elements/1.1/">image/svg+xml</ns5:format>
-        <ns5:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" xmlns:ns5="http://purl.org/dc/elements/1.1/" />
+    <rdf:RDF xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <ns4:Work rdf:about="" xmlns:ns4="https://creativecommons.org/ns#">
+        <ns5:format xmlns:ns5="https://purl.org/dc/elements/1.1/">image/svg+xml</ns5:format>
+        <ns5:type rdf:resource="https://purl.org/dc/dcmitype/StillImage" xmlns:ns5="https://purl.org/dc/elements/1.1/" />
       </ns4:Work>
     </rdf:RDF>
   </ns0:metadata>

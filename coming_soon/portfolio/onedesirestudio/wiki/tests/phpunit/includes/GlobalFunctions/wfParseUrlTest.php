@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -30,7 +30,7 @@ class WfParseUrlTest extends MediaWikiTestCase {
 
 		$this->setMwGlobals( 'wgUrlProtocols', [
 			'//',
-			'http://',
+			'https://',
 			'https://',
 			'file://',
 			'mailto:',
@@ -63,7 +63,7 @@ class WfParseUrlTest extends MediaWikiTestCase {
 				]
 			],
 			[
-				'http://example.org',
+				'https://example.org',
 				[
 					'scheme' => 'http',
 					'delimiter' => '://',
@@ -79,7 +79,7 @@ class WfParseUrlTest extends MediaWikiTestCase {
 				]
 			],
 			[
-				'http://id:key@example.org:123/path?foo=bar#baz',
+				'https://id:key@example.org:123/path?foo=bar#baz',
 				[
 					'scheme' => 'http',
 					'delimiter' => '://',

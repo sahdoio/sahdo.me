@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup LockManager
@@ -28,7 +28,7 @@
  * This should work fine for small sites running off one server.
  * Do not use this with 'lockDirectory' set to an NFS mount unless the
  * NFS client is at least version 2.6.12. Otherwise, the BSD flock()
- * locks will be ignored; see http://nfs.sourceforge.net/#section_d.
+ * locks will be ignored; see https://nfs.sourceforge.net/#section_d.
  *
  * @ingroup LockManager
  * @since 1.19

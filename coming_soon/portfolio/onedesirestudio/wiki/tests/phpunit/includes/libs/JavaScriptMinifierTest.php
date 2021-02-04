@@ -107,14 +107,14 @@ class JavaScriptMinifierTest extends PHPUnit_Framework_TestCase {
 
 			// URL in quoted string ( // is not a comment)
 			[
-				"aNode.setAttribute('href','http://foo.bar.org/baz');",
-				"aNode.setAttribute('href','http://foo.bar.org/baz');"
+				"aNode.setAttribute('href','https://foo.bar.org/baz');",
+				"aNode.setAttribute('href','https://foo.bar.org/baz');"
 			],
 
 			// URL in quoted string after multiline quoted string
 			[
-				"var foo=\"\\\nblah\\\n\";\naNode.setAttribute('href','http://foo.bar.org/baz');",
-				"var foo=\"\\\nblah\\\n\";aNode.setAttribute('href','http://foo.bar.org/baz');"
+				"var foo=\"\\\nblah\\\n\";\naNode.setAttribute('href','https://foo.bar.org/baz');",
+				"var foo=\"\\\nblah\\\n\";aNode.setAttribute('href','https://foo.bar.org/baz');"
 			],
 
 			// Division vs. regex nastiness

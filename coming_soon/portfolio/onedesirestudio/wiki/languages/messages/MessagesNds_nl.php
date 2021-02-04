@@ -70,7 +70,7 @@ $dateFormats = [
 ];
 
 $bookstoreList = [
-	'Koninklijke Bibliotheek' => 'http://opc4.kb.nl/DB=1/SET=5/TTL=1/CMD?ACT=SRCH&IKT=1007&SRT=RLV&TRM=$1'
+	'Koninklijke Bibliotheek' => 'https://opc4.kb.nl/DB=1/SET=5/TTL=1/CMD?ACT=SRCH&IKT=1007&SRT=RLV&TRM=$1'
 ];
 
 $magicWords = [

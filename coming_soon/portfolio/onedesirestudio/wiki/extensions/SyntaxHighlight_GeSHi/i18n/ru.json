@@ -5,5 +5,5 @@
 			"Okras"
 		]
 	},
-	"syntaxhighlight-desc": "Обеспечивает подсветки синтаксиса <code>&lt;syntaxhighlight&gt;</code> с помощью [http://pygments.org/ Pygments — средства подсветки синтаксиса для Python]"
+	"syntaxhighlight-desc": "Обеспечивает подсветки синтаксиса <code>&lt;syntaxhighlight&gt;</code> с помощью [https://pygments.org/ Pygments — средства подсветки синтаксиса для Python]"
 }

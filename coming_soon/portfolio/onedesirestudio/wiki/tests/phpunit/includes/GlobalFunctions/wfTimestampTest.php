@@ -149,7 +149,7 @@ class WfTimestampTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @see http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1
+	 * @see https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1
 	 * @dataProvider provideHttpDates
 	 */
 	public function testHttpDate( $input, $output, $desc ) {
@@ -161,7 +161,7 @@ class WfTimestampTest extends MediaWikiTestCase {
 			[ 'Sun, 06 Nov 1994 08:49:37 GMT', '19941106084937', 'RFC 822 date' ],
 			[ 'Sunday, 06-Nov-94 08:49:37 GMT', '19941106084937', 'RFC 850 date' ],
 			[ 'Sun Nov  6 08:49:37 1994', '19941106084937', "ANSI C's asctime() format" ],
-			// See http://www.squid-cache.org/mail-archive/squid-users/200307/0122.html and r77171
+			// See https://www.squid-cache.org/mail-archive/squid-users/200307/0122.html and r77171
 			[
 				'Mon, 22 Nov 2010 14:12:42 GMT; length=52626',
 				'20101122141242',

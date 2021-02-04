@@ -5,7 +5,7 @@
  * Overview:
  *   https://en.wikipedia.org/wiki/XCF_(file_format)
  * Specification in Gnome repository:
- *   http://svn.gnome.org/viewvc/gimp/trunk/devel-docs/xcf.txt?view=markup
+ *   https://svn.gnome.org/viewvc/gimp/trunk/devel-docs/xcf.txt?view=markup
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -67,7 +67,7 @@ class XCFHandler extends BitmapHandler {
 		}
 
 		# Forge a return array containing metadata information just like getimagesize()
-		# See PHP documentation at: http://www.php.net/getimagesize
+		# See PHP documentation at: https://www.php.net/getimagesize
 		return [
 			0 => $header['width'],
 			1 => $header['height'],

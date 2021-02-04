@@ -705,7 +705,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$this->hook( 'UserLoggedIn', $this->never() );
 		$this->request->getSession()->setSecret( 'AuthManager::authnState', 'test' );
 		try {
-			$this->manager->beginAuthentication( [], 'http://localhost/' );
+			$this->manager->beginAuthentication( [], 'https://localhost/' );
 			$this->fail( 'Expected exception not thrown' );
 		} catch ( \LogicException $ex ) {
 			$this->assertSame( 'Authentication is not possible now', $ex->getMessage() );
@@ -722,7 +722,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		];
 		$this->hook( 'UserLoggedIn', $this->never() );
 		try {
-			$this->manager->beginAuthentication( $reqs, 'http://localhost/' );
+			$this->manager->beginAuthentication( $reqs, 'https://localhost/' );
 			$this->fail( 'Expected exception not thrown' );
 		} catch ( \LogicException $ex ) {
 			$this->assertSame(
@@ -742,7 +742,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 			} ) );
 		$this->hook( 'AuthManagerLoginAuthenticateAudit', $this->once() );
 		$this->logger->setCollect( true );
-		$ret = $this->manager->beginAuthentication( $reqs, 'http://localhost/' );
+		$ret = $this->manager->beginAuthentication( $reqs, 'https://localhost/' );
 		$this->logger->setCollect( false );
 		$this->unhook( 'UserLoggedIn' );
 		$this->unhook( 'AuthManagerLoginAuthenticateAudit' );
@@ -768,11 +768,11 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$userReq = new UsernameAuthenticationRequest;
 		$userReq->username = 'UTDummy';
 
-		$req1->returnToUrl = 'http://localhost/';
-		$req2->returnToUrl = 'http://localhost/';
-		$req3->returnToUrl = 'http://localhost/';
+		$req1->returnToUrl = 'https://localhost/';
+		$req2->returnToUrl = 'https://localhost/';
+		$req3->returnToUrl = 'https://localhost/';
 		$req3->username = 'UTDummy';
-		$userReq->returnToUrl = 'http://localhost/';
+		$userReq->returnToUrl = 'https://localhost/';
 
 		// Passing one into beginAuthentication(), and an immediate FAIL
 		$primary = $this->getMockForAbstractClass( AbstractPrimaryAuthenticationProvider::class );
@@ -786,7 +786,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 			null, [ $req2->getUniqueId() => $req2 ]
 		);
 		$this->logger->setCollect( true );
-		$ret = $this->manager->beginAuthentication( [ $createReq ], 'http://localhost/' );
+		$ret = $this->manager->beginAuthentication( [ $createReq ], 'https://localhost/' );
 		$this->logger->setCollect( false );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertInstanceOf( CreateFromLoginAuthenticationRequest::class, $ret->createRequest );
@@ -808,7 +808,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$primary->expects( $this->any() )->method( 'continuePrimaryAuthentication' )
 			->will( $this->returnValue( $res ) );
 		$this->logger->setCollect( true );
-		$ret = $this->manager->beginAuthentication( [], 'http://localhost/' );
+		$ret = $this->manager->beginAuthentication( [], 'https://localhost/' );
 		$this->assertSame( AuthenticationResponse::UI, $ret->status, 'sanity check' );
 		$ret = $this->manager->continueAuthentication( [] );
 		$this->logger->setCollect( false );
@@ -822,7 +822,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$this->primaryauthMocks = [ $primary ];
 		$this->initializeManager( true );
 		$createReq = new CreateFromLoginAuthenticationRequest( $req3, [ $req2 ] );
-		$createReq->returnToUrl = 'http://localhost/';
+		$createReq->returnToUrl = 'https://localhost/';
 		$createReq->username = 'UTDummy';
 		$res = AuthenticationResponse::newUI( [ $req1 ], wfMessage( 'foo' ) );
 		$primary->expects( $this->any() )->method( 'beginPrimaryAccountCreation' )
@@ -832,7 +832,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 			->will( $this->returnValue( PrimaryAuthenticationProvider::TYPE_CREATE ) );
 		$this->logger->setCollect( true );
 		$ret = $this->manager->beginAccountCreation(
-			$user, [ $userReq, $createReq ], 'http://localhost/'
+			$user, [ $userReq, $createReq ], 'https://localhost/'
 		);
 		$this->logger->setCollect( false );
 		$this->assertSame( AuthenticationResponse::UI, $ret->status );
@@ -1003,7 +1003,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 			$ex = null;
 			try {
 				if ( !$i ) {
-					$ret = $this->manager->beginAuthentication( [ $req ], 'http://localhost/' );
+					$ret = $this->manager->beginAuthentication( [ $req ], 'https://localhost/' );
 				} else {
 					$ret = $this->manager->continueAuthentication( [ $req ] );
 				}
@@ -1025,7 +1025,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 			$this->unhook( 'UserLoggedIn' );
 			$this->unhook( 'AuthManagerLoginAuthenticateAudit' );
 
-			$this->assertSame( 'http://localhost/', $req->returnToUrl );
+			$this->assertSame( 'https://localhost/', $req->returnToUrl );
 
 			$ret->message = $this->message( $ret->message );
 			$this->assertEquals( $response, $ret, "Response $i, response" );
@@ -1559,7 +1559,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$this->hook( 'LocalUserCreated', $this->never() );
 		try {
 			$this->manager->beginAccountCreation(
-				$creator, [], 'http://localhost/'
+				$creator, [], 'https://localhost/'
 			);
 			$this->fail( 'Expected exception not thrown' );
 		} catch ( \LogicException $ex ) {
@@ -1581,7 +1581,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$this->initializeManager( true );
 
 		$this->hook( 'LocalUserCreated', $this->never() );
-		$ret = $this->manager->beginAccountCreation( $creator, [], 'http://localhost/' );
+		$ret = $this->manager->beginAccountCreation( $creator, [], 'https://localhost/' );
 		$this->unhook( 'LocalUserCreated' );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'noname', $ret->message->getKey() );
@@ -1591,7 +1591,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$userReq2 = new UsernameAuthenticationRequest;
 		$userReq2->username = $userReq->username . 'X';
 		$ret = $this->manager->beginAccountCreation(
-			$creator, [ $userReq, $userReq2 ], 'http://localhost/'
+			$creator, [ $userReq, $userReq2 ], 'https://localhost/'
 		);
 		$this->unhook( 'LocalUserCreated' );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
@@ -1600,7 +1600,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$this->setMwGlobals( [ 'wgReadOnly' => 'Because' ] );
 		$this->hook( 'LocalUserCreated', $this->never() );
 		$userReq->username = self::usernameForCreation();
-		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'http://localhost/' );
+		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'https://localhost/' );
 		$this->unhook( 'LocalUserCreated' );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'readonlytext', $ret->message->getKey() );
@@ -1609,7 +1609,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 
 		$this->hook( 'LocalUserCreated', $this->never() );
 		$userReq->username = self::usernameForCreation();
-		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'http://localhost/' );
+		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'https://localhost/' );
 		$this->unhook( 'LocalUserCreated' );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'userexists', $ret->message->getKey() );
@@ -1626,7 +1626,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 
 		$this->hook( 'LocalUserCreated', $this->never() );
 		$userReq->username = self::usernameForCreation();
-		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'http://localhost/' );
+		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'https://localhost/' );
 		$this->unhook( 'LocalUserCreated' );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'fail', $ret->message->getKey() );
@@ -1643,14 +1643,14 @@ class AuthManagerTest extends \MediaWikiTestCase {
 
 		$this->hook( 'LocalUserCreated', $this->never() );
 		$userReq->username = self::usernameForCreation() . '<>';
-		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'http://localhost/' );
+		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'https://localhost/' );
 		$this->unhook( 'LocalUserCreated' );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'noname', $ret->message->getKey() );
 
 		$this->hook( 'LocalUserCreated', $this->never() );
 		$userReq->username = $creator->getName();
-		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'http://localhost/' );
+		$ret = $this->manager->beginAccountCreation( $creator, [ $userReq ], 'https://localhost/' );
 		$this->unhook( 'LocalUserCreated' );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'userexists', $ret->message->getKey() );
@@ -1674,7 +1674,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 			->willReturn( \StatusValue::newFatal( 'populatefail' ) );
 		$userReq->username = self::usernameForCreation();
 		$ret = $this->manager->beginAccountCreation(
-			$creator, [ $userReq, $req ], 'http://localhost/'
+			$creator, [ $userReq, $req ], 'https://localhost/'
 		);
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'populatefail', $ret->message->getKey() );
@@ -1683,13 +1683,13 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$userReq->username = self::usernameForCreation();
 
 		$ret = $this->manager->beginAccountCreation(
-			$creator, [ $userReq, $req ], 'http://localhost/'
+			$creator, [ $userReq, $req ], 'https://localhost/'
 		);
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'fail', $ret->message->getKey() );
 
 		$this->manager->beginAccountCreation(
-			\User::newFromName( $userReq->username ), [ $userReq, $req ], 'http://localhost/'
+			\User::newFromName( $userReq->username ), [ $userReq, $req ], 'https://localhost/'
 		);
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'fail', $ret->message->getKey() );
@@ -2032,7 +2032,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 					$userReq = new UsernameAuthenticationRequest;
 					$userReq->username = $username;
 					$ret = $this->manager->beginAccountCreation(
-						$creator, [ $userReq, $req ], 'http://localhost/'
+						$creator, [ $userReq, $req ], 'https://localhost/'
 					);
 				} else {
 					$ret = $this->manager->continueAccountCreation( [ $req ] );
@@ -2055,7 +2055,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 
 			$this->unhook( 'LocalUserCreated' );
 
-			$this->assertSame( 'http://localhost/', $req->returnToUrl );
+			$this->assertSame( 'https://localhost/', $req->returnToUrl );
 
 			if ( $success ) {
 				$this->assertNotNull( $ret->loginRequest, "Response $i, login marker" );
@@ -2289,7 +2289,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$reasonReq = new CreationReasonAuthenticationRequest;
 		$reasonReq->reason = $this->toString();
 		$ret = $this->manager->beginAccountCreation(
-			$creator, [ $userReq, $reasonReq ], 'http://localhost/'
+			$creator, [ $userReq, $reasonReq ], 'https://localhost/'
 		);
 
 		$this->assertSame( AuthenticationResponse::PASS, $ret->status );
@@ -3187,7 +3187,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 
 		$this->hook( 'UserLoggedIn', $this->never() );
 		$this->hook( 'LocalUserCreated', $this->once() )->with( $callback, $this->equalTo( true ) );
-		$ret = $this->manager->beginAuthentication( [], 'http://localhost/' );
+		$ret = $this->manager->beginAuthentication( [], 'https://localhost/' );
 		$this->unhook( 'LocalUserCreated' );
 		$this->unhook( 'UserLoggedIn' );
 		$this->assertSame( AuthenticationResponse::UI, $ret->status );
@@ -3233,7 +3233,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 
 		$this->hook( 'UserLoggedIn', $this->never() );
 		$this->hook( 'LocalUserCreated', $this->never() );
-		$ret = $this->manager->beginAuthentication( [], 'http://localhost/' );
+		$ret = $this->manager->beginAuthentication( [], 'https://localhost/' );
 		$this->unhook( 'LocalUserCreated' );
 		$this->unhook( 'UserLoggedIn' );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
@@ -3289,7 +3289,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 
 		$this->request->getSession()->setSecret( 'AuthManager::accountLinkState', 'test' );
 		try {
-			$this->manager->beginAccountLink( $user, [], 'http://localhost/' );
+			$this->manager->beginAccountLink( $user, [], 'https://localhost/' );
 			$this->fail( 'Expected exception not thrown' );
 		} catch ( \LogicException $ex ) {
 			$this->assertEquals( 'Account linking is not possible', $ex->getMessage() );
@@ -3303,12 +3303,12 @@ class AuthManagerTest extends \MediaWikiTestCase {
 		$this->primaryauthMocks = [ $mock ];
 		$this->initializeManager( true );
 
-		$ret = $this->manager->beginAccountLink( new \User, [], 'http://localhost/' );
+		$ret = $this->manager->beginAccountLink( new \User, [], 'https://localhost/' );
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'noname', $ret->message->getKey() );
 
 		$ret = $this->manager->beginAccountLink(
-			\User::newFromName( 'UTDoesNotExist' ), [], 'http://localhost/'
+			\User::newFromName( 'UTDoesNotExist' ), [], 'https://localhost/'
 		);
 		$this->assertSame( AuthenticationResponse::FAIL, $ret->status );
 		$this->assertSame( 'authmanager-userdoesnotexist', $ret->message->getKey() );
@@ -3486,7 +3486,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 			$ex = null;
 			try {
 				if ( $first ) {
-					$ret = $this->manager->beginAccountLink( $user, [ $req ], 'http://localhost/' );
+					$ret = $this->manager->beginAccountLink( $user, [ $req ], 'https://localhost/' );
 				} else {
 					$ret = $this->manager->continueAccountLink( [ $req ] );
 				}
@@ -3503,7 +3503,7 @@ class AuthManagerTest extends \MediaWikiTestCase {
 				return;
 			}
 
-			$this->assertSame( 'http://localhost/', $req->returnToUrl );
+			$this->assertSame( 'https://localhost/', $req->returnToUrl );
 
 			$ret->message = $this->message( $ret->message );
 			$this->assertEquals( $response, $ret, "Response $i, response" );

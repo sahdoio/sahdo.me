@@ -6,7 +6,7 @@ $result = [
 	],
 	'xmp-general' =>
 	[
-		'LicenseUrl' => 'http://creativecommons.com/cc-by-2.9',
+		'LicenseUrl' => 'https://creativecommons.com/cc-by-2.9',
 		'ImageDescription' =>
 		[
 			'x-default' => 'Test image for the cc: xmp: xmpRights: namespaces in xmp',
@@ -21,7 +21,7 @@ $result = [
 		'Software' => 'The one true editor: Vi (ok i used gimp)',
 		'Identifier' =>
 		[
-			0 => 'http://example.com/identifierurl',
+			0 => 'https://example.com/identifierurl',
 			1 => 'urn:sha1:342524abcdef',
 			'_type' => 'ul',
 		],
@@ -30,7 +30,7 @@ $result = [
 		'DateTime' => '2007:03:04 06:34:10',
 		'Nickname' => 'My little xmp test image',
 		'Rating' => '5',
-		'RightsCertificate' => 'http://example.com/rights-certificate/',
+		'RightsCertificate' => 'https://example.com/rights-certificate/',
 		'Copyrighted' => 'True',
 		'CopyrightOwner' =>
 		[
@@ -43,10 +43,10 @@ $result = [
 			'en-gb' => 'Do whatever you want in british english',
 			'_type' => 'lang',
 		],
-		'WebStatement' => 'http://example.com/web_statement',
+		'WebStatement' => 'https://example.com/web_statement',
 	],
 	'xmp-deprecated' =>
 	[
-		'Identifier' => 'http://example.com/identifierurl/wrong',
+		'Identifier' => 'https://example.com/identifierurl/wrong',
 	],
 ];

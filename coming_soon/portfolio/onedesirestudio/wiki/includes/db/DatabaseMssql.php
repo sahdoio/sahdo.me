@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Database
@@ -89,7 +89,7 @@ class DatabaseMssql extends Database {
 			throw new DBConnectionError(
 				$this,
 				"Microsoft SQL Server Native (sqlsrv) functions missing.
-				You can download the driver from: http://go.microsoft.com/fwlink/?LinkId=123470\n"
+				You can download the driver from: https://go.microsoft.com/fwlink/?LinkId=123470\n"
 			);
 		}
 
@@ -512,7 +512,7 @@ class DatabaseMssql extends Database {
 	public function estimateRowCount( $table, $vars = '*', $conds = '',
 		$fname = __METHOD__, $options = []
 	) {
-		// http://msdn2.microsoft.com/en-us/library/aa259203.aspx
+		// https://msdn2.microsoft.com/en-us/library/aa259203.aspx
 		$options['EXPLAIN'] = true;
 		$options['FOR COUNT'] = true;
 		$res = $this->select( $table, $vars, $conds, $fname, $options );
@@ -1073,7 +1073,7 @@ class DatabaseMssql extends Database {
 	/**
 	 * Escapes a identifier for use inm SQL.
 	 * Throws an exception if it is invalid.
-	 * Reference: http://msdn.microsoft.com/en-us/library/aa224033%28v=SQL.80%29.aspx
+	 * Reference: https://msdn.microsoft.com/en-us/library/aa224033%28v=SQL.80%29.aspx
 	 * @param string $identifier
 	 * @throws MWException
 	 * @return string
@@ -1131,7 +1131,7 @@ class DatabaseMssql extends Database {
 	 * @return string
 	 */
 	public function addIdentifierQuotes( $s ) {
-		// http://msdn.microsoft.com/en-us/library/aa223962.aspx
+		// https://msdn.microsoft.com/en-us/library/aa223962.aspx
 		return '[' . $s . ']';
 	}
 
@@ -1156,7 +1156,7 @@ class DatabaseMssql extends Database {
 	/**
 	 * MS SQL requires specifying the escape character used in a LIKE query
 	 * or using Square brackets to surround characters that are to be escaped
-	 * http://msdn.microsoft.com/en-us/library/ms179859.aspx
+	 * https://msdn.microsoft.com/en-us/library/ms179859.aspx
 	 * Here we take the Specify-Escape-Character approach since it's less
 	 * invasive, renders a query that is closer to other DB's and better at
 	 * handling square bracket escaping

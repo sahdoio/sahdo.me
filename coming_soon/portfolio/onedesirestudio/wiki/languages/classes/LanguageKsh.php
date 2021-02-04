@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @author Purodha Blissenbach
@@ -79,7 +79,7 @@ class LanguageKsh extends Language {
 	 *
 	 * We currently handle definite articles of the singular only.
 	 * There is a full set of test cases at:
-	 * http://translatewiki.net/wiki/Portal:Ksh#GRAMMAR_Pr%C3%B6%C3%B6fe
+	 * https://translatewiki.net/wiki/Portal:Ksh#GRAMMAR_Pr%C3%B6%C3%B6fe
 	 * Contents of the leftmost table column can be copied and pasted as
 	 * "case" values.
 	 *

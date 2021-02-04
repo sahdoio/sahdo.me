@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Deployment
@@ -1067,7 +1067,7 @@ abstract class Installer {
 		/**
 		 * This needs to be updated something that the latest libicu
 		 * will properly normalize.  This normalization was found at
-		 * http://www.unicode.org/versions/Unicode5.2.0/#Character_Additions
+		 * https://www.unicode.org/versions/Unicode5.2.0/#Character_Additions
 		 * Note that we use the hex representation to create the code
 		 * points in order to avoid any Unicode-destroying during transit.
 		 */

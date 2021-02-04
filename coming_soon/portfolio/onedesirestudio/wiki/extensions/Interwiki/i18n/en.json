@@ -44,7 +44,7 @@
 	"interwiki_addbutton": "Add",
 	"interwiki_added": "Prefix \"$1\" was added to the interwiki table.",
 	"interwiki_addfailed": "Prefix \"$1\" could not be added to the interwiki table.\nPossibly it already exists in the interwiki table.",
-	"interwiki-defaulturl": "http://www.example.com/$1",
+	"interwiki-defaulturl": "https://www.example.com/$1",
 	"interwiki_edittext": "Editing an interwiki prefix",
 	"interwiki_editintro": "You are editing an interwiki prefix.\nRemember that this can break existing links.",
 	"interwiki_edited": "Prefix \"$1\" was modified in the interwiki table.",

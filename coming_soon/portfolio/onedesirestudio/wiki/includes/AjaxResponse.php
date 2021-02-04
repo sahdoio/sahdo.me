@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Ajax
@@ -161,7 +161,7 @@ class AjaxResponse {
 			// For back-compat, it is supported that mResponseCode be a string like " 200 OK"
 			// (with leading space and the status message after). Cast response code to an integer
 			// to take advantage of PHP's conversion rules which will turn "  200 OK" into 200.
-			// http://php.net/string#language.types.string.conversion
+			// https://php.net/string#language.types.string.conversion
 			$n = intval( trim( $this->mResponseCode ) );
 			HttpStatus::header( $n );
 		}

@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -41,8 +41,8 @@ $response->header( 'Cache-control: max-age=600' );
 print '<?xml version="1.0"?>';
 print Xml::openElement( 'OpenSearchDescription',
 	[
-		'xmlns' => 'http://a9.com/-/spec/opensearch/1.1/',
-		'xmlns:moz' => 'http://www.mozilla.org/2006/browser/search/' ] );
+		'xmlns' => 'https://a9.com/-/spec/opensearch/1.1/',
+		'xmlns:moz' => 'https://www.mozilla.org/2006/browser/search/' ] );
 
 /* The spec says the ShortName must be no longer than 16 characters,
  * but 16 is *realllly* short. In practice, browsers don't appear to care

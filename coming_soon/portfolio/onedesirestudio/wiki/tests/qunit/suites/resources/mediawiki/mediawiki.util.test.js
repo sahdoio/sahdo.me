@@ -223,11 +223,11 @@
 	QUnit.test( 'getParamValue', 5, function ( assert ) {
 		var url;
 
-		url = 'http://example.org/?foo=wrong&foo=right#&foo=bad';
+		url = 'https://example.org/?foo=wrong&foo=right#&foo=bad';
 		assert.equal( mw.util.getParamValue( 'foo', url ), 'right', 'Use latest one, ignore hash' );
 		assert.strictEqual( mw.util.getParamValue( 'bar', url ), null, 'Return null when not found' );
 
-		url = 'http://example.org/#&foo=bad';
+		url = 'https://example.org/#&foo=bad';
 		assert.strictEqual( mw.util.getParamValue( 'foo', url ), null, 'Ignore hash if param is not in querystring but in hash (bug 27427)' );
 
 		url = 'example.org?' + $.param( { TEST: 'a b+c' } );

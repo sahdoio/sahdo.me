@@ -113,7 +113,7 @@
 {{#ifexpr: ({{{1|1}}} = 112) | 112 ([[Al-Ikhlas]]) |
 {{#ifexpr: ({{{1|1}}} = 113) | 113 ([[Al-Falaq]]) |
 {{#ifexpr: ({{{1|1}}} = 114) | 114 ([[An-Nas]]) |
-error }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }}, [[ayat|verse]] [http://www.usc.edu/dept/MSA/quran/{{three digit|{{{1|1}}}}}.qmt.html#{{three digit|{{{1|1}}}}}.{{three digit|{{{2|1}}}}} {{{2|1}}}]''':'''{{cquote| {{{3|Default text}}}&mdash; <small>[[Qur'an translations|translated]] by {{#ifexpr: ({{{4|0}}} = 0) | Unknown | 
+error }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }} }}, [[ayat|verse]] [https://www.usc.edu/dept/MSA/quran/{{three digit|{{{1|1}}}}}.qmt.html#{{three digit|{{{1|1}}}}}.{{three digit|{{{2|1}}}}} {{{2|1}}}]''':'''{{cquote| {{{3|Default text}}}&mdash; <small>[[Qur'an translations|translated]] by {{#ifexpr: ({{{4|0}}} = 0) | Unknown | 
 {{#ifexpr: ({{{4|0}}} = 1) | [[Salman the Persian]] |
 {{#ifexpr: ({{{4|0}}} = 101) | [[Marmaduke Pickthall]] |
 {{#ifexpr: ({{{4|0}}} = 102) | [[Abdullah Yusuf Ali]] |

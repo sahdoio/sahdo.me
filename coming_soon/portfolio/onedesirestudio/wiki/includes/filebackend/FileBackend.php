@@ -22,7 +22,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup FileBackend
@@ -874,7 +874,7 @@ abstract class FileBackend {
 	 * @return ScopedCallback|null
 	 */
 	final protected function getScopedPHPBehaviorForOps() {
-		if ( PHP_SAPI != 'cli' ) { // http://bugs.php.net/bug.php?id=47540
+		if ( PHP_SAPI != 'cli' ) { // https://bugs.php.net/bug.php?id=47540
 			$old = ignore_user_abort( true ); // avoid half-finished operations
 			return new ScopedCallback( function () use ( $old ) {
 				ignore_user_abort( $old );

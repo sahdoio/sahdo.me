@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -184,7 +184,7 @@ function wfPHPVersionError( $type, $mwVersion, $minimumVersionPHP, $phpVersion )
 		. "Check if you have a newer php executable with a different name, such as php5.\n\n";
 
 	$longHtml = <<<HTML
-			Please consider <a href="http://www.php.net/downloads.php">upgrading your copy of PHP</a>.
+			Please consider <a href="https://www.php.net/downloads.php">upgrading your copy of PHP</a>.
 			PHP versions less than 5.5.0 are no longer supported by the PHP Group and will not receive
 			security or bugfix updates.
 		</p>

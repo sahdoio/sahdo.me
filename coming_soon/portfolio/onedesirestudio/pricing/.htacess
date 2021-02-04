@@ -5,7 +5,7 @@ Options -Indexes
 #RewriteEngine On
 #RewriteCond %{REQUEST_FILENAME} !-f [OR]
 #RewriteCond %{REQUEST_FILENAME} \.css$
-#RewriteRule ^ http://www.onedesire.co/error_404.html
+#RewriteRule ^ https://www.onedesire.co/error_404.html
 
 #proibe acesso ao arquivo .htaccess
 <files ~ "^.*\.([Hh][Tt][Aa])">
@@ -15,8 +15,8 @@ Options -Indexes
 </files>
 
 #encaminha para página de erro
-ErrorDocument 400 http://onedesire.co/error_404.html
-ErrorDocument 401 http://onedesire.co/error_404.html
-ErrorDocument 403 http://onedesire.co/error_404.html
-ErrorDocument 404 http://onedesire.co/error_404.html
-ErrorDocument 500 http://onedesire.co/error_404.html
+ErrorDocument 400 https://onedesire.co/error_404.html
+ErrorDocument 401 https://onedesire.co/error_404.html
+ErrorDocument 403 https://onedesire.co/error_404.html
+ErrorDocument 404 https://onedesire.co/error_404.html
+ErrorDocument 500 https://onedesire.co/error_404.html

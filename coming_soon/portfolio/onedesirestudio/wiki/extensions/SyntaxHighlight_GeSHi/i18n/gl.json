@@ -7,7 +7,7 @@
 			"Banjo"
 		]
 	},
-	"syntaxhighlight-desc": "Proporciona unha sintaxe resaltada <code>&lt;syntaxhighlight&gt;</code> usando [http://pygments.org/ Pygments - Resaltador de sintaxe en Python]",
+	"syntaxhighlight-desc": "Proporciona unha sintaxe resaltada <code>&lt;syntaxhighlight&gt;</code> usando [https://pygments.org/ Pygments - Resaltador de sintaxe en Python]",
 	"syntaxhighlight-error-category": "Páxinas con erros de sintaxe resaltados",
 	"syntaxhighlight-error-category-desc": "Houbo un erro ó intentar resaltar o código incluído na páxina.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Código",

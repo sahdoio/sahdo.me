@@ -28,7 +28,7 @@
 	"config-env-bad": "Yio dilamowali mopopasi MediaWiki",
 	"config-env-php": "PHP$1 mayilepasi",
 	"config-env-hhvm": "HHVM $1 mayilepasi",
-	"config-apc": "[http://www.php.net/apc APC] mayilepasi",
+	"config-apc": "[https://www.php.net/apc APC] mayilepasi",
 	"config-diff3-bad": "GNU diff3 ja yilotapu",
 	"config-using-server": "Momake tanggulo server \"<nowiki>$1<nowiki>\"",
 	"config-using-uri": "Momake server URL \"<nowiki>$1$2</nowiki>\"",

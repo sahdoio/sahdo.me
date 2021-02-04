@@ -6,6 +6,6 @@
 			"Romaine"
 		]
 	},
-	"syntaxhighlight-desc": "Voorziet in het markeren van syntaxis voor <code>&lt;syntaxhighlight&gt;</code> met [http://pygments.org/ Pygments]",
+	"syntaxhighlight-desc": "Voorziet in het markeren van syntaxis voor <code>&lt;syntaxhighlight&gt;</code> met [https://pygments.org/ Pygments]",
 	"syntaxhighlight-error-category": "Pagina's met fouten in de syntaxmarkering"
 }

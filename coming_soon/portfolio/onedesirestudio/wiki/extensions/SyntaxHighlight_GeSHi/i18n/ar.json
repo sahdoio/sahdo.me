@@ -5,6 +5,6 @@
 			"زكريا"
 		]
 	},
-	"syntaxhighlight-desc": "يوفر تعليم النص <code>&lt;syntaxhighlight&gt;</code> باستخدام [http://pygments.org/ معلم GeSHi]",
+	"syntaxhighlight-desc": "يوفر تعليم النص <code>&lt;syntaxhighlight&gt;</code> باستخدام [https://pygments.org/ معلم GeSHi]",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "نص خام"
 }

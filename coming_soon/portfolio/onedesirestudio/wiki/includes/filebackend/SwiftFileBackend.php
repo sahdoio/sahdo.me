@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup FileBackend
@@ -96,12 +96,12 @@ class SwiftFileBackend extends FileBackendStore {
 	 *                          Do not set this until it has been set in the backend.
 	 *                          This is used for generating expiring pre-authenticated URLs.
 	 *                          Only use this when using rgw and to work around
-	 *                          http://tracker.newdream.net/issues/3454.
+	 *                          https://tracker.newdream.net/issues/3454.
 	 *   - rgwS3SecretKey     : Rados Gateway S3 "secret key" value on the account.
 	 *                          Do not set this until it has been set in the backend.
 	 *                          This is used for generating expiring pre-authenticated URLs.
 	 *                          Only use this when using rgw and to work around
-	 *                          http://tracker.newdream.net/issues/3454.
+	 *                          https://tracker.newdream.net/issues/3454.
 	 */
 	public function __construct( array $config ) {
 		parent::__construct( $config );
@@ -1184,7 +1184,7 @@ class SwiftFileBackend extends FileBackendStore {
 					$this->rgwS3SecretKey,
 					true // raw
 				) );
-				// See http://s3.amazonaws.com/doc/s3-developer-guide/RESTAuthentication.html.
+				// See https://s3.amazonaws.com/doc/s3-developer-guide/RESTAuthentication.html.
 				// Note: adding a newline for empty CanonicalizedAmzHeaders does not work.
 				return wfAppendQuery(
 					str_replace( '/swift/v1', '', // S3 API is the rgw default
@@ -1278,7 +1278,7 @@ class SwiftFileBackend extends FileBackendStore {
 	/**
 	 * Set read/write permissions for a Swift container.
 	 *
-	 * @see http://swift.openstack.org/misc.html#acls
+	 * @see https://swift.openstack.org/misc.html#acls
 	 *
 	 * In general, we don't allow listings to end-users. It's not useful, isn't well-defined
 	 * (lists are truncated to 10000 item with no way to page), and is just a performance risk.

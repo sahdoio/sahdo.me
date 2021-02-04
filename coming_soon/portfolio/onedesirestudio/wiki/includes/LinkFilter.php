@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -61,7 +61,7 @@ class LinkFilter {
 	 * @return string Regex pattern, for preg_match()
 	 */
 	private static function makeRegex( $filterEntry ) {
-		$regex = '!http://';
+		$regex = '!https://';
 		if ( substr( $filterEntry, 0, 2 ) == '*.' ) {
 			$regex .= '(?:[A-Za-z0-9.-]+\.|)';
 			$filterEntry = substr( $filterEntry, 2 );
@@ -73,13 +73,13 @@ class LinkFilter {
 	/**
 	 * Make an array to be used for calls to Database::buildLike(), which
 	 * will match the specified string. There are several kinds of filter entry:
-	 *     *.domain.com    -  Produces http://com.domain.%, matches domain.com
+	 *     *.domain.com    -  Produces https://com.domain.%, matches domain.com
 	 *                        and www.domain.com
-	 *     domain.com      -  Produces http://com.domain./%, matches domain.com
+	 *     domain.com      -  Produces https://com.domain./%, matches domain.com
 	 *                        or domain.com/ but not www.domain.com
-	 *     *.domain.com/x  -  Produces http://com.domain.%/x%, matches
+	 *     *.domain.com/x  -  Produces https://com.domain.%/x%, matches
 	 *                        www.domain.com/xy
-	 *     domain.com/x    -  Produces http://com.domain./x%, matches
+	 *     domain.com/x    -  Produces https://com.domain./x%, matches
 	 *                        domain.com/xy but not www.domain.com/xy
 	 *
 	 * Asterisks in any other location are considered invalid.
@@ -88,10 +88,10 @@ class LinkFilter {
 	 * of adding wildcards
 	 *
 	 * @param string $filterEntry Domainparts
-	 * @param string $protocol Protocol (default http://)
+	 * @param string $protocol Protocol (default https://)
 	 * @return array Array to be passed to Database::buildLike() or false on error
 	 */
-	public static function makeLikeArray( $filterEntry, $protocol = 'http://' ) {
+	public static function makeLikeArray( $filterEntry, $protocol = 'https://' ) {
 		$db = wfGetDB( DB_SLAVE );
 
 		$target = $protocol . $filterEntry;

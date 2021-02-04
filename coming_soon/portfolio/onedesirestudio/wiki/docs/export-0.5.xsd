@@ -16,14 +16,14 @@
 	Version 0.5 adds byte count per revision.
 
 	The canonical URL to the schema document is:
-	http://www.mediawiki.org/xml/export-0.5.xsd
+	https://www.mediawiki.org/xml/export-0.5.xsd
 
 	Use the namespace:
-	http://www.mediawiki.org/xml/export-0.5/
+	https://www.mediawiki.org/xml/export-0.5/
 -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema"
-		xmlns:mw="http://www.mediawiki.org/xml/export-0.5/"
-		targetNamespace="http://www.mediawiki.org/xml/export-0.5/"
+<schema xmlns="https://www.w3.org/2001/XMLSchema"
+		xmlns:mw="https://www.mediawiki.org/xml/export-0.5/"
+		targetNamespace="https://www.mediawiki.org/xml/export-0.5/"
 		elementFormDefault="qualified">
 
 	<annotation>
@@ -33,8 +33,8 @@
 	</annotation>
 
 	<!-- Need this to reference xml:lang -->
-	<import namespace="http://www.w3.org/XML/1998/namespace"
-			schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<import namespace="https://www.w3.org/XML/1998/namespace"
+			schemaLocation="https://www.w3.org/2001/xml.xsd"/>
 
 	<!-- Our root element -->
 	<element name="mediawiki" type="mw:MediaWikiType"/>

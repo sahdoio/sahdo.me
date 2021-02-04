@@ -21,7 +21,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -291,7 +291,7 @@ class RSSFeed extends ChannelFeed {
 		global $wgVersion;
 
 		$this->outXmlHeader();
-		?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+		?><rss version="2.0" xmlns:dc="https://purl.org/dc/elements/1.1/">
 	<channel>
 		<title><?php print $this->getTitle() ?></title>
 		<link><?php print wfExpandUrl( $this->getUrl(), PROTO_CURRENT ) ?></link>
@@ -357,7 +357,7 @@ class AtomFeed extends ChannelFeed {
 
 		$this->outXmlHeader();
 		// @codingStandardsIgnoreStart Ignore long lines and formatting issues.
-		?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="<?php print $this->getLanguage() ?>">
+		?><feed xmlns="https://www.w3.org/2005/Atom" xml:lang="<?php print $this->getLanguage() ?>">
 		<id><?php print $this->getFeedId() ?></id>
 		<title><?php print $this->getTitle() ?></title>
 		<link rel="self" type="application/atom+xml" href="<?php print wfExpandUrl( $this->getSelfUrl(), PROTO_CURRENT ) ?>"/>

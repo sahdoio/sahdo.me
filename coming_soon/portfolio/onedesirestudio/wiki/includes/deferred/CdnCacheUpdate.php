@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Cache
@@ -93,7 +93,7 @@ class CdnCacheUpdate implements DeferrableUpdate, MergeableUpdate {
 	/**
 	 * Purges a list of CDN nodes defined in $wgSquidServers.
 	 * $urlArr should contain the full URLs to purge as values
-	 * (example: $urlArr[] = 'http://my.host/something')
+	 * (example: $urlArr[] = 'https://my.host/something')
 	 *
 	 * @param string[] $urlArr List of full URLs to purge
 	 */

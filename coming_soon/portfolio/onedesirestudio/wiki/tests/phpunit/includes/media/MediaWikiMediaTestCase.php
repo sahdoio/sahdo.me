@@ -37,7 +37,7 @@ abstract class MediaWikiMediaTestCase extends MediaWikiTestCase {
 	protected function getRepoOptions() {
 		return [
 			'name' => 'temp',
-			'url' => 'http://localhost/thumbtest',
+			'url' => 'https://localhost/thumbtest',
 			'backend' => $this->backend
 		];
 	}

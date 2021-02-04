@@ -7,7 +7,7 @@
 			"Liuxinyu970226"
 		]
 	},
-	"syntaxhighlight-desc": "使用 [http://pygments.org/ Pygments - Python syntax highlighter] 提供可強調語法顯示的 <code>&lt;syntaxhighlight&gt;</code> 標籤。",
+	"syntaxhighlight-desc": "使用 [https://pygments.org/ Pygments - Python syntax highlighter] 提供可強調語法顯示的 <code>&lt;syntaxhighlight&gt;</code> 標籤。",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "程式碼",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-language": "語言",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-none": "(無)",

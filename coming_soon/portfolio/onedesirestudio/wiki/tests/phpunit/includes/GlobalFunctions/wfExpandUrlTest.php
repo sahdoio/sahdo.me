@@ -28,7 +28,7 @@ class WfExpandUrlTest extends MediaWikiTestCase {
 	public static function provideExpandableUrls() {
 		$modes = [ 'http', 'https' ];
 		$servers = [
-			'http' => 'http://example.com',
+			'http' => 'https://example.com',
 			'https' => 'https://example.com',
 			'protocol-relative' => '//example.com'
 		];
@@ -48,7 +48,7 @@ class WfExpandUrlTest extends MediaWikiTestCase {
 					$canServer = "$canServerMode://example2.com";
 					foreach ( $defaultProtos as $protoDesc => $defaultProto ) {
 						$retval[] = [
-							'http://example.com', 'http://example.com',
+							'https://example.com', 'https://example.com',
 							$defaultProto, $server, $canServer, $httpsMode,
 							"Testing fully qualified http URLs (no need to expand) "
 								. "(defaultProto: $protoDesc , wgServer: $server, "

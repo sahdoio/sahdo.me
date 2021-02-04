@@ -1,7 +1,7 @@
 /*!
  * Isotope v2.0.0
  * Filter & sort magical layouts
- * http://isotope.metafizzy.co
+ * https://isotope.metafizzy.co
  */
 
 ( function( window ) {

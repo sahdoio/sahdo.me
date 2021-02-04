@@ -43,7 +43,7 @@
 /**
  * This is a PHP client for memcached - a distributed memory cache daemon.
  *
- * More information is available at http://www.danga.com/memcached/
+ * More information is available at https://www.danga.com/memcached/
  *
  * Usage example:
  *

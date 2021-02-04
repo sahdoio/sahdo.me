@@ -45,7 +45,7 @@
 				smile: {
 					label: 'Smile!',
 					type: 'button',
-					icon: 'http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gnome-face-smile.svg/22px-Gnome-face-smile.svg.png',
+					icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gnome-face-smile.svg/22px-Gnome-face-smile.svg.png',
 					action: {
 						type: 'encapsulate',
 						options: {

@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -47,8 +47,8 @@ class MockImageHandler {
 		# Example of what we receive:
 		# $image: LocalFile
 		# $dstPath: /tmp/transform_7d0a7a2f1a09-1.jpg
-		# $dstUrl : http://example.com/images/thumb/0/09/Bad.jpg/320px-Bad.jpg
-		# $params:  width: 320,  descriptionUrl http://trunk.dev/wiki/File:Bad.jpg
+		# $dstUrl : https://example.com/images/thumb/0/09/Bad.jpg/320px-Bad.jpg
+		# $params:  width: 320,  descriptionUrl https://trunk.dev/wiki/File:Bad.jpg
 
 		$that->normaliseParams( $image, $params );
 

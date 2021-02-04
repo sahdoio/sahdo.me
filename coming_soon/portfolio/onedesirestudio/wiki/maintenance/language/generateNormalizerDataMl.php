@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup MaintenanceLanguage
@@ -42,14 +42,14 @@ class GenerateNormalizerDataMl extends Maintenance {
 
 	public function execute() {
 		$hexPairs = [
-			# From http://unicode.org/versions/Unicode5.1.0/#Malayalam_Chillu_Characters
+			# From https://unicode.org/versions/Unicode5.1.0/#Malayalam_Chillu_Characters
 			'0D23 0D4D 200D' => '0D7A',
 			'0D28 0D4D 200D' => '0D7B',
 			'0D30 0D4D 200D' => '0D7C',
 			'0D32 0D4D 200D' => '0D7D',
 			'0D33 0D4D 200D' => '0D7E',
 
-			# From http://permalink.gmane.org/gmane.science.linguistics.wikipedia.technical/46413
+			# From https://permalink.gmane.org/gmane.science.linguistics.wikipedia.technical/46413
 			'0D15 0D4D 200D' => '0D7F',
 		];
 

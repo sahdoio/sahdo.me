@@ -20,7 +20,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -35,7 +35,7 @@ class ApiRsd extends ApiBase {
 		$result = $this->getResult();
 
 		$result->addValue( null, 'version', '1.0' );
-		$result->addValue( null, 'xmlns', 'http://archipelago.phrasewise.com/rsd' );
+		$result->addValue( null, 'xmlns', 'https://archipelago.phrasewise.com/rsd' );
 
 		$service = [
 			'apis' => $this->formatRsdApiList(),
@@ -75,7 +75,7 @@ class ApiRsd extends ApiBase {
 	 * compatible APIs, by hooking 'ApiRsdServiceApis' and adding more
 	 * elements to the array.
 	 *
-	 * See http://cyber.law.harvard.edu/blogs/gems/tech/rsd.html for
+	 * See https://cyber.law.harvard.edu/blogs/gems/tech/rsd.html for
 	 * the base RSD spec, and check WordPress and StatusNet sites for
 	 * in-production examples listing several blogging and micrblogging
 	 * APIs.

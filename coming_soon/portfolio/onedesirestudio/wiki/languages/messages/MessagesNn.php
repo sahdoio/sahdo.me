@@ -35,11 +35,11 @@
  */
 
 /**
- * @license http://www.gnu.org/copyleft/fdl.html GNU Free Documentation License
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @license https://www.gnu.org/copyleft/fdl.html GNU Free Documentation License
+ * @license https://www.gnu.org/copyleft/gpl.html GNU General Public License
  *
- * @see http://meta.wikimedia.org/w/index.php?title=LanguageNn.php&action=history
- * @see http://nn.wikipedia.org/w/index.php?title=Brukar:Dittaeva/LanguageNn.php&action=history
+ * @see https://meta.wikimedia.org/w/index.php?title=LanguageNn.php&action=history
+ * @see https://nn.wikipedia.org/w/index.php?title=Brukar:Dittaeva/LanguageNn.php&action=history
  */
 
 $datePreferences = [
@@ -88,15 +88,15 @@ $dateFormats = [
 ];
 
 $bookstoreList = [
-	'Bibsys'       => 'http://ask.bibsys.no/ask/action/result?kilde=biblio&fid=isbn&lang=nn&term=$1',
-	'BokBerit'     => 'http://www.bokberit.no/annet_sted/bocker/$1.html',
-	'Bokkilden'    => 'http://www.bokkilden.no/ProductDetails.aspx?ProductId=$1',
-	'Haugenbok'    => 'http://www.haugenbok.no/resultat.cfm?st=hurtig&isbn=$1',
-	'Akademika'    => 'http://www.akademika.no/sok.php?isbn=$1',
-	'Gnist'        => 'http://www.gnist.no/sok.php?isbn=$1',
-	'Amazon.co.uk' => 'http://www.amazon.co.uk/exec/obidos/ISBN=$1',
-	'Amazon.de'    => 'http://www.amazon.de/exec/obidos/ISBN=$1',
-	'Amazon.com'   => 'http://www.amazon.com/exec/obidos/ISBN=$1'
+	'Bibsys'       => 'https://ask.bibsys.no/ask/action/result?kilde=biblio&fid=isbn&lang=nn&term=$1',
+	'BokBerit'     => 'https://www.bokberit.no/annet_sted/bocker/$1.html',
+	'Bokkilden'    => 'https://www.bokkilden.no/ProductDetails.aspx?ProductId=$1',
+	'Haugenbok'    => 'https://www.haugenbok.no/resultat.cfm?st=hurtig&isbn=$1',
+	'Akademika'    => 'https://www.akademika.no/sok.php?isbn=$1',
+	'Gnist'        => 'https://www.gnist.no/sok.php?isbn=$1',
+	'Amazon.co.uk' => 'https://www.amazon.co.uk/exec/obidos/ISBN=$1',
+	'Amazon.de'    => 'https://www.amazon.de/exec/obidos/ISBN=$1',
+	'Amazon.com'   => 'https://www.amazon.com/exec/obidos/ISBN=$1'
 ];
 
 $magicWords = [

@@ -20,7 +20,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -259,7 +259,7 @@ class XmlTypeCheck {
 	private function getAttributesArray( XMLReader $r ) {
 		$attrs = [];
 		while ( $r->moveToNextAttribute() ) {
-			if ( $r->namespaceURI === 'http://www.w3.org/2000/xmlns/' ) {
+			if ( $r->namespaceURI === 'https://www.w3.org/2000/xmlns/' ) {
 				// XMLReader treats xmlns attributes as normal
 				// attributes, while xml_parse doesn't
 				continue;

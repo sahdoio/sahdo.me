@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -123,7 +123,7 @@ class ApiClientLogin extends ApiBase {
 	protected function getExamplesMessages() {
 		return [
 			'action=clientlogin&username=Example&password=ExamplePassword&'
-				. 'loginreturnurl=http://example.org/&logintoken=123ABC'
+				. 'loginreturnurl=https://example.org/&logintoken=123ABC'
 				=> 'apihelp-clientlogin-example-login',
 			'action=clientlogin&logincontinue=1&OATHToken=987654&logintoken=123ABC'
 				=> 'apihelp-clientlogin-example-login2',

@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Upload
@@ -223,7 +223,7 @@ class UploadStash {
 		// reasonable here, except that for historical reasons, the key is this
 		// random thing instead.  At least it's not guessable.
 		// Some things that when combined will make a suitably unique key.
-		// see: http://www.jwz.org/doc/mid.html
+		// see: https://www.jwz.org/doc/mid.html
 		list( $usec, $sec ) = explode( ' ', microtime() );
 		$usec = substr( $usec, 2 );
 		$key = Wikimedia\base_convert( $sec . $usec, 10, 36 ) . '.' .

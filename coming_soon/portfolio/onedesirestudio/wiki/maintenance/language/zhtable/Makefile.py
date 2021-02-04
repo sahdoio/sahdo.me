@@ -301,11 +301,11 @@ def PHPArray(table):
 
 def main():
     # Get Unihan.zip:
-    url = 'http://www.unicode.org/Public/%s/ucd/Unihan.zip' % UNIHAN_VER
+    url = 'https://www.unicode.org/Public/%s/ucd/Unihan.zip' % UNIHAN_VER
     han_dest = 'Unihan-%s.zip' % UNIHAN_VER
     download(url, han_dest)
 
-    sfurlbase = 'http://%s.dl.sourceforge.net/sourceforge/' % SF_MIRROR
+    sfurlbase = 'https://%s.dl.sourceforge.net/sourceforge/' % SF_MIRROR
 
     # Get scim-tables-$(SCIM_TABLES_VER).tar.gz:
     url = sfurlbase + 'scim/scim-tables-%s.tar.gz' % SCIM_TABLES_VER

@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -1676,7 +1676,7 @@ class User implements IDBAccessObject {
 	public function inDnsBlacklist( $ip, $bases ) {
 
 		$found = false;
-		// @todo FIXME: IPv6 ???  (http://bugs.php.net/bug.php?id=33170)
+		// @todo FIXME: IPv6 ???  (https://bugs.php.net/bug.php?id=33170)
 		if ( IP::isIPv4( $ip ) ) {
 			// Reverse IP, bug 21255
 			$ipReversed = implode( '.', array_reverse( explode( '.', $ip ) ) );

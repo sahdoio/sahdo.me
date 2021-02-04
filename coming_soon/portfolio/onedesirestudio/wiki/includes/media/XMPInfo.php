@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -61,7 +61,7 @@ class XMPInfo {
 	 * Currently this just has a bunch of EXIF values as this class is only half-done.
 	 */
 	static private $items = [
-		'http://ns.adobe.com/exif/1.0/' => [
+		'https://ns.adobe.com/exif/1.0/' => [
 			'ApertureValue' => [
 				'map_group' => 'exif',
 				'mode' => XMPReader::MODE_SIMPLE,
@@ -527,7 +527,7 @@ class XMPInfo {
 				'choices' => [ '0' => true, '1' => true ]
 			],
 		],
-		'http://ns.adobe.com/tiff/1.0/' => [
+		'https://ns.adobe.com/tiff/1.0/' => [
 			'Artist' => [
 				'map_group' => 'exif',
 				'mode' => XMPReader::MODE_SIMPLE,
@@ -667,7 +667,7 @@ class XMPInfo {
 			 * ),
 			 */
 		],
-		'http://ns.adobe.com/exif/1.0/aux/' => [
+		'https://ns.adobe.com/exif/1.0/aux/' => [
 			'Lens' => [
 				'map_group' => 'exif',
 				'mode' => XMPReader::MODE_SIMPLE,
@@ -682,7 +682,7 @@ class XMPInfo {
 				'mode' => XMPReader::MODE_SIMPLE,
 			],
 		],
-		'http://purl.org/dc/elements/1.1/' => [
+		'https://purl.org/dc/elements/1.1/' => [
 			'title' => [
 				'map_group' => 'general',
 				'map_name' => 'ObjectName',
@@ -765,7 +765,7 @@ class XMPInfo {
 				'mode' => XMPReader::MODE_BAG,
 			],
 		],
-		'http://ns.adobe.com/xap/1.0/' => [
+		'https://ns.adobe.com/xap/1.0/' => [
 			'CreateDate' => [
 				'map_group' => 'general',
 				'map_name' => 'DateTimeDigitized',
@@ -808,7 +808,7 @@ class XMPInfo {
 				'validate' => 'validateRating',
 			],
 		],
-		'http://ns.adobe.com/xap/1.0/rights/' => [
+		'https://ns.adobe.com/xap/1.0/rights/' => [
 			'Certificate' => [
 				'map_group' => 'general',
 				'map_name' => 'RightsCertificate',
@@ -836,7 +836,7 @@ class XMPInfo {
 			],
 		],
 		// XMP media management.
-		'http://ns.adobe.com/xap/1.0/mm/' => [
+		'https://ns.adobe.com/xap/1.0/mm/' => [
 			// if we extract the exif UniqueImageID, might
 			// as well do this too.
 			'OriginalDocumentID' => [
@@ -850,7 +850,7 @@ class XMPInfo {
 			// get a file:// url for the path of the doc,
 			// which is somewhat of a privacy issue.
 		],
-		'http://creativecommons.org/ns#' => [
+		'https://creativecommons.org/ns#' => [
 			'license' => [
 				'map_name' => 'LicenseUrl',
 				'map_group' => 'general',
@@ -873,7 +873,7 @@ class XMPInfo {
 			],
 		],
 		// Note, this property affects how jpeg metadata is extracted.
-		'http://ns.adobe.com/xmp/note/' => [
+		'https://ns.adobe.com/xmp/note/' => [
 			'HasExtendedXMP' => [
 				'map_group' => 'special',
 				'mode' => XMPReader::MODE_SIMPLE,
@@ -884,7 +884,7 @@ class XMPInfo {
 		 * and properties marked as deprecated in the standard are
 		 * are marked as general here as they don't have replacements
 		 */
-		'http://ns.adobe.com/photoshop/1.0/' => [
+		'https://ns.adobe.com/photoshop/1.0/' => [
 			'City' => [
 				'map_group' => 'deprecated',
 				'mode' => XMPReader::MODE_SIMPLE,
@@ -960,7 +960,7 @@ class XMPInfo {
 				'mode' => XMPReader::MODE_SIMPLE
 			],
 		],
-		'http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/' => [
+		'https://iptc.org/std/Iptc4xmpCore/1.0/xmlns/' => [
 			'CountryCode' => [
 				'map_group' => 'deprecated',
 				'mode' => XMPReader::MODE_SIMPLE,
@@ -971,7 +971,7 @@ class XMPInfo {
 				'mode' => XMPReader::MODE_SIMPLE,
 			],
 			// Note, this is a six digit code.
-			// See: http://cv.iptc.org/newscodes/scene/
+			// See: https://cv.iptc.org/newscodes/scene/
 			// Since these aren't really all that common,
 			// we just show the number.
 			'Scene' => [
@@ -1059,7 +1059,7 @@ class XMPInfo {
 			],
 			/* End contact info struct properties */
 		],
-		'http://iptc.org/std/Iptc4xmpExt/2008-02-29/' => [
+		'https://iptc.org/std/Iptc4xmpExt/2008-02-29/' => [
 			'Event' => [
 				'map_group' => 'general',
 				'mode' => XMPReader::MODE_SIMPLE,

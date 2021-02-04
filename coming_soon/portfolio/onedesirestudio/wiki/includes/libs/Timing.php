@@ -13,7 +13,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -36,9 +36,9 @@ use Psr\Log\NullLogger;
  *   getEntryByName().
  *
  * The in-line documentation incorporates content from the User Timing Specification
- * http://www.w3.org/TR/user-timing/
+ * https://www.w3.org/TR/user-timing/
  * Copyright © 2013 World Wide Web Consortium, (MIT, ERCIM, Keio, Beihang).
- * http://www.w3.org/Consortium/Legal/2015/doc-license
+ * https://www.w3.org/Consortium/Legal/2015/doc-license
  *
  * @since 1.27
  */

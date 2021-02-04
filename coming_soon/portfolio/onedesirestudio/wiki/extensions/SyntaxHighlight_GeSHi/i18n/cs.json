@@ -7,7 +7,7 @@
 			"Matěj Suchánek"
 		]
 	},
-	"syntaxhighlight-desc": "Poskytuje zvýrazňování syntaxe <code>&lt;syntaxhighlight&gt;</code> pomocí [http://pygments.org Pygments – zvýrazňovače syntaxe v Pythonu]",
+	"syntaxhighlight-desc": "Poskytuje zvýrazňování syntaxe <code>&lt;syntaxhighlight&gt;</code> pomocí [https://pygments.org Pygments – zvýrazňovače syntaxe v Pythonu]",
 	"syntaxhighlight-error-category": "Stránky s chybami ve zvýrazňování kódu",
 	"syntaxhighlight-error-category-desc": "Při pokusu o zvýraznění kódu na stránce došlo k chybě.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Kód",

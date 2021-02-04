@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Pager
@@ -315,7 +315,7 @@ abstract class TablePager extends IndexPager {
 		foreach ( $labels as $type => $label ) {
 			// We want every cell to have the same width. We could use table-layout: fixed; in CSS,
 			// but it only works if we specify the width of a cell or the table and we don't want to.
-			// There is no better way. <http://www.w3.org/TR/CSS2/tables.html#fixed-table-layout>
+			// There is no better way. <https://www.w3.org/TR/CSS2/tables.html#fixed-table-layout>
 			$s .= Html::rawElement( 'td',
 				[ 'style' => "width: $width;", 'class' => "TablePager_nav-$type" ],
 				$links[$type] ) . "\n";

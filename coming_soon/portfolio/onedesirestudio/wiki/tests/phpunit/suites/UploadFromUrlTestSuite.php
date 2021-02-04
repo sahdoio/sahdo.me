@@ -32,7 +32,7 @@ class UploadFromUrlTestSuite extends PHPUnit_Framework_TestSuite {
 		$tmpGlobals['wgLocalFileRepo'] = [
 			'class' => 'LocalRepo',
 			'name' => 'local',
-			'url' => 'http://example.com/images',
+			'url' => 'https://example.com/images',
 			'hashLevels' => 2,
 			'transformVia404' => false,
 			'backend' => new FSFileBackend( [

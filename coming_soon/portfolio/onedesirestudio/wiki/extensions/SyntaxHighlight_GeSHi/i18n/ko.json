@@ -7,7 +7,7 @@
 			"Revi"
 		]
 	},
-	"syntaxhighlight-desc": "[http://pygments.org/ Pygments - Python 구문 강조 기능]을 사용해 <code>&lt;syntaxhighlight&gt;</code>로 구문 강조를 제공합니다",
+	"syntaxhighlight-desc": "[https://pygments.org/ Pygments - Python 구문 강조 기능]을 사용해 <code>&lt;syntaxhighlight&gt;</code>로 구문 강조를 제공합니다",
 	"syntaxhighlight-error-category": "구문 강조에 오류가 있는 문서",
 	"syntaxhighlight-error-category-desc": "문서에 포함된 코드를 강조하기 위해 시도하는 중에 오류가 발생했습니다.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "코드",

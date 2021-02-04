@@ -224,7 +224,7 @@
 	"loginlanguagelabel": "Tokples: $1",
 	"changepassword": "Senis paswot",
 	"link_sample": "Link taitel",
-	"extlink_sample": "http://www.example.com link taitel",
+	"extlink_sample": "https://www.example.com link taitel",
 	"media_tip": "Link bilong fail",
 	"summary": "Liklik toksave bilong senis:",
 	"subject": "Nem bilong pes (o hap bilong pes):",

@@ -451,9 +451,9 @@ $.wikiEditor.modules.dialogs.config = {
 								}
 							} else {
 								target = $.trim( target );
-								// Prepend http:// if there is no protocol
+								// Prepend https:// if there is no protocol
 								if ( !target.match( /^[a-z]+:\/\/./ ) ) {
-									target = 'http://' + target;
+									target = 'https://' + target;
 								}
 
 								// Detect if this is really an internal link in disguise
@@ -544,7 +544,7 @@ $.wikiEditor.modules.dialogs.config = {
 								// Preserve whitespace when replacing
 								$( '#wikieditor-toolbar-link-dialog' ).data( 'whitespace', [ matches[ 1 ], matches[ 5 ] ] );
 							} else if ( ( matches = selection.match( /^(\s*)\[([^\] ]+)( ([^\]]+))?\](\s*)$/ ) ) ) {
-								// [http://www.example.com foo] or [http://www.example.com]
+								// [https://www.example.com foo] or [https://www.example.com]
 								target = matches[ 2 ];
 								text = ( matches[ 4 ] || '' );
 								type = 'ext';

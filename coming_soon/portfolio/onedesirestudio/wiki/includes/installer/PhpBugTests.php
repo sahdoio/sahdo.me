@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @defgroup PHPBugTests PHP known bugs tests
@@ -24,7 +24,7 @@
 /**
  * Test for PHP+libxml2 bug which breaks XML input subtly with certain versions.
  * Known fixed with PHP 5.2.9 + libxml2-2.7.3
- * @see http://bugs.php.net/bug.php?id=45996
+ * @see https://bugs.php.net/bug.php?id=45996
  * @ingroup PHPBugTests
  */
 class PhpXmlBugTester {

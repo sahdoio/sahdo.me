@@ -20,7 +20,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @todo Make this more independent of the configuration (and if possible the database)
  * @todo document
@@ -190,7 +190,7 @@ class ParserTest {
 		$wgLocalFileRepo = [
 			'class' => 'LocalRepo',
 			'name' => 'local',
-			'url' => 'http://example.com/images',
+			'url' => 'https://example.com/images',
 			'hashLevels' => 2,
 			'transformVia404' => false,
 			'backend' => new FSFileBackend( [
@@ -265,52 +265,52 @@ class ParserTest {
 		Hooks::register( 'InterwikiLoadPrefix', function ( $prefix, &$iwData ) {
 			static $testInterwikis = [
 				'local' => [
-					'iw_url' => 'http://doesnt.matter.org/$1',
+					'iw_url' => 'https://doesnt.matter.org/$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 0 ],
 				'wikipedia' => [
-					'iw_url' => 'http://en.wikipedia.org/wiki/$1',
+					'iw_url' => 'https://en.wikipedia.org/wiki/$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 0 ],
 				'meatball' => [
-					'iw_url' => 'http://www.usemod.com/cgi-bin/mb.pl?$1',
+					'iw_url' => 'https://www.usemod.com/cgi-bin/mb.pl?$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 0 ],
 				'memoryalpha' => [
-					'iw_url' => 'http://www.memory-alpha.org/en/index.php/$1',
+					'iw_url' => 'https://www.memory-alpha.org/en/index.php/$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 0 ],
 				'zh' => [
-					'iw_url' => 'http://zh.wikipedia.org/wiki/$1',
+					'iw_url' => 'https://zh.wikipedia.org/wiki/$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 1 ],
 				'es' => [
-					'iw_url' => 'http://es.wikipedia.org/wiki/$1',
+					'iw_url' => 'https://es.wikipedia.org/wiki/$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 1 ],
 				'fr' => [
-					'iw_url' => 'http://fr.wikipedia.org/wiki/$1',
+					'iw_url' => 'https://fr.wikipedia.org/wiki/$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 1 ],
 				'ru' => [
-					'iw_url' => 'http://ru.wikipedia.org/wiki/$1',
+					'iw_url' => 'https://ru.wikipedia.org/wiki/$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 1 ],
 				'mi' => [
-					'iw_url' => 'http://mi.wikipedia.org/wiki/$1',
+					'iw_url' => 'https://mi.wikipedia.org/wiki/$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 1 ],
 				'mul' => [
-					'iw_url' => 'http://wikisource.org/wiki/$1',
+					'iw_url' => 'https://wikisource.org/wiki/$1',
 					'iw_api' => '',
 					'iw_wikiid' => '',
 					'iw_local' => 1 ],
@@ -832,7 +832,7 @@ class ParserTest {
 			self::getOptionValue( 'wgLinkHolderBatchSize', $opts, 1000 );
 
 		$settings = [
-			'wgServer' => 'http://example.org',
+			'wgServer' => 'https://example.org',
 			'wgServerName' => 'example.org',
 			'wgScript' => '/index.php',
 			'wgScriptPath' => '',
@@ -849,7 +849,7 @@ class ParserTest {
 			'wgLocalFileRepo' => [
 				'class' => 'LocalRepo',
 				'name' => 'local',
-				'url' => 'http://example.com/images',
+				'url' => 'https://example.com/images',
 				'hashLevels' => 2,
 				'transformVia404' => false,
 				'backend' => new FSFileBackend( [
@@ -1229,7 +1229,7 @@ class ParserTest {
 		wfMkdirParents( $dir . '/f/ff', null, __METHOD__ );
 		file_put_contents( "$dir/f/ff/Foobar.svg",
 			'<?xml version="1.0" encoding="utf-8"?>' .
-			'<svg xmlns="http://www.w3.org/2000/svg"' .
+			'<svg xmlns="https://www.w3.org/2000/svg"' .
 			' version="1.1" width="240" height="180"/>' );
 		wfMkdirParents( $dir . '/5/5f', null, __METHOD__ );
 		copy( "$IP/tests/phpunit/data/parser/LoremIpsum.djvu", "$dir/5/5f/LoremIpsum.djvu" );

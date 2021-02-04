@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -39,7 +39,7 @@ use MediaWiki\Session\SessionManager;
  */
 
 // hash_equals function only exists in PHP >= 5.6.0
-// http://php.net/hash_equals
+// https://php.net/hash_equals
 if ( !function_exists( 'hash_equals' ) ) {
 	/**
 	 * Check whether a user-provided string is equal to a fixed-length secret string
@@ -59,7 +59,7 @@ if ( !function_exists( 'hash_equals' ) ) {
 	 * the inevitable leakage of the string's length. That is generally known anyway as
 	 * a chararacteristic of the hash function used to compute the secret value.
 	 *
-	 * Longer explanation: http://www.emerose.com/timing-attacks-explained
+	 * Longer explanation: https://www.emerose.com/timing-attacks-explained
 	 *
 	 * @codeCoverageIgnore
 	 * @param string $known_string Fixed-length secret string to compare against
@@ -529,10 +529,10 @@ function wfAppendQuery( $url, $query ) {
  * is correct.
  *
  * The meaning of the PROTO_* constants is as follows:
- * PROTO_HTTP: Output a URL starting with http://
+ * PROTO_HTTP: Output a URL starting with https://
  * PROTO_HTTPS: Output a URL starting with https://
  * PROTO_RELATIVE: Output a URL starting with // (protocol-relative URL)
- * PROTO_CURRENT: Output a URL starting with either http:// or https:// , depending
+ * PROTO_CURRENT: Output a URL starting with either https:// or https:// , depending
  *    on which protocol was used for the current incoming request
  * PROTO_CANONICAL: For URLs without a domain, like /w/index.php , use $wgCanonicalServer.
  *    For protocol-relative URLs, use the protocol of $wgCanonicalServer
@@ -827,7 +827,7 @@ function wfParseUrl( $url ) {
 	$bits = parse_url( $url );
 	MediaWiki\restoreWarnings();
 	// parse_url() returns an array without scheme for some invalid URLs, e.g.
-	// parse_url("%0Ahttp://example.com") == array( 'host' => '%0Ahttp', 'path' => 'example.com' )
+	// parse_url("%0Ahttps://example.com") == array( 'host' => '%0Ahttp', 'path' => 'example.com' )
 	if ( !$bits || !isset( $bits['scheme'] ) ) {
 		return false;
 	}
@@ -2019,7 +2019,7 @@ define( 'TS_ISO_8601', 4 );
 /**
  * An Exif timestamp (YYYY:MM:DD HH:MM:SS)
  *
- * @see http://exif.org/Exif2-2.PDF The Exif 2.2 spec, see page 28 for the
+ * @see https://exif.org/Exif2-2.PDF The Exif 2.2 spec, see page 28 for the
  *       DateTime tag and page 36 for the DateTimeOriginal and
  *       DateTimeDigitized tags.
  */
@@ -2209,7 +2209,7 @@ function wfMkdirParents( $dir, $mode = null, $caller = null ) {
  */
 function wfRecursiveRemoveDir( $dir ) {
 	wfDebug( __FUNCTION__ . "( $dir )\n" );
-	// taken from http://de3.php.net/manual/en/function.rmdir.php#98622
+	// taken from https://de3.php.net/manual/en/function.rmdir.php#98622
 	if ( is_dir( $dir ) ) {
 		$objects = scandir( $dir );
 		foreach ( $objects as $object ) {
@@ -2303,8 +2303,8 @@ function wfEscapeShellArg( /*...*/ ) {
 			// Escaping for an MSVC-style command line parser and CMD.EXE
 			// @codingStandardsIgnoreStart For long URLs
 			// Refs:
-			//  * http://web.archive.org/web/20020708081031/http://mailman.lyra.org/pipermail/scite-interest/2002-March/000436.html
-			//  * http://technet.microsoft.com/en-us/library/cc723564.aspx
+			//  * https://web.archive.org/web/20020708081031/https://mailman.lyra.org/pipermail/scite-interest/2002-March/000436.html
+			//  * https://technet.microsoft.com/en-us/library/cc723564.aspx
 			//  * Bug #13518
 			//  * CR r63214
 			// Double the backslashes before any double quotes. Escape the double quotes.
@@ -2404,14 +2404,14 @@ function wfShellExec( $cmd, &$retval = null, $environ = [],
 		if ( wfIsWindows() ) {
 			/* Surrounding a set in quotes (method used by wfEscapeShellArg) makes the quotes themselves
 			 * appear in the environment variable, so we must use carat escaping as documented in
-			 * http://technet.microsoft.com/en-us/library/cc723564.aspx
+			 * https://technet.microsoft.com/en-us/library/cc723564.aspx
 			 * Note however that the quote isn't listed there, but is needed, and the parentheses
 			 * are listed there but doesn't appear to need it.
 			 */
 			$envcmd .= "set $k=" . preg_replace( '/([&|()<>^"])/', '^\\1', $v ) . '&& ';
 		} else {
 			/* Assume this is a POSIX shell, thus required to accept variable assignments before the command
-			 * http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_09_01
+			 * https://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_09_01
 			 */
 			$envcmd .= "$k=" . escapeshellarg( $v ) . ' ';
 		}
@@ -2631,7 +2631,7 @@ function wfShellExecWithStderr( $cmd, &$retval = null, $environ = [], $limits = 
 }
 
 /**
- * Workaround for http://bugs.php.net/bug.php?id=45132
+ * Workaround for https://bugs.php.net/bug.php?id=45132
  * escapeshellarg() destroys non-ASCII characters if LANG is not a UTF-8 locale
  */
 function wfInitShellLocale() {
@@ -2883,7 +2883,7 @@ function wfUseMW( $req_ver ) {
 /**
  * Return the final portion of a pathname.
  * Reimplemented because PHP5's "basename()" is buggy with multibyte text.
- * http://bugs.php.net/bug.php?id=33898
+ * https://bugs.php.net/bug.php?id=33898
  *
  * PHP's basename() only considers '\' a pathchar on Windows and Netware.
  * We'll consider it so always, as we don't want '\s' in our Unix paths either.

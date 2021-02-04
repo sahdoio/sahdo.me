@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 349.46883 405.12272">
+<svg xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="https://www.w3.org/2000/svg" height="100%" width="100%" version="1.1" xmlns:cc="https://creativecommons.org/ns#" xmlns:dc="https://purl.org/dc/elements/1.1/" viewBox="0 0 349.46883 405.12272">
  <title>Tux</title>
- <desc>For more information see: http://commons.wikimedia.org/wiki/Image:Tux.svg</desc>
+ <desc>For more information see: https://commons.wikimedia.org/wiki/Image:Tux.svg</desc>
  <radialGradient id="ag" gradientUnits="userSpaceOnUse" cy="-551.04" cx="274.822" gradientTransform="matrix(.5671 0 0 -.2835 81.263 201.645)" r="165.384">
   <stop stop-opacity=".502" offset="0"/>
   <stop stop-opacity="0" offset="1"/>

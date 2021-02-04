@@ -10,7 +10,7 @@ class LinkFilterTest extends MediaWikiLangTestCase {
 		parent::setUp();
 
 		$this->setMwGlobals( 'wgUrlProtocols', [
-			'http://',
+			'https://',
 			'https://',
 			'ftp://',
 			'irc://',
@@ -70,27 +70,27 @@ class LinkFilterTest extends MediaWikiLangTestCase {
 
 		return [
 			// Protocol, Search pattern, URL which matches the pattern
-			[ 'http://', '*.test.com', 'http://www.test.com' ],
-			[ 'http://', 'test.com:8080/dir/file', 'http://name:pass@test.com:8080/dir/file' ],
+			[ 'https://', '*.test.com', 'https://www.test.com' ],
+			[ 'https://', 'test.com:8080/dir/file', 'https://name:pass@test.com:8080/dir/file' ],
 			[ 'https://', '*.com', 'https://s.s.test..com:88/dir/file?a=1&b=2' ],
 			[ 'https://', '*.com', 'https://name:pass@secure.com/index.html' ],
-			[ 'http://', 'name:pass@test.com', 'http://test.com' ],
-			[ 'http://', 'test.com', 'http://name:pass@test.com' ],
-			[ 'http://', '*.test.com', 'http://a.b.c.test.com/dir/dir/file?a=6' ],
-			[ null, 'http://*.test.com', 'http://www.test.com' ],
+			[ 'https://', 'name:pass@test.com', 'https://test.com' ],
+			[ 'https://', 'test.com', 'https://name:pass@test.com' ],
+			[ 'https://', '*.test.com', 'https://a.b.c.test.com/dir/dir/file?a=6' ],
+			[ null, 'https://*.test.com', 'https://www.test.com' ],
 			[ 'mailto:', 'name@mail.test123.com', 'mailto:name@mail.test123.com' ],
 			[ '',
-				'http://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg',
-				'http://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg'
+				'https://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg',
+				'https://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg'
 			],
-			[ '', 'http://name:pass@*.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg',
-				'http://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg' ],
-			[ '', 'http://name:wrongpass@*.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]',
-				'http://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg' ],
-			[ 'http://', 'name:pass@*.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg',
-				'http://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg' ],
-			[ '', 'http://name:pass@www.test.com:12345',
-				'http://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg' ],
+			[ '', 'https://name:pass@*.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg',
+				'https://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg' ],
+			[ '', 'https://name:wrongpass@*.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]',
+				'https://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg' ],
+			[ 'https://', 'name:pass@*.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg',
+				'https://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg' ],
+			[ '', 'https://name:pass@www.test.com:12345',
+				'https://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg' ],
 			[ 'ftp://', 'user:pass@ftp.test.com:1233/home/user/file;type=efw',
 				'ftp://user:pass@ftp.test.com:1233/home/user/file;type=efw' ],
 			[ null, 'ftp://otheruser:otherpass@ftp.test.com:1233/home/user/file;type=',
@@ -124,24 +124,24 @@ class LinkFilterTest extends MediaWikiLangTestCase {
 			[ 'git://', '*.github.com/', 'git://a.b.c.d.e.f.github.com/prwef/abc-def.git' ],
 			[ '', 'gopher://*.test.com/', 'gopher://gopher.test.com/0/v2/vstat' ],
 			[ 'telnet://', '*.test.com', 'telnet://shell.test.com/~home/' ],
-			[ '', 'http://test.com', 'http://test.com/index?arg=1' ],
-			[ 'http://', '*.test.com', 'http://www.test.com/index?arg=1' ],
+			[ '', 'https://test.com', 'https://test.com/index?arg=1' ],
+			[ 'https://', '*.test.com', 'https://www.test.com/index?arg=1' ],
 			[ '' ,
-				'http://xx23124:__ffdfdef__@www.test.com:12345/dir' ,
-				'http://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg'
+				'https://xx23124:__ffdfdef__@www.test.com:12345/dir' ,
+				'https://name:pass@www.test.com:12345/dir/dir/file.xyz.php#__se__?arg1=_&arg2[]=4rtg'
 			],
 
 			// Tests for false positives
-			[ 'http://', 'test.com', 'http://www.test.com', false ],
-			[ 'http://', 'www1.test.com', 'http://www.test.com', false ],
-			[ 'http://', '*.test.com', 'http://www.test.t.com', false ],
-			[ '', 'http://test.com:8080', 'http://www.test.com:8080', false ],
-			[ '', 'https://test.com', 'http://test.com', false ],
-			[ '', 'http://test.com', 'https://test.com', false ],
-			[ 'http://', 'http://test.com', 'http://test.com', false ],
-			[ null, 'http://www.test.com', 'http://www.test.com:80', false ],
-			[ null, 'http://www.test.com:80', 'http://www.test.com', false ],
-			[ null, 'http://*.test.com:80', 'http://www.test.com', false ],
+			[ 'https://', 'test.com', 'https://www.test.com', false ],
+			[ 'https://', 'www1.test.com', 'https://www.test.com', false ],
+			[ 'https://', '*.test.com', 'https://www.test.t.com', false ],
+			[ '', 'https://test.com:8080', 'https://www.test.com:8080', false ],
+			[ '', 'https://test.com', 'https://test.com', false ],
+			[ '', 'https://test.com', 'https://test.com', false ],
+			[ 'https://', 'https://test.com', 'https://test.com', false ],
+			[ null, 'https://www.test.com', 'https://www.test.com:80', false ],
+			[ null, 'https://www.test.com:80', 'https://www.test.com', false ],
+			[ null, 'https://*.test.com:80', 'https://www.test.com', false ],
 			[ '', 'https://gerrit.wikimedia.org/r/#/XXX/status:open,n,z',
 				'https://gerrit.wikimedia.org/r/#/q/status:open,n,z', false ],
 			[ '', 'https://*.wikimedia.org/r/#/q/status:open,n,z',
@@ -155,12 +155,12 @@ class LinkFilterTest extends MediaWikiLangTestCase {
 			[ 'ftp://', '*.co/dir/', 'ftp://www.co/dir2/', false ],
 			[ 'ftp://', 'www.co/dir/', 'ftp://www.co/dir2/', false ],
 			[ 'ftp://', 'test.com/dir/', 'ftp://test.com/', false ],
-			[ '', 'http://test.com:8080/dir/', 'http://test.com:808/dir/', false ],
-			[ '', 'http://test.com/dir/index.html', 'http://test.com/dir/index.php', false ],
+			[ '', 'https://test.com:8080/dir/', 'https://test.com:808/dir/', false ],
+			[ '', 'https://test.com/dir/index.html', 'https://test.com/dir/index.php', false ],
 
 			// These are false positives too and ideally shouldn't match, but that
 			// would require using regexes and RLIKE instead of LIKE
-			// [ null, 'http://*.test.com', 'http://www.test.com:80', false ],
+			// [ null, 'https://*.test.com', 'https://www.test.com:80', false ],
 			// [ '', 'https://*.wikimedia.org/r/#/q/status:open,n,z',
 			// 	'https://gerrit.wikimedia.org/XXX/r/#/q/status:open,n,z', false ],
 		];
@@ -175,7 +175,7 @@ class LinkFilterTest extends MediaWikiLangTestCase {
 	 *
 	 * @dataProvider provideValidPatterns
 	 *
-	 * @param string $protocol Protocol, e.g. 'http://' or 'mailto:'
+	 * @param string $protocol Protocol, e.g. 'https://' or 'mailto:'
 	 * @param string $pattern Search pattern to feed to LinkFilter::makeLikeArray
 	 * @param string $url URL to feed to wfMakeUrlIndexes
 	 * @param bool $shouldBeFound Should the URL be found? (defaults true)
@@ -224,19 +224,19 @@ class LinkFilterTest extends MediaWikiLangTestCase {
 		return [
 			[ '' ],
 			[ '*' ],
-			[ 'http://*' ],
-			[ 'http://*/' ],
-			[ 'http://*/dir/file' ],
+			[ 'https://*' ],
+			[ 'https://*/' ],
+			[ 'https://*/dir/file' ],
 			[ 'test.*.com' ],
-			[ 'http://test.*.com' ],
+			[ 'https://test.*.com' ],
 			[ 'test.*.com' ],
-			[ 'http://*.test.*' ],
-			[ 'http://*test.com' ],
+			[ 'https://*.test.*' ],
+			[ 'https://*test.com' ],
 			[ 'https://*' ],
 			[ '*://test.com' ],
 			[ 'mailto:name:pass@t*est.com' ],
-			[ 'http://*:888/' ],
-			[ '*http://' ],
+			[ 'https://*:888/' ],
+			[ '*https://' ],
 			[ 'test.com/*/index' ],
 			[ 'test.com/dir/index?arg=*' ],
 		];

@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup HTTP
@@ -38,7 +38,7 @@ class Http {
 	 * Perform an HTTP request
 	 *
 	 * @param string $method HTTP method. Usually GET/POST
-	 * @param string $url Full URL to act on. If protocol-relative, will be expanded to an http:// URL
+	 * @param string $url Full URL to act on. If protocol-relative, will be expanded to an https:// URL
 	 * @param array $options Options to pass to MWHttpRequest object.
 	 *	Possible keys for the array:
 	 *    - timeout             Timeout length in seconds
@@ -139,7 +139,7 @@ class Http {
 
 		// Extract host part
 		$matches = [];
-		if ( preg_match( '!^http://([\w.-]+)[/:].*$!', $url, $matches ) ) {
+		if ( preg_match( '!^https://([\w.-]+)[/:].*$!', $url, $matches ) ) {
 			$host = $matches[1];
 			// Split up dotwise
 			$domainParts = explode( '.', $host );
@@ -259,7 +259,7 @@ class MWHttpRequest {
 	protected $profileName;
 
 	/**
-	 * @param string $url Url to use. If protocol-relative, will be expanded to an http:// URL
+	 * @param string $url Url to use. If protocol-relative, will be expanded to an https:// URL
 	 * @param array $options (optional) extra params to pass (see Http::request())
 	 * @param string $caller The method making this request, for profiling
 	 * @param Profiler $profiler An instance of the profiler for profiling, or null
@@ -337,7 +337,7 @@ class MWHttpRequest {
 		if ( !Http::$httpEngine ) {
 			Http::$httpEngine = function_exists( 'curl_init' ) ? 'curl' : 'php';
 		} elseif ( Http::$httpEngine == 'curl' && !function_exists( 'curl_init' ) ) {
-			throw new MWException( __METHOD__ . ': curl (http://php.net/curl) is not installed, but' .
+			throw new MWException( __METHOD__ . ': curl (https://php.net/curl) is not installed, but' .
 				' Http::$httpEngine is set to "curl"' );
 		}
 
@@ -349,7 +349,7 @@ class MWHttpRequest {
 					throw new MWException( __METHOD__ . ': allow_url_fopen ' .
 						'needs to be enabled for pure PHP http requests to ' .
 						'work. If possible, curl should be used instead. See ' .
-						'http://php.net/curl.'
+						'https://php.net/curl.'
 					);
 				}
 				return new PhpHttpRequest( $url, $options, $caller, Profiler::instance() );
@@ -531,7 +531,7 @@ class MWHttpRequest {
 	 * message if the returned integer value of the status code was
 	 * not successful (< 300) or a redirect (>=300 and < 400).  (see
 	 * RFC2616, section 10,
-	 * http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html for a
+	 * https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html for a
 	 * list of status codes.)
 	 */
 	protected function setStatus() {
@@ -547,7 +547,7 @@ class MWHttpRequest {
 
 	/**
 	 * Get the integer value of the HTTP status code (e.g. 200 for "200 Ok")
-	 * (see RFC2616, section 10, http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+	 * (see RFC2616, section 10, https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
 	 * for a list of status codes.)
 	 *
 	 * @return int

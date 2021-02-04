@@ -8,8 +8,8 @@ class WikiReferenceTest extends PHPUnit_Framework_TestCase {
 
 	public function provideGetDisplayName() {
 		return [
-			'http' => [ 'foo.bar', 'http://foo.bar' ],
-			'https' => [ 'foo.bar', 'http://foo.bar' ],
+			'http' => [ 'foo.bar', 'https://foo.bar' ],
+			'https' => [ 'foo.bar', 'https://foo.bar' ],
 
 			// apparently, this is the expected behavior
 			'invalid' => [ 'purple kittens', 'purple kittens' ],

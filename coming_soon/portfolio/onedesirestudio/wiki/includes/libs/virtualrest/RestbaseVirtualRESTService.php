@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  */
 
 /**
@@ -49,7 +49,7 @@ class RestbaseVirtualRESTService extends VirtualRESTService {
 		// set up defaults and merge them with the given params
 		$mparams = array_merge( [
 			'name' => 'restbase',
-			'url' => 'http://localhost:7231/',
+			'url' => 'https://localhost:7231/',
 			'domain' => 'localhost',
 			'timeout' => 100,
 			'forwardCookies' => false,

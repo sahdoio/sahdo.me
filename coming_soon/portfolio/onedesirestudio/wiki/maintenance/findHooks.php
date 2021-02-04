@@ -8,7 +8,7 @@
  * - hooks names in code are the first parameter of wfRunHooks.
  *
  * if --online option is passed, the script will compare the hooks in the code
- * with the ones at http://www.mediawiki.org/wiki/Manual:Hooks
+ * with the ones at https://www.mediawiki.org/wiki/Manual:Hooks
  *
  * Any instance of wfRunHooks that doesn't meet these parameters will be noted.
  *
@@ -27,7 +27,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Maintenance
@@ -210,7 +210,7 @@ class FindHooks extends Maintenance {
 		$retval = [];
 		while ( true ) {
 			$json = Http::get(
-				wfAppendQuery( 'http://www.mediawiki.org/w/api.php', $params ),
+				wfAppendQuery( 'https://www.mediawiki.org/w/api.php', $params ),
 				[],
 				__METHOD__
 			);

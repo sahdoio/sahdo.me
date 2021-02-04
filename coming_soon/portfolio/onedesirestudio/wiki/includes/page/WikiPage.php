@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -601,7 +601,7 @@ class WikiPage implements Page, IDBAccessObject {
 			// SELECT. Thus we need S1 to also gets the revision row FOR UPDATE; otherwise, it
 			// may not find it since a page row UPDATE and revision row INSERT by S2 may have
 			// happened after the first S1 SELECT.
-			// http://dev.mysql.com/doc/refman/5.0/en/set-transaction.html#isolevel_repeatable-read
+			// https://dev.mysql.com/doc/refman/5.0/en/set-transaction.html#isolevel_repeatable-read
 			$flags = Revision::READ_LOCKING;
 		} elseif ( $this->mDataLoadedFrom == self::READ_LATEST ) {
 			// Bug T93976: if page_latest was loaded from the master, fetch the

@@ -422,7 +422,7 @@
 				},
 
 				{
-					url: 'http://localhost/thumb.php?f=Stuffless_Figaro%27s.jpg&width=180',
+					url: 'https://localhost/thumb.php?f=Stuffless_Figaro%27s.jpg&width=180',
 					typeOfUrl: 'thumb.php-based thumbnail',
 					nameText: 'Stuffless Figaro\'s',
 					prefixedText: 'File:Stuffless Figaro\'s.jpg'

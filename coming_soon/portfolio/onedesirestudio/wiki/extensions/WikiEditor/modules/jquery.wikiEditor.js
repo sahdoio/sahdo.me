@@ -210,7 +210,7 @@ $.wikiEditor = {
 		var src = $.wikiEditor.autoLang( icon );
 		path = path || $.wikiEditor.imgPath;
 		// Prepend path if src is not absolute
-		if ( src.substr( 0, 7 ) !== 'http://' && src.substr( 0, 8 ) !== 'https://' && src[ 0 ] !== '/' ) {
+		if ( src.substr( 0, 7 ) !== 'https://' && src.substr( 0, 8 ) !== 'https://' && src[ 0 ] !== '/' ) {
 			src = path + src;
 		}
 		return src + '?' + mw.loader.getVersion( 'jquery.wikiEditor' );
@@ -237,7 +237,7 @@ $.wikiEditor = {
 			if ( icon && hasOwn.call( icon, key ) ) {
 				src = icon[ key ];
 				// Prepend path if src is not absolute
-				if ( src.substr( 0, 7 ) !== 'http://' && src.substr( 0, 8 ) !== 'https://' && src[ 0 ] !== '/' ) {
+				if ( src.substr( 0, 7 ) !== 'https://' && src.substr( 0, 8 ) !== 'https://' && src[ 0 ] !== '/' ) {
 					src = path + src;
 				}
 				return src + '?' + mw.loader.getVersion( 'jquery.wikiEditor' );

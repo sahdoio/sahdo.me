@@ -11,7 +11,7 @@
 			"Wladek92"
 		]
 	},
-	"syntaxhighlight-desc": "Fournit la mise en valeur de la syntaxe par la balise <code>&lt;syntaxhighlight&gt;</code> en utilisant [http://pygments.org/ Pygments - coloration syntaxique Python]",
+	"syntaxhighlight-desc": "Fournit la mise en valeur de la syntaxe par la balise <code>&lt;syntaxhighlight&gt;</code> en utilisant [https://pygments.org/ Pygments - coloration syntaxique Python]",
 	"syntaxhighlight-error-category": "Pages avec des erreurs de coloration syntaxique",
 	"syntaxhighlight-error-category-desc": "Il y a eu une erreur lors de la tentative de mise en valeur du code inclus sur la page.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Database
@@ -258,7 +258,7 @@ class DatabaseSqlite extends Database {
 	}
 
 	/**
-	 * Attaches external database to our connection, see http://sqlite.org/lang_attach.html
+	 * Attaches external database to our connection, see https://sqlite.org/lang_attach.html
 	 * for details.
 	 *
 	 * @param string $name Database name to be used in queries like

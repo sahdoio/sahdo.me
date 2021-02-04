@@ -5,7 +5,7 @@
 			"Ed Sanders"
 		]
 	},
-	"syntaxhighlight-desc": "Provides syntax highlighting <code>&lt;syntaxhighlight&gt;</code> using [http://pygments.org/ Pygments - Python syntax highlighter]",
+	"syntaxhighlight-desc": "Provides syntax highlighting <code>&lt;syntaxhighlight&gt;</code> using [https://pygments.org/ Pygments - Python syntax highlighter]",
 	"syntaxhighlight-error-category": "Pages with syntax highlighting errors",
 	"syntaxhighlight-error-category-desc": "There was an error when attempting to highlight code included on the page.",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-code": "Code",

@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup MaintenanceLanguage
@@ -67,8 +67,8 @@ class GenerateCollationData extends Maintenance {
 
 		// As of January 2013, these links work for all versions of Unicode
 		// between 5.1 and 6.2, inclusive.
-		$allkeysURL = "http://www.unicode.org/Public/UCA/<Unicode version>/allkeys.txt";
-		$ucdallURL = "http://www.unicode.org/Public/<Unicode version>/ucdxml/ucd.all.grouped.zip";
+		$allkeysURL = "https://www.unicode.org/Public/UCA/<Unicode version>/allkeys.txt";
+		$ucdallURL = "https://www.unicode.org/Public/<Unicode version>/ucdxml/ucd.all.grouped.zip";
 
 		if ( !$allkeysPresent || !$ucdallPresent ) {
 			$icuVersion = IcuCollation::getICUVersion();
@@ -96,7 +96,7 @@ class GenerateCollationData extends Maintenance {
 					. "This can be caused by running a very old version of intl or PHP < 5.3.7. "
 					. "If you are sure everything is all right, find out the ICU version "
 					. "by running phpinfo(), check what is the Unicode version it is using "
-					. "at http://site.icu-project.org/download, then try finding appropriate data file(s) at:";
+					. "at https://site.icu-project.org/download, then try finding appropriate data file(s) at:";
 			} elseif ( version_compare( $icuVersion, "4.0", "<" ) ) {
 				// Extra old version
 				$error .= "You are using outdated version of ICU ($icuVersion), intended for "
@@ -107,7 +107,7 @@ class GenerateCollationData extends Maintenance {
 			} elseif ( version_compare( $icuVersion, "51.0", ">=" ) ) {
 				// Extra recent version
 				$error .= "You are using ICU $icuVersion, released after this script was last updated. "
-					. "Check what is the Unicode version it is using at http://site.icu-project.org/download . "
+					. "Check what is the Unicode version it is using at https://site.icu-project.org/download . "
 					. "It can't be guaranteed everything will work, but appropriate file(s) should "
 					. "be available at:";
 			} else {

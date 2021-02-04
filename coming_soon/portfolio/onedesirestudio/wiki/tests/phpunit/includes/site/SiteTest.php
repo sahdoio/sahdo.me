@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @since 1.21
@@ -157,14 +157,14 @@ class SiteTest extends MediaWikiTestCase {
 	public function testSetAndRemovePath( Site $site ) {
 		$count = count( $site->getAllPaths() );
 
-		$site->setPath( 'spam', 'http://www.wikidata.org/$1' );
-		$site->setPath( 'spam', 'http://www.wikidata.org/foo/$1' );
-		$site->setPath( 'foobar', 'http://www.wikidata.org/bar/$1' );
+		$site->setPath( 'spam', 'https://www.wikidata.org/$1' );
+		$site->setPath( 'spam', 'https://www.wikidata.org/foo/$1' );
+		$site->setPath( 'foobar', 'https://www.wikidata.org/bar/$1' );
 
 		$this->assertEquals( $count + 2, count( $site->getAllPaths() ) );
 
 		$this->assertInternalType( 'string', $site->getPath( 'foobar' ) );
-		$this->assertEquals( 'http://www.wikidata.org/foo/$1', $site->getPath( 'spam' ) );
+		$this->assertEquals( 'https://www.wikidata.org/foo/$1', $site->getPath( 'spam' ) );
 
 		$site->removePath( 'spam' );
 		$site->removePath( 'foobar' );
@@ -235,17 +235,17 @@ class SiteTest extends MediaWikiTestCase {
 
 		return [
 			[ # 0
-				'http://acme.test/TestPath/$1',
+				'https://acme.test/TestPath/$1',
 				'Foo',
 				'/TestPath/Foo',
 			],
 			[ # 1
-				'http://acme.test/TestScript?x=$1&y=bla',
+				'https://acme.test/TestScript?x=$1&y=bla',
 				'Foo',
 				'TestScript?x=Foo&y=bla',
 			],
 			[ # 2
-				'http://acme.test/TestPath/$1',
+				'https://acme.test/TestPath/$1',
 				'foo & bar/xyzzy (quux-shmoox?)',
 				'/TestPath/foo%20%26%20bar%2Fxyzzy%20%28quux-shmoox%3F%29',
 			],

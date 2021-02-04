@@ -6,9 +6,9 @@
  * Minifies a javascript file using a javascript parser
  *
  * This implements a PHP port of Brendan Eich's Narcissus open source javascript engine (in javascript)
- * References: http://en.wikipedia.org/wiki/Narcissus_(JavaScript_engine)
- * Narcissus sourcecode: http://mxr.mozilla.org/mozilla/source/js/narcissus/
- * JSMinPlus weblog: http://crisp.tweakblogs.net/blog/cat/716
+ * References: https://en.wikipedia.org/wiki/Narcissus_(JavaScript_engine)
+ * Narcissus sourcecode: https://mxr.mozilla.org/mozilla/source/js/narcissus/
+ * JSMinPlus weblog: https://crisp.tweakblogs.net/blog/cat/716
  *
  * Tino Zijdel <crisp@tweakers.net>
  *
@@ -23,7 +23,7 @@
  * 12-04-2009 - some small bugfixes and performance improvements
  * 09-04-2009 - initial open sourced version 1.0
  *
- * Latest version of this script: http://files.tweakers.net/jsminplus/jsminplus.zip
+ * Latest version of this script: https://files.tweakers.net/jsminplus/jsminplus.zip
  *
  * @file
  */
@@ -34,7 +34,7 @@
  * The contents of this file are subject to the Mozilla Public License Version
  * 1.1 (the "License"); you may not use this file except in compliance with
  * the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
+ * https://www.mozilla.org/MPL/
  *
  * Software distributed under the License is distributed on an "AS IS" basis,
  * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
@@ -936,7 +936,7 @@ class JSParser
 				{
 					// <script language="JavaScript"> (without version hints) may need
 					// automatic semicolon insertion without a newline after do-while.
-					// See http://bugzilla.mozilla.org/show_bug.cgi?id=238945.
+					// See https://bugzilla.mozilla.org/show_bug.cgi?id=238945.
 					$this->t->match(OP_SEMICOLON);
 					return $n;
 				}

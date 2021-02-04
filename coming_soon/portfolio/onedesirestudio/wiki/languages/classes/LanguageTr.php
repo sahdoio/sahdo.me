@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Language
@@ -27,7 +27,7 @@
  * Turkish has two different i, one with a dot and another without a dot. They
  * are totally different letters in this language, so we have to override the
  * ucfirst and lcfirst methods.
- * See http://en.wikipedia.org/wiki/Dotted_and_dotless_I
+ * See https://en.wikipedia.org/wiki/Dotted_and_dotless_I
  * and @bug 28040
  * @ingroup Language
  */

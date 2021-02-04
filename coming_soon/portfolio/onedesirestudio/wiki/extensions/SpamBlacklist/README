@@ -59,7 +59,7 @@ In simple terms:
 
 Internally, a regex is formed which looks like this:
 
-   !http://[a-z0-9\-.]*(line 1|line 2|line 3|....)!Si
+   !https://[a-z0-9\-.]*(line 1|line 2|line 3|....)!Si
 
 A few notes about this format. It's not necessary to add www to the start of
 hostnames, the regex is designed to match any subdomain. Don't add patterns
@@ -114,7 +114,7 @@ Obtaining or making blacklists
 The primary source for a MediaWiki-compatible blacklist file is the Wikimedia
 spam blacklist on meta:
 
-    http://meta.wikimedia.org/wiki/Spam_blacklist
+    https://meta.wikimedia.org/wiki/Spam_blacklist
 
 In the default configuration, the extension loads this list from our site 
 once every 10-15 minutes.
@@ -125,7 +125,7 @@ hence the Wikimedia blacklist is comparatively conservative in the links it
 blocks. You may want to add your own keyword blocks or even ccTLD blocks.
 You may suggest modifications to the Wikimedia blacklist at:
 
-    http://meta.wikimedia.org/wiki/Talk:Spam_blacklist
+    https://meta.wikimedia.org/wiki/Talk:Spam_blacklist
 
 To make maintenance of local lists easier, you may wish to add a DB: source to
 $wgSpamBlacklistFiles and hence create a blacklist on your wiki. If you do this,

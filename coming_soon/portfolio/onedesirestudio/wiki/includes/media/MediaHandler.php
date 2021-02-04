@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -126,7 +126,7 @@ abstract class MediaHandler {
 	 * @param File $image The image object, or false if there isn't one
 	 * @param string $path The filename
 	 * @return array Follow the format of PHP getimagesize() internal function.
-	 *   See http://www.php.net/getimagesize. MediaWiki will only ever use the
+	 *   See https://www.php.net/getimagesize. MediaWiki will only ever use the
 	 *   first two array keys (the width and height), and the 'bits' associative
 	 *   key. All other array keys are ignored. Returning a 'bits' key is optional
 	 *   as not all formats have a notion of "bitdepth".
@@ -880,7 +880,7 @@ abstract class MediaHandler {
 	 *       'info' => 'example-filewarning-info',
 	 *     ),
 	 *     // Optional, link for more information
-	 *     'link' => 'http://example.com',
+	 *     'link' => 'https://example.com',
 	 *   )
 	 *
 	 * Returns null if no warning is necessary.

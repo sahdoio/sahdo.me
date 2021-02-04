@@ -9,22 +9,22 @@ class ParserOutputTest extends MediaWikiTestCase {
 	public static function provideIsLinkInternal() {
 		return [
 			// Different domains
-			[ false, 'http://example.org', 'http://mediawiki.org' ],
+			[ false, 'https://example.org', 'https://mediawiki.org' ],
 			// Same domains
-			[ true, 'http://example.org', 'http://example.org' ],
+			[ true, 'https://example.org', 'https://example.org' ],
 			[ true, 'https://example.org', 'https://example.org' ],
 			[ true, '//example.org', '//example.org' ],
 			// Same domain different cases
-			[ true, 'http://example.org', 'http://EXAMPLE.ORG' ],
+			[ true, 'https://example.org', 'https://EXAMPLE.ORG' ],
 			// Paths, queries, and fragments are not relevant
-			[ true, 'http://example.org', 'http://example.org/wiki/Main_Page' ],
-			[ true, 'http://example.org', 'http://example.org?my=query' ],
-			[ true, 'http://example.org', 'http://example.org#its-a-fragment' ],
+			[ true, 'https://example.org', 'https://example.org/wiki/Main_Page' ],
+			[ true, 'https://example.org', 'https://example.org?my=query' ],
+			[ true, 'https://example.org', 'https://example.org#its-a-fragment' ],
 			// Different protocols
-			[ false, 'http://example.org', 'https://example.org' ],
-			[ false, 'https://example.org', 'http://example.org' ],
+			[ false, 'https://example.org', 'https://example.org' ],
+			[ false, 'https://example.org', 'https://example.org' ],
 			// Protocol relative servers always match http and https links
-			[ true, '//example.org', 'http://example.org' ],
+			[ true, '//example.org', 'https://example.org' ],
 			[ true, '//example.org', 'https://example.org' ],
 			// But they don't match strange things like this
 			[ false, '//example.org', 'irc://example.org' ],

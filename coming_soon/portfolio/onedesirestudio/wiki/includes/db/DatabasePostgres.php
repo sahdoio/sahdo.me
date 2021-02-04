@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Database
@@ -1069,7 +1069,7 @@ __INDEXATTR__;
 
 	/**
 	 * Posted by cc[plus]php[at]c2se[dot]com on 25-Mar-2009 09:12
-	 * to http://www.php.net/manual/en/ref.pgsql.php
+	 * to https://www.php.net/manual/en/ref.pgsql.php
 	 *
 	 * Parsing a postgres array can be a tricky problem, he's my
 	 * take on this, it handles multi-dimensional arrays plus
@@ -1549,7 +1549,7 @@ SQL;
 
 	/**
 	 * Check to see if a named lock is available. This is non-blocking.
-	 * See http://www.postgresql.org/docs/8.2/static/functions-admin.html#FUNCTIONS-ADVISORY-LOCKS
+	 * See https://www.postgresql.org/docs/8.2/static/functions-admin.html#FUNCTIONS-ADVISORY-LOCKS
 	 *
 	 * @param string $lockName Name of lock to poll
 	 * @param string $method Name of method calling us
@@ -1566,7 +1566,7 @@ SQL;
 	}
 
 	/**
-	 * See http://www.postgresql.org/docs/8.2/static/functions-admin.html#FUNCTIONS-ADVISORY-LOCKS
+	 * See https://www.postgresql.org/docs/8.2/static/functions-admin.html#FUNCTIONS-ADVISORY-LOCKS
 	 * @param string $lockName
 	 * @param string $method
 	 * @param int $timeout
@@ -1592,8 +1592,8 @@ SQL;
 	}
 
 	/**
-	 * See http://www.postgresql.org/docs/8.2/static/functions-admin.html#FUNCTIONS-ADVISORY-LOCKSFROM
-	 * PG DOCS: http://www.postgresql.org/docs/8.2/static/functions-admin.html#FUNCTIONS-ADVISORY-LOCKS
+	 * See https://www.postgresql.org/docs/8.2/static/functions-admin.html#FUNCTIONS-ADVISORY-LOCKSFROM
+	 * PG DOCS: https://www.postgresql.org/docs/8.2/static/functions-admin.html#FUNCTIONS-ADVISORY-LOCKS
 	 * @param string $lockName
 	 * @param string $method
 	 * @return bool

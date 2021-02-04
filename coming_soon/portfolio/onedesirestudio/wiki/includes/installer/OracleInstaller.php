@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Deployment
@@ -325,7 +325,7 @@ class OracleInstaller extends DatabaseInstaller {
 	 *
 	 * Regex should be able to validate all connect string formats
 	 * [//](host|tns_name)[:port][/service_name][:POOLED]
-	 * http://www.orafaq.com/wiki/EZCONNECT
+	 * https://www.orafaq.com/wiki/EZCONNECT
 	 *
 	 * @since 1.22
 	 *

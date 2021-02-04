@@ -670,7 +670,7 @@
 	"apihelp-query+exturlusage-param-namespace": "איזה מרחב שם למנות.",
 	"apihelp-query+exturlusage-param-limit": "כמה דפים להחזיר.",
 	"apihelp-query+exturlusage-param-expandurl": "הרחבת URL־ים בעלי פרוטוקול יחסי בפרוטוקול קנוני.",
-	"apihelp-query+exturlusage-example-simple": "הצגת דפים שמקשרים ל־<kbd>http://www.mediawiki.org</kbd>.",
+	"apihelp-query+exturlusage-example-simple": "הצגת דפים שמקשרים ל־<kbd>https://www.mediawiki.org</kbd>.",
 	"apihelp-query+filearchive-description": "למנות את כל הקבצים המחוקים לפי הסדר.",
 	"apihelp-query+filearchive-param-from": "מאיזו כותרת תמונה להתחיל למנות.",
 	"apihelp-query+filearchive-param-to": "באיזו כותרת תמונה להפסיק למנות.",

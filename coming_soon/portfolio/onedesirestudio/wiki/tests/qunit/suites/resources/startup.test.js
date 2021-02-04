@@ -90,8 +90,8 @@
 			'Lynx/2.8.6rel.4 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.8g',
 			'w3m/0.5.1',
 			// Bots
-			'Googlebot/2.1 (+http://www.google.com/bot.html)',
-			'Mozilla/5.0 (compatible; googlebot/2.1; +http://www.google.com/bot.html)',
+			'Googlebot/2.1 (+https://www.google.com/bot.html)',
+			'Mozilla/5.0 (compatible; googlebot/2.1; +https://www.google.com/bot.html)',
 			'Mozilla/5.0 (compatible; YandexBot/3.0)',
 			// Scripts
 			'curl/7.21.4 (universal-apple-darwin11.0) libcurl/7.21.4 OpenSSL/0.9.8r zlib/1.2.5',

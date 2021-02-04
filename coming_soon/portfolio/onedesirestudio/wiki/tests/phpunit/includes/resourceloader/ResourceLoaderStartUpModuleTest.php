@@ -91,8 +91,8 @@ mw.loader.register( [
 				'msg' => 'Foreign source',
 				'sources' => [
 					'example' => [
-						'loadScript' => 'http://example.org/w/load.php',
-						'apiScript' => 'http://example.org/w/api.php',
+						'loadScript' => 'https://example.org/w/load.php',
+						'apiScript' => 'https://example.org/w/api.php',
 					],
 				],
 				'modules' => [
@@ -101,7 +101,7 @@ mw.loader.register( [
 				'out' => '
 mw.loader.addSource( {
     "local": "/w/load.php",
-    "example": "http://example.org/w/load.php"
+    "example": "https://example.org/w/load.php"
 } );
 mw.loader.register( [
     [
@@ -180,8 +180,8 @@ mw.loader.register( [
 				'msg' => 'Advanced (everything combined)',
 				'sources' => [
 					'example' => [
-						'loadScript' => 'http://example.org/w/load.php',
-						'apiScript' => 'http://example.org/w/api.php',
+						'loadScript' => 'https://example.org/w/load.php',
+						'apiScript' => 'https://example.org/w/api.php',
 					],
 				],
 				'modules' => [
@@ -235,7 +235,7 @@ mw.loader.register( [
 				'out' => '
 mw.loader.addSource( {
     "local": "/w/load.php",
-    "example": "http://example.org/w/load.php"
+    "example": "https://example.org/w/load.php"
 } );
 mw.loader.register( [
     [

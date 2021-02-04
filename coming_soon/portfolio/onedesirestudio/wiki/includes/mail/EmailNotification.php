@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @author <brion@pobox.com>
@@ -41,7 +41,7 @@ use MediaWiki\Linker\LinkTarget;
  * of sending out bulk mails (bcc:user1,user2...) for all these users having the
  * same timeoffset in their preferences.
  *
- * Visit the documentation pages under http://meta.wikipedia.com/Enotif
+ * Visit the documentation pages under https://meta.wikipedia.com/Enotif
  */
 class EmailNotification {
 

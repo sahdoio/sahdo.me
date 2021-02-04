@@ -9,7 +9,7 @@
  * should be used in its place for any real usages.
  *
  * Copyright (C) 2005-2007 Brion Vibber <brion@wikimedia.org>
- * http://www.mediawiki.org/
+ * https://www.mediawiki.org/
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Extensions

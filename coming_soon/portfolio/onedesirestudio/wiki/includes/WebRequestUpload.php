@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -102,7 +102,7 @@ class WebRequestUpload {
 
 	/**
 	 * Return the upload error. See link for explanation
-	 * http://www.php.net/manual/en/features.file-upload.errors.php
+	 * https://www.php.net/manual/en/features.file-upload.errors.php
 	 *
 	 * @return int One of the UPLOAD_ constants, 0 if non-existent
 	 */

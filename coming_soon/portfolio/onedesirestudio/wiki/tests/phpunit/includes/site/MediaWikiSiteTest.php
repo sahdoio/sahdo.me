@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @since 1.21
@@ -84,13 +84,13 @@ class MediaWikiSiteTest extends SiteTest {
 	public static function provideGetPageUrl() {
 		return [
 			// path, page, expected substring
-			[ 'http://acme.test/wiki/$1', 'Berlin', '/wiki/Berlin' ],
-			[ 'http://acme.test/wiki/', 'Berlin', '/wiki/' ],
-			[ 'http://acme.test/w/index.php?title=$1', 'Berlin', '/w/index.php?title=Berlin' ],
-			[ 'http://acme.test/wiki/$1', '', '/wiki/' ],
-			[ 'http://acme.test/wiki/$1', 'Berlin/sub page', '/wiki/Berlin/sub_page' ],
-			[ 'http://acme.test/wiki/$1', 'Cork (city)   ', '/Cork_(city)' ],
-			[ 'http://acme.test/wiki/$1', 'M&M', '/wiki/M%26M' ],
+			[ 'https://acme.test/wiki/$1', 'Berlin', '/wiki/Berlin' ],
+			[ 'https://acme.test/wiki/', 'Berlin', '/wiki/' ],
+			[ 'https://acme.test/w/index.php?title=$1', 'Berlin', '/w/index.php?title=Berlin' ],
+			[ 'https://acme.test/wiki/$1', '', '/wiki/' ],
+			[ 'https://acme.test/wiki/$1', 'Berlin/sub page', '/wiki/Berlin/sub_page' ],
+			[ 'https://acme.test/wiki/$1', 'Cork (city)   ', '/Cork_(city)' ],
+			[ 'https://acme.test/wiki/$1', 'M&M', '/wiki/M%26M' ],
 		];
 	}
 

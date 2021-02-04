@@ -15,12 +15,12 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @author Ævar Arnfjörð Bjarmason <avarab@gmail.com>
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @license http://www.gnu.org/copyleft/fdl.html GNU Free Documentation License
+ * @license https://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @license https://www.gnu.org/copyleft/fdl.html GNU Free Documentation License
  * @ingroup Language
  */
 
@@ -28,7 +28,7 @@
  * Belarusian in Taraškievica orthography (Беларуская тарашкевіца)
  *
  * @ingroup Language
- * @see http://be-x-old.wikipedia.org/wiki/Project_talk:LanguageBe_tarask.php
+ * @see https://be-x-old.wikipedia.org/wiki/Project_talk:LanguageBe_tarask.php
  */
 // @codingStandardsIgnoreStart Ignore class name is not in camel caps format error
 class LanguageBe_tarask extends Language {

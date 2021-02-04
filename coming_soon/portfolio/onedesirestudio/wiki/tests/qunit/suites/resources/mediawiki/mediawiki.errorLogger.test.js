@@ -4,7 +4,7 @@
 	QUnit.test( 'installGlobalHandler', 7, function ( assert ) {
 		var w = {},
 			errorMessage = 'Foo',
-			errorUrl = 'http://example.com',
+			errorUrl = 'https://example.com',
 			errorLine = '123',
 			errorColumn = '45',
 			errorObject = new Error( 'Foo' ),

@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup DifferenceEngine
@@ -26,7 +26,7 @@
 /**
  * This diff implementation is mainly lifted from the LCS algorithm of the Eclipse project which
  * in turn is based on Myers' "An O(ND) difference algorithm and its variations"
- * (http://citeseer.ist.psu.edu/myers86ond.html) with range compression (see Wu et al.'s
+ * (https://citeseer.ist.psu.edu/myers86ond.html) with range compression (see Wu et al.'s
  * "An O(NP) Sequence Comparison Algorithm").
  *
  * This implementation supports an upper bound on the execution time.

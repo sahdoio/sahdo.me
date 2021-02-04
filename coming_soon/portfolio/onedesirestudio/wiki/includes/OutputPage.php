@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -116,7 +116,7 @@ class OutputPage extends ContextSource {
 	 * headers If-Match and If-None-Match containing its locally cached ETAG value.
 	 *
 	 * To get more information, you will have to look at HTTP/1.1 protocol which
-	 * is properly described in RFC 2616 : http://tools.ietf.org/html/rfc2616
+	 * is properly described in RFC 2616 : https://tools.ietf.org/html/rfc2616
 	 */
 	private $mETag = false;
 
@@ -851,7 +851,7 @@ class OutputPage extends ContextSource {
 	}
 
 	/**
-	 * Set the robot policy for the page: <http://www.robotstxt.org/meta.html>
+	 * Set the robot policy for the page: <https://www.robotstxt.org/meta.html>
 	 *
 	 * @param string $policy The literal string to output as the contents of
 	 *   the meta tag.  Will be parsed according to the spec and output in
@@ -2673,8 +2673,8 @@ class OutputPage extends ContextSource {
 			// The spec recommends defining XHTML5's charset using the XML declaration
 			// instead of meta.
 			// Our XML declaration is output by Html::htmlHeader.
-			// http://www.whatwg.org/html/semantics.html#attr-meta-http-equiv-content-type
-			// http://www.whatwg.org/html/semantics.html#charset
+			// https://www.whatwg.org/html/semantics.html#attr-meta-http-equiv-content-type
+			// https://www.whatwg.org/html/semantics.html#charset
 			$ret .= Html::element( 'meta', [ 'charset' => 'UTF-8' ] ) . "\n";
 		}
 
@@ -3342,7 +3342,7 @@ class OutputPage extends ContextSource {
 
 		$p = "{$this->mIndexPolicy},{$this->mFollowPolicy}";
 		if ( $p !== 'index,follow' ) {
-			// http://www.robotstxt.org/wc/meta-user.html
+			// https://www.robotstxt.org/wc/meta-user.html
 			// Only show if it's different from the default robots policy
 			$tags['meta-robots'] = Html::element( 'meta', [
 				'name' => 'robots',
@@ -3889,7 +3889,7 @@ class OutputPage extends ContextSource {
 	public static function transformCssMedia( $media ) {
 		global $wgRequest;
 
-		// http://www.w3.org/TR/css3-mediaqueries/#syntax
+		// https://www.w3.org/TR/css3-mediaqueries/#syntax
 		$screenMediaQueryRegex = '/^(?:only\s+)?screen\b/i';
 
 		// Switch in on-screen display for media testing

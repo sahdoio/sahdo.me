@@ -408,12 +408,12 @@ $dateFormats = [
 ];
 
 $bookstoreList = [
-	'Поиск по библиотекам «Сигла»' => 'http://www.sigla.ru/results.jsp?f=7&t=3&v0=$1',
-	'Findbook.ru' => 'http://findbook.ru/search/d0?ptype=4&pvalue=$1',
-	'Яндекс.Маркет' => 'http://market.yandex.ru/search.xml?text=$1',
-	'ОЗОН' => 'http://www.ozon.ru/?context=advsearch_book&isbn=$1',
-	'Books.Ru' => 'http://www.books.ru/shop/search?query=$1',
-	'Amazon.com' => 'http://www.amazon.com/exec/obidos/ISBN=$1'
+	'Поиск по библиотекам «Сигла»' => 'https://www.sigla.ru/results.jsp?f=7&t=3&v0=$1',
+	'Findbook.ru' => 'https://findbook.ru/search/d0?ptype=4&pvalue=$1',
+	'Яндекс.Маркет' => 'https://market.yandex.ru/search.xml?text=$1',
+	'ОЗОН' => 'https://www.ozon.ru/?context=advsearch_book&isbn=$1',
+	'Books.Ru' => 'https://www.books.ru/shop/search?query=$1',
+	'Amazon.com' => 'https://www.amazon.com/exec/obidos/ISBN=$1'
 ];
 
 /**

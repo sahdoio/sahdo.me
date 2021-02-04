@@ -6,6 +6,6 @@
 			"McAang"
 		]
 	},
-	"syntaxhighlight-desc": "[http://pygments.org/ Pygments] kullanarak <code>&lt;syntaxhighlight&gt;</code> sözdizimi vurgulamasını sağlar",
+	"syntaxhighlight-desc": "[https://pygments.org/ Pygments] kullanarak <code>&lt;syntaxhighlight&gt;</code> sözdizimi vurgulamasını sağlar",
 	"syntaxhighlight-visualeditor-mwsyntaxhighlightinspector-title": "Kod bloğu"
 }

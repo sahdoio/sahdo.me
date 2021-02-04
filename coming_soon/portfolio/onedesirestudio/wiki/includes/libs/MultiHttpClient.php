@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -214,7 +214,7 @@ class MultiHttpClient {
 				// Wait (if possible) for available work...
 				if ( $active > 0 && $mrc == CURLM_OK ) {
 					if ( curl_multi_select( $chm, 10 ) == -1 ) {
-						// PHP bug 63411; http://curl.haxx.se/libcurl/c/curl_multi_fdset.html
+						// PHP bug 63411; https://curl.haxx.se/libcurl/c/curl_multi_fdset.html
 						usleep( 5000 ); // 5ms
 					}
 				}

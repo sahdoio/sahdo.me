@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup JobQueue
@@ -322,7 +322,7 @@ class JobRunner implements LoggerAwareInterface {
 	 */
 	private function getMaxRssKb() {
 		$info = wfGetRusage() ?: [];
-		// see http://linux.die.net/man/2/getrusage
+		// see https://linux.die.net/man/2/getrusage
 		return isset( $info['ru_maxrss'] ) ? (int)$info['ru_maxrss'] : null;
 	}
 

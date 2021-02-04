@@ -10,8 +10,8 @@ class InterwikiTest extends MediaWikiTestCase {
 	public function testConstructor() {
 		$interwiki = new Interwiki(
 			'xyz',
-			'http://xyz.acme.test/wiki/$1',
-			'http://xyz.acme.test/w/api.php',
+			'https://xyz.acme.test/wiki/$1',
+			'https://xyz.acme.test/w/api.php',
 			'xyzwiki',
 			1,
 			0
@@ -21,8 +21,8 @@ class InterwikiTest extends MediaWikiTestCase {
 
 		$this->assertSame( '(interwiki-name-xyz)', $interwiki->getName() );
 		$this->assertSame( '(interwiki-desc-xyz)', $interwiki->getDescription() );
-		$this->assertSame( 'http://xyz.acme.test/w/api.php', $interwiki->getAPI() );
-		$this->assertSame( 'http://xyz.acme.test/wiki/$1', $interwiki->getURL() );
+		$this->assertSame( 'https://xyz.acme.test/w/api.php', $interwiki->getAPI() );
+		$this->assertSame( 'https://xyz.acme.test/wiki/$1', $interwiki->getURL() );
 		$this->assertSame( 'xyzwiki', $interwiki->getWikiID() );
 		$this->assertTrue( $interwiki->isLocal() );
 		$this->assertFalse( $interwiki->isTranscludable() );
@@ -31,11 +31,11 @@ class InterwikiTest extends MediaWikiTestCase {
 	public function testGetUrl() {
 		$interwiki = new Interwiki(
 			'xyz',
-			'http://xyz.acme.test/wiki/$1'
+			'https://xyz.acme.test/wiki/$1'
 		);
 
-		$this->assertSame( 'http://xyz.acme.test/wiki/$1', $interwiki->getURL() );
-		$this->assertSame( 'http://xyz.acme.test/wiki/Foo%26Bar', $interwiki->getURL( 'Foo&Bar' ) );
+		$this->assertSame( 'https://xyz.acme.test/wiki/$1', $interwiki->getURL() );
+		$this->assertSame( 'https://xyz.acme.test/wiki/Foo%26Bar', $interwiki->getURL( 'Foo&Bar' ) );
 	}
 
 	//// tests for static data access methods below ///////////////////////////////////////////////
@@ -52,8 +52,8 @@ class InterwikiTest extends MediaWikiTestCase {
 		//  it once and run all the tests in one go.
 		$dewiki = [
 			'iw_prefix' => 'de',
-			'iw_url' => 'http://de.wikipedia.org/wiki/',
-			'iw_api' => 'http://de.wikipedia.org/w/api.php',
+			'iw_url' => 'https://de.wikipedia.org/wiki/',
+			'iw_api' => 'https://de.wikipedia.org/w/api.php',
 			'iw_wikiid' => 'dewiki',
 			'iw_local' => 1,
 			'iw_trans' => 0
@@ -61,8 +61,8 @@ class InterwikiTest extends MediaWikiTestCase {
 
 		$zzwiki = [
 			'iw_prefix' => 'zz',
-			'iw_url' => 'http://zzwiki.org/wiki/',
-			'iw_api' => 'http://zzwiki.org/w/api.php',
+			'iw_url' => 'https://zzwiki.org/wiki/',
+			'iw_api' => 'https://zzwiki.org/w/api.php',
 			'iw_wikiid' => 'zzwiki',
 			'iw_local' => 0,
 			'iw_trans' => 0
@@ -99,8 +99,8 @@ class InterwikiTest extends MediaWikiTestCase {
 		$this->assertInstanceOf( 'Interwiki', $interwiki );
 		$this->assertSame( $interwiki, Interwiki::fetch( 'de' ), 'in-process caching' );
 
-		$this->assertSame( 'http://de.wikipedia.org/wiki/', $interwiki->getURL(), 'getURL' );
-		$this->assertSame( 'http://de.wikipedia.org/w/api.php', $interwiki->getAPI(), 'getAPI' );
+		$this->assertSame( 'https://de.wikipedia.org/wiki/', $interwiki->getURL(), 'getURL' );
+		$this->assertSame( 'https://de.wikipedia.org/w/api.php', $interwiki->getAPI(), 'getAPI' );
 		$this->assertSame( 'dewiki', $interwiki->getWikiID(), 'getWikiID' );
 		$this->assertSame( true, $interwiki->isLocal(), 'isLocal' );
 		$this->assertSame( false, $interwiki->isTranscludable(), 'isTranscludable' );
@@ -163,13 +163,13 @@ class InterwikiTest extends MediaWikiTestCase {
 
 		$dewiki = [
 			'iw_prefix' => 'de',
-			'iw_url' => 'http://de.wikipedia.org/wiki/',
+			'iw_url' => 'https://de.wikipedia.org/wiki/',
 			'iw_local' => 1
 		];
 
 		$zzwiki = [
 			'iw_prefix' => 'zz',
-			'iw_url' => 'http://zzwiki.org/wiki/',
+			'iw_url' => 'https://zzwiki.org/wiki/',
 			'iw_local' => 0
 		];
 
@@ -194,13 +194,13 @@ class InterwikiTest extends MediaWikiTestCase {
 		$interwiki = Interwiki::fetch( 'de' );
 		$this->assertInstanceOf( 'Interwiki', $interwiki );
 
-		$this->assertSame( 'http://de.wikipedia.org/wiki/', $interwiki->getURL(), 'getURL' );
+		$this->assertSame( 'https://de.wikipedia.org/wiki/', $interwiki->getURL(), 'getURL' );
 		$this->assertSame( true, $interwiki->isLocal(), 'isLocal' );
 
 		$interwiki = Interwiki::fetch( 'zz' );
 		$this->assertInstanceOf( 'Interwiki', $interwiki );
 
-		$this->assertSame( 'http://zzwiki.org/wiki/', $interwiki->getURL(), 'getURL' );
+		$this->assertSame( 'https://zzwiki.org/wiki/', $interwiki->getURL(), 'getURL' );
 		$this->assertSame( false, $interwiki->isLocal(), 'isLocal' );
 
 		// cleanup temp file
@@ -210,13 +210,13 @@ class InterwikiTest extends MediaWikiTestCase {
 	public function testArrayStorage() {
 		$dewiki = [
 			'iw_prefix' => 'de',
-			'iw_url' => 'http://de.wikipedia.org/wiki/',
+			'iw_url' => 'https://de.wikipedia.org/wiki/',
 			'iw_local' => 1
 		];
 
 		$zzwiki = [
 			'iw_prefix' => 'zz',
-			'iw_url' => 'http://zzwiki.org/wiki/',
+			'iw_url' => 'https://zzwiki.org/wiki/',
 			'iw_local' => 0
 		];
 
@@ -241,13 +241,13 @@ class InterwikiTest extends MediaWikiTestCase {
 		$interwiki = Interwiki::fetch( 'de' );
 		$this->assertInstanceOf( 'Interwiki', $interwiki );
 
-		$this->assertSame( 'http://de.wikipedia.org/wiki/', $interwiki->getURL(), 'getURL' );
+		$this->assertSame( 'https://de.wikipedia.org/wiki/', $interwiki->getURL(), 'getURL' );
 		$this->assertSame( true, $interwiki->isLocal(), 'isLocal' );
 
 		$interwiki = Interwiki::fetch( 'zz' );
 		$this->assertInstanceOf( 'Interwiki', $interwiki );
 
-		$this->assertSame( 'http://zzwiki.org/wiki/', $interwiki->getURL(), 'getURL' );
+		$this->assertSame( 'https://zzwiki.org/wiki/', $interwiki->getURL(), 'getURL' );
 		$this->assertSame( false, $interwiki->isLocal(), 'isLocal' );
 	}
 

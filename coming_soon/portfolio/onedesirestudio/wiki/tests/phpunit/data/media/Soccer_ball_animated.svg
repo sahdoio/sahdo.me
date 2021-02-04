@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg>
-<svg width="150" height="150" viewBox="-105 -105 210 210" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="150" height="150" viewBox="-105 -105 210 210" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
    <defs>
       <clipPath id="ball">
          <circle r="100" stroke-width="0"/>

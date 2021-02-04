@@ -8,7 +8,7 @@
  * not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * 		http://www.apache.org/licenses/LICENSE-2.0
+ * 		https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software distributed
  * under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS
@@ -19,7 +19,7 @@
  * @version 0.1.1 -- 2010-09-11
  * @author Trevor Parscal <tparscal@wikimedia.org>
  * @copyright Copyright 2010 Wikimedia Foundation
- * @license http://www.apache.org/licenses/LICENSE-2.0
+ * @license https://www.apache.org/licenses/LICENSE-2.0
  */
 
 /**
@@ -154,7 +154,7 @@ class CSSMin {
 
 	/**
 	 * Serialize a string (escape and quote) for use as a CSS string value.
-	 * http://www.w3.org/TR/2013/WD-cssom-20131205/#serialize-a-string
+	 * https://www.w3.org/TR/2013/WD-cssom-20131205/#serialize-a-string
 	 *
 	 * @param string $value
 	 * @return string
@@ -199,7 +199,7 @@ class CSSMin {
 	 * Build a CSS 'url()' value for the given URL, quoting parentheses (and other funny characters)
 	 * and escaping quotes as necessary.
 	 *
-	 * See http://www.w3.org/TR/css-syntax-3/#consume-a-url-token
+	 * See https://www.w3.org/TR/css-syntax-3/#consume-a-url-token
 	 *
 	 * @param string $url URL to process
 	 * @return string 'url()' value, usually just `"url($url)"`, quoted/escaped if necessary

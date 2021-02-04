@@ -1,303 +1,303 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+      xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://www.onedesire.co/</loc>
+  <loc>https://www.onedesire.co/</loc>
   <lastmod>2016-03-21T22:26:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/index.html</loc>
+  <loc>https://www.onedesire.co/index.html</loc>
   <lastmod>2016-03-21T22:26:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/services.html</loc>
+  <loc>https://www.onedesire.co/services.html</loc>
   <lastmod>2016-03-21T22:26:01+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio.html</loc>
+  <loc>https://www.onedesire.co/portfolio.html</loc>
   <lastmod>2016-03-21T22:26:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/clients.html</loc>
+  <loc>https://www.onedesire.co/clients.html</loc>
   <lastmod>2016-03-21T22:25:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/contact.html</loc>
+  <loc>https://www.onedesire.co/contact.html</loc>
   <lastmod>2016-03-21T22:25:58+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/projetolaura-film/</loc>
+  <loc>https://www.onedesire.co/portfolio/projetolaura-film/</loc>
   <lastmod>2016-03-21T21:20:54+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/projetolaura-website/</loc>
+  <loc>https://www.onedesire.co/portfolio/projetolaura-website/</loc>
   <lastmod>2016-03-21T21:20:56+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/projetolaura-photo/</loc>
+  <loc>https://www.onedesire.co/portfolio/projetolaura-photo/</loc>
   <lastmod>2016-03-21T21:20:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/iasmaintenance-website/</loc>
+  <loc>https://www.onedesire.co/portfolio/iasmaintenance-website/</loc>
   <lastmod>2016-03-21T21:20:47+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/frankconcretos-logo/</loc>
+  <loc>https://www.onedesire.co/portfolio/frankconcretos-logo/</loc>
   <lastmod>2016-03-21T21:20:40+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/freirefisio-logo/</loc>
+  <loc>https://www.onedesire.co/portfolio/freirefisio-logo/</loc>
   <lastmod>2016-03-21T21:20:43+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/website/</loc>
+  <loc>https://www.onedesire.co/categoria/website/</loc>
   <lastmod>2016-03-21T20:50:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/film/</loc>
+  <loc>https://www.onedesire.co/categoria/film/</loc>
   <lastmod>2016-03-21T20:50:42+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/photo/</loc>
+  <loc>https://www.onedesire.co/categoria/photo/</loc>
   <lastmod>2016-03-21T20:50:45+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/design/</loc>
+  <loc>https://www.onedesire.co/categoria/design/</loc>
   <lastmod>2016-03-21T20:50:43+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/logo/</loc>
+  <loc>https://www.onedesire.co/categoria/logo/</loc>
   <lastmod>2016-03-21T20:50:45+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/botecodasmeninas-visitcard/</loc>
+  <loc>https://www.onedesire.co/portfolio/botecodasmeninas-visitcard/</loc>
   <lastmod>2016-03-21T21:20:35+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/iasmaintenance-logo/</loc>
+  <loc>https://www.onedesire.co/portfolio/iasmaintenance-logo/</loc>
   <lastmod>2016-03-21T21:20:45+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/review-website/</loc>
+  <loc>https://www.onedesire.co/portfolio/review-website/</loc>
   <lastmod>2016-03-21T21:21:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/enroladosdoceria-logo/</loc>
+  <loc>https://www.onedesire.co/portfolio/enroladosdoceria-logo/</loc>
   <lastmod>2016-03-21T21:20:36+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/barbearia5dejulho-logo/</loc>
+  <loc>https://www.onedesire.co/portfolio/barbearia5dejulho-logo/</loc>
   <lastmod>2016-03-21T21:20:34+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/frankconcretos-website/</loc>
+  <loc>https://www.onedesire.co/portfolio/frankconcretos-website/</loc>
   <lastmod>2016-03-21T21:20:42+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/enroladosdoceria-visitcard/</loc>
+  <loc>https://www.onedesire.co/portfolio/enroladosdoceria-visitcard/</loc>
   <lastmod>2016-03-21T21:20:38+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/jessicaelucas-photo/</loc>
+  <loc>https://www.onedesire.co/portfolio/jessicaelucas-photo/</loc>
   <lastmod>2016-03-21T21:20:49+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/freirefisio-website/</loc>
+  <loc>https://www.onedesire.co/portfolio/freirefisio-website/</loc>
   <lastmod>2016-03-21T21:20:44+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/mecenasproducoes-logo/</loc>
+  <loc>https://www.onedesire.co/portfolio/mecenasproducoes-logo/</loc>
   <lastmod>2016-03-21T21:20:53+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/frankconcretos-visitcard/</loc>
+  <loc>https://www.onedesire.co/portfolio/frankconcretos-visitcard/</loc>
   <lastmod>2016-03-21T21:20:41+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/iasmaintenance-visitcard/</loc>
+  <loc>https://www.onedesire.co/portfolio/iasmaintenance-visitcard/</loc>
   <lastmod>2016-03-21T21:20:47+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/enroladosdoceria-website/</loc>
+  <loc>https://www.onedesire.co/portfolio/enroladosdoceria-website/</loc>
   <lastmod>2016-03-21T21:20:38+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/ieadam-website/</loc>
+  <loc>https://www.onedesire.co/portfolio/ieadam-website/</loc>
   <lastmod>2016-03-21T21:20:50+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/projetolaura-film/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/projetolaura-film/index.html</loc>
   <lastmod>2016-03-21T21:20:54+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/projetolaura-website/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/projetolaura-website/index.html</loc>
   <lastmod>2016-03-21T21:20:56+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/projetolaura-photo/book/page-1.html</loc>
+  <loc>https://www.onedesire.co/portfolio/projetolaura-photo/book/page-1.html</loc>
   <lastmod>2016-03-21T21:21:03+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/projetolaura-photo/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/projetolaura-photo/index.html</loc>
   <lastmod>2016-03-21T21:20:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/iasmaintenance-website/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/iasmaintenance-website/index.html</loc>
   <lastmod>2016-03-21T21:20:47+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/frankconcretos-logo/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/frankconcretos-logo/index.html</loc>
   <lastmod>2016-03-21T21:20:40+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/freirefisio-logo/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/freirefisio-logo/index.html</loc>
   <lastmod>2016-03-21T21:20:43+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/website/index.html</loc>
+  <loc>https://www.onedesire.co/categoria/website/index.html</loc>
   <lastmod>2016-03-21T20:50:57+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/film/index.html</loc>
+  <loc>https://www.onedesire.co/categoria/film/index.html</loc>
   <lastmod>2016-03-21T20:50:42+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/photo/index.html</loc>
+  <loc>https://www.onedesire.co/categoria/photo/index.html</loc>
   <lastmod>2016-03-21T20:50:45+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/design/index.html</loc>
+  <loc>https://www.onedesire.co/categoria/design/index.html</loc>
   <lastmod>2016-03-21T20:50:43+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/categoria/logo/index.html</loc>
+  <loc>https://www.onedesire.co/categoria/logo/index.html</loc>
   <lastmod>2016-03-21T20:50:45+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/botecodasmeninas-visitcard/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/botecodasmeninas-visitcard/index.html</loc>
   <lastmod>2016-03-21T21:20:35+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/iasmaintenance-logo/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/iasmaintenance-logo/index.html</loc>
   <lastmod>2016-03-21T21:20:45+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/review-website/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/review-website/index.html</loc>
   <lastmod>2016-03-21T21:21:00+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/enroladosdoceria-logo/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/enroladosdoceria-logo/index.html</loc>
   <lastmod>2016-03-21T21:20:36+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/barbearia5dejulho-logo/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/barbearia5dejulho-logo/index.html</loc>
   <lastmod>2016-03-21T21:20:34+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/frankconcretos-website/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/frankconcretos-website/index.html</loc>
   <lastmod>2016-03-21T21:20:42+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/enroladosdoceria-visitcard/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/enroladosdoceria-visitcard/index.html</loc>
   <lastmod>2016-03-21T21:20:38+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/jessicaelucas-photo/book/page-1.html</loc>
+  <loc>https://www.onedesire.co/portfolio/jessicaelucas-photo/book/page-1.html</loc>
   <lastmod>2016-03-21T21:21:04+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/jessicaelucas-photo/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/jessicaelucas-photo/index.html</loc>
   <lastmod>2016-03-21T21:20:49+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/freirefisio-website/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/freirefisio-website/index.html</loc>
   <lastmod>2016-03-21T21:20:44+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/mecenasproducoes-logo/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/mecenasproducoes-logo/index.html</loc>
   <lastmod>2016-03-21T21:20:53+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/frankconcretos-visitcard/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/frankconcretos-visitcard/index.html</loc>
   <lastmod>2016-03-21T21:20:41+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/iasmaintenance-visitcard/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/iasmaintenance-visitcard/index.html</loc>
   <lastmod>2016-03-21T21:20:47+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/enroladosdoceria-website/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/enroladosdoceria-website/index.html</loc>
   <lastmod>2016-03-21T21:20:38+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/ieadam-website/index.html</loc>
+  <loc>https://www.onedesire.co/portfolio/ieadam-website/index.html</loc>
   <lastmod>2016-03-21T21:20:50+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://www.onedesire.co/portfolio/jessicaelucas-photo/book/page-2.html</loc>
+  <loc>https://www.onedesire.co/portfolio/jessicaelucas-photo/book/page-2.html</loc>
   <lastmod>2016-03-21T21:21:01+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>

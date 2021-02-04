@@ -51,7 +51,7 @@ ie. /wiki/index.php/Article.
 
   +--------------------------------------------------------------------------+
   |  Note: If you plan to use a fancy URL-rewriting scheme to prettify your  |
-  |  URLs, such as http://www.example.com/wiki/Article, you should put the   |
+  |  URLs, such as https://www.example.com/wiki/Article, you should put the   |
   |  files in a *different* directory from the virtual path where page names |
   |  will appear. It is common in this case to use w as the folder name and  |
   |  /wiki/ as the virtual article path where your articles pretend to be.   |
@@ -82,8 +82,8 @@ help (please provide enough information to work with, and preferably be aware of
 what you're doing!) and keep track of major changes to the software, including
 performance improvements and security patches.
 
-http://lists.wikimedia.org/mailman/listinfo/mediawiki-announce (low traffic)
+https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce (low traffic)
 
-http://lists.wikimedia.org/mailman/listinfo/mediawiki-l (site admin support)
+https://lists.wikimedia.org/mailman/listinfo/mediawiki-l (site admin support)
 
-http://lists.wikimedia.org/mailman/listinfo/wikitech-l (development)
+https://lists.wikimedia.org/mailman/listinfo/wikitech-l (development)

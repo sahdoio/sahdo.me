@@ -26,7 +26,7 @@ class TidyTest extends MediaWikiTestCase {
 
 	public static function provideTestWrapping() {
 		$testMathML = <<<'MathML'
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math xmlns="https://www.w3.org/1998/Math/MathML">
     <mrow>
       <mi>a</mi>
       <mo>&InvisibleTimes;</mo>

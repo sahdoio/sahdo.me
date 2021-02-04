@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -32,7 +32,7 @@ class IPTC {
 	 * form that can be handled by mediawiki. Generally called from
 	 * BitmapMetadataHandler::doApp13.
 	 *
-	 * @see http://www.iptc.org/std/IIM/4.1/specification/IIMV4.1.pdf
+	 * @see https://www.iptc.org/std/IIM/4.1/specification/IIMV4.1.pdf
 	 *
 	 * @param string $rawData The app13 block from jpeg containing iptc/iim data
 	 * @return array IPTC metadata array

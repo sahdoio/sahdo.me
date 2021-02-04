@@ -701,7 +701,7 @@ class SimpleCaptcha {
 		} else {
 			# Make regex
 			# It's faster using the S modifier even though it will usually only be run once
-			// $regex = 'http://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
+			// $regex = 'https://+[a-z0-9_\-.]*(' . implode( '|', $lines ) . ')';
 			// return '/' . str_replace( '/', '\/', preg_replace('|\\\*/|', '/', $regex) ) . '/Si';
 			$regexes = [];
 			$regexStart = [

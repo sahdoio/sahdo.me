@@ -16,19 +16,19 @@
 #
 mw-vagrant-host: &default
   user_factory: true
-  mediawiki_url: http://127.0.0.1:8080/wiki/
+  mediawiki_url: https://127.0.0.1:8080/wiki/
 
 mw-vagrant-guest:
   user_factory: true
-  mediawiki_url: http://127.0.0.1/wiki/
+  mediawiki_url: https://127.0.0.1/wiki/
 
 beta:
-  mediawiki_url: http://en.wikipedia.beta.wmflabs.org/wiki/
+  mediawiki_url: https://en.wikipedia.beta.wmflabs.org/wiki/
   mediawiki_user: Selenium_user
   # mediawiki_password: SET THIS IN THE ENVIRONMENT!
 
 test:
-  mediawiki_url: http://test.wikipedia.org/wiki/
+  mediawiki_url: https://test.wikipedia.org/wiki/
   mediawiki_user: Selenium_user
   # mediawiki_password: SET THIS IN THE ENVIRONMENT!
 

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @since 1.21
@@ -68,7 +68,7 @@ class TestSites {
 		$site->addNavigationId( 'spam' );
 		$site->addNavigationId( 'spamz' );
 		$site->addInterwikiId( 'spamzz' );
-		$site->setLinkPath( "http://spamzz.test/testing/" );
+		$site->setLinkPath( "https://spamzz.test/testing/" );
 		$sites[] = $site;
 
 		/**

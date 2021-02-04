@@ -13,7 +13,7 @@ unihan database, and phrases not included in the SCIM package.
 - trad2simp_noconvert.manual: Do not convert the chars as inapporiate.
 
 - tradphrases.manual: Phrases in Traditional Chinese. A portition is obtained
-  from the TongWen package (http://tongwen.mozdev.org/)
+  from the TongWen package (https://tongwen.mozdev.org/)
 
 - simpphrases.manual: Phrases in Simplified Chinese.
 

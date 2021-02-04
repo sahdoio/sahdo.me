@@ -79,14 +79,14 @@ class HttpTest extends MediaWikiTestCase {
 	public static function provideURI() {
 		/** Format: 'boolean expectation', 'URI to test', 'Optional message' */
 		return [
-			[ false, '¿non sens before!! http://a', 'Allow anything before URI' ],
+			[ false, '¿non sens before!! https://a', 'Allow anything before URI' ],
 
 			# (http|https) - only two schemes allowed
-			[ true, 'http://www.example.org/' ],
 			[ true, 'https://www.example.org/' ],
-			[ true, 'http://www.example.org', 'URI without directory' ],
-			[ true, 'http://a', 'Short name' ],
-			[ true, 'http://étoile', 'Allow UTF-8 in hostname' ], # 'étoile' is french for 'star'
+			[ true, 'https://www.example.org/' ],
+			[ true, 'https://www.example.org', 'URI without directory' ],
+			[ true, 'https://a', 'Short name' ],
+			[ true, 'https://étoile', 'Allow UTF-8 in hostname' ], # 'étoile' is french for 'star'
 			[ false, '\\host\directory', 'CIFS share' ],
 			[ false, 'gopher://host/dir', 'Reject gopher scheme' ],
 			[ false, 'telnet://host', 'Reject telnet scheme' ],
@@ -96,47 +96,47 @@ class HttpTest extends MediaWikiTestCase {
 			[ false, 'http:/example.org', 'Reject missing slash in protocol' ],
 			[ false, 'http:example.org', 'Must have two slashes' ],
 			# Following fail since hostname can be made of anything
-			[ false, 'http:///example.org', 'Must have exactly two slashes, not three' ],
+			[ false, 'https:///example.org', 'Must have exactly two slashes, not three' ],
 
 			# (\w+:{0,1}\w*@)? - optional user:pass
-			[ true, 'http://user@host', 'Username provided' ],
-			[ true, 'http://user:@host', 'Username provided, no password' ],
-			[ true, 'http://user:pass@host', 'Username and password provided' ],
+			[ true, 'https://user@host', 'Username provided' ],
+			[ true, 'https://user:@host', 'Username provided, no password' ],
+			[ true, 'https://user:pass@host', 'Username and password provided' ],
 
 			# (\S+) - host part is made of anything not whitespaces
 			// commented these out in order to remove @group Broken
 			// @todo are these valid tests? if so, fix Http::isValidURI so it can handle them
-			// array( false, 'http://!"èèè¿¿¿~~\'', 'hostname is made of any non whitespace' ),
-			// array( false, 'http://exam:ple.org/', 'hostname can not use colons!' ),
+			// array( false, 'https://!"èèè¿¿¿~~\'', 'hostname is made of any non whitespace' ),
+			// array( false, 'https://exam:ple.org/', 'hostname can not use colons!' ),
 
 			# (:[0-9]+)? - port number
-			[ true, 'http://example.org:80/' ],
 			[ true, 'https://example.org:80/' ],
-			[ true, 'http://example.org:443/' ],
+			[ true, 'https://example.org:80/' ],
+			[ true, 'https://example.org:443/' ],
 			[ true, 'https://example.org:443/' ],
 
 			# Part after the hostname is / or / with something else
-			[ true, 'http://example/#' ],
-			[ true, 'http://example/!' ],
-			[ true, 'http://example/:' ],
-			[ true, 'http://example/.' ],
-			[ true, 'http://example/?' ],
-			[ true, 'http://example/+' ],
-			[ true, 'http://example/=' ],
-			[ true, 'http://example/&' ],
-			[ true, 'http://example/%' ],
-			[ true, 'http://example/@' ],
-			[ true, 'http://example/-' ],
-			[ true, 'http://example//' ],
-			[ true, 'http://example/&' ],
+			[ true, 'https://example/#' ],
+			[ true, 'https://example/!' ],
+			[ true, 'https://example/:' ],
+			[ true, 'https://example/.' ],
+			[ true, 'https://example/?' ],
+			[ true, 'https://example/+' ],
+			[ true, 'https://example/=' ],
+			[ true, 'https://example/&' ],
+			[ true, 'https://example/%' ],
+			[ true, 'https://example/@' ],
+			[ true, 'https://example/-' ],
+			[ true, 'https://example//' ],
+			[ true, 'https://example/&' ],
 
 			# Fragment
-			[ true, 'http://exam#ple.org', ], # This one is valid, really!
-			[ true, 'http://example.org:80#anchor' ],
-			[ true, 'http://example.org/?id#anchor' ],
-			[ true, 'http://example.org/?#anchor' ],
+			[ true, 'https://exam#ple.org', ], # This one is valid, really!
+			[ true, 'https://example.org:80#anchor' ],
+			[ true, 'https://example.org/?id#anchor' ],
+			[ true, 'https://example.org/?#anchor' ],
 
-			[ false, 'http://a ¿non !!sens after', 'Allow anything after URI' ],
+			[ false, 'https://a ¿non !!sens after', 'Allow anything after URI' ],
 		];
 	}
 
@@ -149,17 +149,17 @@ class HttpTest extends MediaWikiTestCase {
 	 * HTTP redirects).
 	 */
 	public function testRelativeRedirections() {
-		$h = MWHttpRequestTester::factory( 'http://oldsite/file.ext', [], __METHOD__ );
+		$h = MWHttpRequestTester::factory( 'https://oldsite/file.ext', [], __METHOD__ );
 
 		# Forge a Location header
 		$h->setRespHeaders( 'location', [
-				'http://newsite/file.ext',
+				'https://newsite/file.ext',
 				'/newfile.ext',
 			]
 		);
 		# Verify we correctly fix the Location
 		$this->assertEquals(
-			'http://newsite/newfile.ext',
+			'https://newsite/newfile.ext',
 			$h->getFinalUrl(),
 			"Relative file path Location: interpreted as full URL"
 		);
@@ -176,7 +176,7 @@ class HttpTest extends MediaWikiTestCase {
 
 		$h->setRespHeaders( 'location', [
 				'/anotherfile.ext',
-				'http://anotherfile/hoster.ext',
+				'https://anotherfile/hoster.ext',
 				'https://anotherfile/hoster.ext'
 			]
 		);
@@ -188,7 +188,7 @@ class HttpTest extends MediaWikiTestCase {
 
 	/**
 	 * Constant values are from PHP 5.3.28 using cURL 7.24.0
-	 * @see http://php.net/manual/en/curl.constants.php
+	 * @see https://php.net/manual/en/curl.constants.php
 	 *
 	 * All constant values are present so that developers don’t need to remember
 	 * to add them if added at a later date. The commented out constants were
@@ -501,7 +501,7 @@ class MWHttpRequestTester extends MWHttpRequest {
 		if ( !Http::$httpEngine ) {
 			Http::$httpEngine = function_exists( 'curl_init' ) ? 'curl' : 'php';
 		} elseif ( Http::$httpEngine == 'curl' && !function_exists( 'curl_init' ) ) {
-			throw new MWException( __METHOD__ . ': curl (http://php.net/curl) is not installed, but' .
+			throw new MWException( __METHOD__ . ': curl (https://php.net/curl) is not installed, but' .
 				'Http::$httpEngine is set to "curl"' );
 		}
 
@@ -512,7 +512,7 @@ class MWHttpRequestTester extends MWHttpRequest {
 				if ( !wfIniGetBool( 'allow_url_fopen' ) ) {
 					throw new MWException( __METHOD__ .
 						': allow_url_fopen needs to be enabled for pure PHP HTTP requests to work. '
-							. 'If possible, curl should be used instead. See http://php.net/curl.' );
+							. 'If possible, curl should be used instead. See https://php.net/curl.' );
 				}
 
 				return new PhpHttpRequestTester( $url, $options, $caller );

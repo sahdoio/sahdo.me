@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  *
@@ -70,7 +70,7 @@ class SiteImporterTest extends PHPUnit_Framework_TestCase {
 		$acme->setGlobalId( 'acme.com' );
 		$acme->setGroup( 'Test' );
 		$acme->addLocalId( Site::ID_INTERWIKI, 'acme' );
-		$acme->setPath( Site::PATH_LINK, 'http://acme.com/' );
+		$acme->setPath( Site::PATH_LINK, 'https://acme.com/' );
 
 		$dewiki = Site::newForType( Site::TYPE_MEDIAWIKI );
 		$dewiki->setGlobalId( 'dewiki' );
@@ -78,8 +78,8 @@ class SiteImporterTest extends PHPUnit_Framework_TestCase {
 		$dewiki->setForward( true );
 		$dewiki->addLocalId( Site::ID_INTERWIKI, 'wikipedia' );
 		$dewiki->addLocalId( Site::ID_EQUIVALENT, 'de' );
-		$dewiki->setPath( Site::PATH_LINK, 'http://de.wikipedia.org/w/' );
-		$dewiki->setPath( MediaWikiSite::PATH_PAGE, 'http://de.wikipedia.org/wiki/' );
+		$dewiki->setPath( Site::PATH_LINK, 'https://de.wikipedia.org/w/' );
+		$dewiki->setPath( MediaWikiSite::PATH_PAGE, 'https://de.wikipedia.org/wiki/' );
 		$dewiki->setSource( 'meta.wikimedia.org' );
 
 		return [
@@ -104,7 +104,7 @@ class SiteImporterTest extends PHPUnit_Framework_TestCase {
 						'<globalid>acme.com</globalid>' .
 						'<localid type="interwiki">acme</localid>' .
 						'<group>Test</group>' .
-						'<path type="link">http://acme.com/</path>' .
+						'<path type="link">https://acme.com/</path>' .
 					'</site>' .
 					'<site type="mediawiki">' .
 						'<source>meta.wikimedia.org</source>' .
@@ -113,8 +113,8 @@ class SiteImporterTest extends PHPUnit_Framework_TestCase {
 						'<localid type="equivalent">de</localid>' .
 						'<group>wikipedia</group>' .
 						'<forward/>' .
-						'<path type="link">http://de.wikipedia.org/w/</path>' .
-						'<path type="page_path">http://de.wikipedia.org/wiki/</path>' .
+						'<path type="link">https://de.wikipedia.org/w/</path>' .
+						'<path type="page_path">https://de.wikipedia.org/wiki/</path>' .
 					'</site>' .
 				'</sites>',
 				[ $foo, $acme, $dewiki ],
@@ -128,7 +128,7 @@ class SiteImporterTest extends PHPUnit_Framework_TestCase {
 						'<localid type="interwiki">acme</localid>' .
 						'<silly>boop!</silly>' .
 						'<group>Test</group>' .
-						'<path type="link">http://acme.com/</path>' .
+						'<path type="link">https://acme.com/</path>' .
 					'</site>' .
 				'</sites>',
 				[ $foo, $acme ],
@@ -161,7 +161,7 @@ class SiteImporterTest extends PHPUnit_Framework_TestCase {
 		$acme->setGlobalId( 'acme.com' );
 		$acme->setGroup( 'Test' );
 		$acme->addLocalId( Site::ID_INTERWIKI, 'acme' );
-		$acme->setPath( Site::PATH_LINK, 'http://acme.com/' );
+		$acme->setPath( Site::PATH_LINK, 'https://acme.com/' );
 
 		$dewiki = Site::newForType( Site::TYPE_MEDIAWIKI );
 		$dewiki->setGlobalId( 'dewiki' );
@@ -169,8 +169,8 @@ class SiteImporterTest extends PHPUnit_Framework_TestCase {
 		$dewiki->setForward( true );
 		$dewiki->addLocalId( Site::ID_INTERWIKI, 'wikipedia' );
 		$dewiki->addLocalId( Site::ID_EQUIVALENT, 'de' );
-		$dewiki->setPath( Site::PATH_LINK, 'http://de.wikipedia.org/w/' );
-		$dewiki->setPath( MediaWikiSite::PATH_PAGE, 'http://de.wikipedia.org/wiki/' );
+		$dewiki->setPath( Site::PATH_LINK, 'https://de.wikipedia.org/w/' );
+		$dewiki->setPath( MediaWikiSite::PATH_PAGE, 'https://de.wikipedia.org/wiki/' );
 		$dewiki->setSource( 'meta.wikimedia.org' );
 
 		$importer = $this->newSiteImporter( [ $foo, $acme, $dewiki ], 0 );

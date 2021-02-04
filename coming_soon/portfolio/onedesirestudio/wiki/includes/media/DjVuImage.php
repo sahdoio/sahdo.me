@@ -18,7 +18,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  * @ingroup Media
@@ -29,7 +29,7 @@
  * some basic file metadata (resolution etc)
  *
  * File format docs are available in source package for DjVuLibre:
- * http://djvulibre.djvuzone.org/
+ * https://djvulibre.djvuzone.org/
  *
  * @ingroup Media
  */
@@ -276,7 +276,7 @@ class DjVuImage {
 
 		if ( isset( $wgDjvuDump ) ) {
 			# djvudump is faster as of version 3.5
-			# http://sourceforge.net/tracker/index.php?func=detail&aid=1704049&group_id=32953&atid=406583
+			# https://sourceforge.net/tracker/index.php?func=detail&aid=1704049&group_id=32953&atid=406583
 			$cmd = wfEscapeShellArg( $wgDjvuDump ) . ' ' . wfEscapeShellArg( $this->mFilename );
 			$dump = wfShellExec( $cmd );
 			$xml = $this->convertDumpToXML( $dump );

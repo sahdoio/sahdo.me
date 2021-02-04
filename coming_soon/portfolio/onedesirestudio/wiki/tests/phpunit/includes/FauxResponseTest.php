@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License along
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
- * http://www.gnu.org/copyleft/gpl.html
+ * https://www.gnu.org/copyleft/gpl.html
  *
  * @file
  */
@@ -71,30 +71,30 @@ class FauxResponseTest extends MediaWikiTestCase {
 	public function testHeader() {
 		$this->assertEquals( null, $this->response->getHeader( 'Location' ), 'Non-existing header' );
 
-		$this->response->header( 'Location: http://localhost/' );
+		$this->response->header( 'Location: https://localhost/' );
 		$this->assertEquals(
-			'http://localhost/',
+			'https://localhost/',
 			$this->response->getHeader( 'Location' ),
 			'Set header'
 		);
 
-		$this->response->header( 'Location: http://127.0.0.1/' );
+		$this->response->header( 'Location: https://127.0.0.1/' );
 		$this->assertEquals(
-			'http://127.0.0.1/',
+			'https://127.0.0.1/',
 			$this->response->getHeader( 'Location' ),
 			'Same header'
 		);
 
-		$this->response->header( 'Location: http://127.0.0.2/', false );
+		$this->response->header( 'Location: https://127.0.0.2/', false );
 		$this->assertEquals(
-			'http://127.0.0.1/',
+			'https://127.0.0.1/',
 			$this->response->getHeader( 'Location' ),
 			'Same header with override disabled'
 		);
 
-		$this->response->header( 'Location: http://localhost/' );
+		$this->response->header( 'Location: https://localhost/' );
 		$this->assertEquals(
-			'http://localhost/',
+			'https://localhost/',
 			$this->response->getHeader( 'LOCATION' ),
 			'Get header case insensitive'
 		);
@@ -138,7 +138,7 @@ class FauxResponseTest extends MediaWikiTestCase {
 			'Handle statusHeader method'
 		);
 
-		$this->response->header( 'Location: http://localhost/', false, 206 );
+		$this->response->header( 'Location: https://localhost/', false, 206 );
 		$this->assertEquals(
 			206,
 			$this->response->getStatusCode(),

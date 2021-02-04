@@ -3,7 +3,7 @@
 	QUnit.module( 'mediawiki.Uri', QUnit.newMwEnvironment( {
 		setup: function () {
 			this.mwUriOrg = mw.Uri;
-			mw.Uri = mw.UriRelative( 'http://example.org/w/index.php' );
+			mw.Uri = mw.UriRelative( 'https://example.org/w/index.php' );
 		},
 		teardown: function () {
 			mw.Uri = this.mwUriOrg;
@@ -14,7 +14,7 @@
 	$.each( [ true, false ], function ( i, strictMode ) {
 		QUnit.test( 'Basic construction and properties (' + ( strictMode ? '' : 'non-' ) + 'strict mode)', 2, function ( assert ) {
 			var uriString, uri;
-			uriString = 'http://www.ietf.org/rfc/rfc2396.txt';
+			uriString = 'https://www.ietf.org/rfc/rfc2396.txt';
 			uri = new mw.Uri( uriString, {
 				strictMode: strictMode
 			} );
@@ -63,7 +63,7 @@
 	QUnit.test( 'Constructor( String[, Object ] )', 11, function ( assert ) {
 		var uri;
 
-		uri = new mw.Uri( 'http://www.example.com/dir/?m=foo&m=bar&n=1', {
+		uri = new mw.Uri( 'https://www.example.com/dir/?m=foo&m=bar&n=1', {
 			overrideKeys: true
 		} );
 
@@ -71,7 +71,7 @@
 		assert.strictEqual( uri.query.n, '1', 'Simple parameter with overrideKeys:true' );
 		assert.strictEqual( uri.query.m, 'bar', 'Last key overrides earlier keys with overrideKeys:true' );
 
-		uri = new mw.Uri( 'http://www.example.com/dir/?m=foo&m=bar&n=1', {
+		uri = new mw.Uri( 'https://www.example.com/dir/?m=foo&m=bar&n=1', {
 			overrideKeys: false
 		} );
 
@@ -131,10 +131,10 @@
 		uri = new mw.Uri( 'example.com/bar/baz', {
 			strictMode: false
 		} );
-		assert.equal( uri.toString(), 'http://example.com/bar/baz', 'normalize URI without protocol or // in loose mode' );
+		assert.equal( uri.toString(), 'https://example.com/bar/baz', 'normalize URI without protocol or // in loose mode' );
 
 		/*jshint -W001 */
-		uri = new mw.Uri( 'http://example.com/index.php?key=key&hasOwnProperty=hasOwnProperty&constructor=constructor&watch=watch' );
+		uri = new mw.Uri( 'https://example.com/index.php?key=key&hasOwnProperty=hasOwnProperty&constructor=constructor&watch=watch' );
 		assert.deepEqual(
 			uri.query,
 			{
@@ -154,7 +154,7 @@
 			host: 'www.foo.local',
 			path: '/this'
 		} );
-		assert.equal( uri.toString(), 'http://www.foo.local/this', 'Basic properties' );
+		assert.equal( uri.toString(), 'https://www.foo.local/this', 'Basic properties' );
 
 		uri = new mw.Uri( {
 			protocol: 'http',
@@ -163,7 +163,7 @@
 			query: { hi: 'there' },
 			fragment: 'blah'
 		} );
-		assert.equal( uri.toString(), 'http://www.foo.local/this?hi=there#blah', 'More complex properties' );
+		assert.equal( uri.toString(), 'https://www.foo.local/this?hi=there#blah', 'More complex properties' );
 
 		assert.throws(
 			function () {
@@ -182,7 +182,7 @@
 	QUnit.test( 'Constructor( empty )', 4, function ( assert ) {
 		var testuri, MyUri, uri;
 
-		testuri = 'http://example.org/w/index.php';
+		testuri = 'https://example.org/w/index.php';
 		MyUri = mw.UriRelative( testuri );
 
 		uri = new MyUri();
@@ -201,27 +201,27 @@
 	QUnit.test( 'Properties', 8, function ( assert ) {
 		var uriBase, uri;
 
-		uriBase = new mw.Uri( 'http://en.wiki.local/w/api.php' );
+		uriBase = new mw.Uri( 'https://en.wiki.local/w/api.php' );
 
 		uri = uriBase.clone();
 		uri.fragment = 'frag';
-		assert.equal( uri.toString(), 'http://en.wiki.local/w/api.php#frag', 'add a fragment' );
+		assert.equal( uri.toString(), 'https://en.wiki.local/w/api.php#frag', 'add a fragment' );
 
 		uri = uriBase.clone();
 		uri.host = 'fr.wiki.local';
 		uri.port = '8080';
-		assert.equal( uri.toString(), 'http://fr.wiki.local:8080/w/api.php', 'change host and port' );
+		assert.equal( uri.toString(), 'https://fr.wiki.local:8080/w/api.php', 'change host and port' );
 
 		uri = uriBase.clone();
 		uri.query.foo = 'bar';
-		assert.equal( uri.toString(), 'http://en.wiki.local/w/api.php?foo=bar', 'add query arguments' );
+		assert.equal( uri.toString(), 'https://en.wiki.local/w/api.php?foo=bar', 'add query arguments' );
 
 		delete uri.query.foo;
-		assert.equal( uri.toString(), 'http://en.wiki.local/w/api.php', 'delete query arguments' );
+		assert.equal( uri.toString(), 'https://en.wiki.local/w/api.php', 'delete query arguments' );
 
 		uri = uriBase.clone();
 		uri.query.foo = 'bar';
-		assert.equal( uri.toString(), 'http://en.wiki.local/w/api.php?foo=bar', 'extend query arguments' );
+		assert.equal( uri.toString(), 'https://en.wiki.local/w/api.php?foo=bar', 'extend query arguments' );
 		uri.extend( {
 			foo: 'quux',
 			pif: 'paf'
@@ -232,7 +232,7 @@
 	} );
 
 	QUnit.test( '.getQueryString()', 2, function ( assert ) {
-		var uri = new mw.Uri( 'http://search.example.com/?q=uri' );
+		var uri = new mw.Uri( 'https://search.example.com/?q=uri' );
 
 		assert.deepEqual(
 			{
@@ -268,7 +268,7 @@
 	QUnit.test( '.clone()', 6, function ( assert ) {
 		var original, clone;
 
-		original = new mw.Uri( 'http://foo.example.org/index.php?one=1&two=2' );
+		original = new mw.Uri( 'https://foo.example.org/index.php?one=1&two=2' );
 		clone = original.clone();
 
 		assert.deepEqual( clone, original, 'clone has equivalent properties' );
@@ -292,7 +292,7 @@
 	QUnit.test( '.toString() after query manipulation', 8, function ( assert ) {
 		var uri;
 
-		uri = new mw.Uri( 'http://www.example.com/dir/?m=foo&m=bar&n=1', {
+		uri = new mw.Uri( 'https://www.example.com/dir/?m=foo&m=bar&n=1', {
 			overrideKeys: true
 		} );
 
@@ -302,9 +302,9 @@
 		// of iteration can vary.
 		assert.ok( uri.toString().indexOf( 'm=bar' ), 'toString preserves other values' );
 		assert.ok( uri.toString().indexOf( 'n=x&n=y&n=z' ), 'toString parameter includes all values of an array query parameter' );
-		assert.equal( uri.toString().length, 'http://www.example.com/dir/?m=bar&n=x&n=y&n=z'.length, 'toString matches expected string' );
+		assert.equal( uri.toString().length, 'https://www.example.com/dir/?m=bar&n=x&n=y&n=z'.length, 'toString matches expected string' );
 
-		uri = new mw.Uri( 'http://www.example.com/dir/?m=foo&m=bar&n=1', {
+		uri = new mw.Uri( 'https://www.example.com/dir/?m=foo&m=bar&n=1', {
 			overrideKeys: false
 		} );
 
@@ -315,22 +315,22 @@
 		// of iteration can vary.
 		assert.ok( uri.toString().indexOf( 'm=foo&m=bar' ) >= 0, 'toString preserves other values' );
 		assert.ok( uri.toString().indexOf( 'n=x&n=y&n=z' ) >= 0, 'toString parameter includes all values of an array query parameter' );
-		assert.equal( uri.toString().length, 'http://www.example.com/dir/?m=foo&m=bar&n=x&n=y&n=z'.length, 'toString matches expected string' );
+		assert.equal( uri.toString().length, 'https://www.example.com/dir/?m=foo&m=bar&n=x&n=y&n=z'.length, 'toString matches expected string' );
 
 		// Remove query values
 		uri.query.m.splice( 0, 1 );
 		delete uri.query.n;
 
-		assert.equal( uri.toString(), 'http://www.example.com/dir/?m=bar', 'deletion properties' );
+		assert.equal( uri.toString(), 'https://www.example.com/dir/?m=bar', 'deletion properties' );
 
 		// Remove more query values, leaving an empty array
 		uri.query.m.splice( 0, 1 );
-		assert.equal( uri.toString(), 'http://www.example.com/dir/', 'empty array value is ommitted' );
+		assert.equal( uri.toString(), 'https://www.example.com/dir/', 'empty array value is ommitted' );
 	} );
 
 	QUnit.test( 'Variable defaultUri', 2, function ( assert ) {
 		var uri,
-			href = 'http://example.org/w/index.php#here',
+			href = 'https://example.org/w/index.php#here',
 			UriClass = mw.UriRelative( function () {
 				return href;
 			} );
@@ -391,7 +391,7 @@
 	QUnit.test( 'Advanced URL', 11, function ( assert ) {
 		var uri, queryString, relativePath;
 
-		uri = new mw.Uri( 'http://auth@www.example.com:81/dir/dir.2/index.htm?q1=0&&test1&test2=value+%28escaped%29#top' );
+		uri = new mw.Uri( 'https://auth@www.example.com:81/dir/dir.2/index.htm?q1=0&&test1&test2=value+%28escaped%29#top' );
 
 		assert.deepEqual(
 			{
@@ -436,7 +436,7 @@
 	} );
 
 	QUnit.test( 'Parse a uri with an @ symbol in the path and query', 1, function ( assert ) {
-		var uri = new mw.Uri( 'http://www.example.com/test@test?x=@uri&y@=uri&z@=@' );
+		var uri = new mw.Uri( 'https://www.example.com/test@test?x=@uri&y@=uri&z@=@' );
 
 		assert.deepEqual(
 			{
@@ -477,13 +477,13 @@
 		assert.equal( uri.toString(), 'glork://en.wiki.local/foo.com', 'handle absolute paths by supplying protocol and host from document in loose mode' );
 
 		uri = new UriRel( 'http:/foo.com' );
-		assert.equal( uri.toString(), 'http://en.wiki.local/foo.com', 'handle absolute paths by supplying host from document in loose mode' );
+		assert.equal( uri.toString(), 'https://en.wiki.local/foo.com', 'handle absolute paths by supplying host from document in loose mode' );
 
 		uri = new UriRel( '/foo.com', true );
 		assert.equal( uri.toString(), 'glork://en.wiki.local/foo.com', 'handle absolute paths by supplying protocol and host from document in strict mode' );
 
 		uri = new UriRel( 'http:/foo.com', true );
-		assert.equal( uri.toString(), 'http://en.wiki.local/foo.com', 'handle absolute paths by supplying host from document in strict mode' );
+		assert.equal( uri.toString(), 'https://en.wiki.local/foo.com', 'handle absolute paths by supplying host from document in strict mode' );
 	} );
 
 	QUnit.test( 'bug 35658', 2, function ( assert ) {

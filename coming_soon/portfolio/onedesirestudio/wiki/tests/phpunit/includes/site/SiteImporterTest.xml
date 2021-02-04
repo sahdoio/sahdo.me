@@ -1,10 +1,10 @@
-<sites version="1.0" xmlns="http://www.mediawiki.org/xml/sitelist-1.0/">
+<sites version="1.0" xmlns="https://www.mediawiki.org/xml/sitelist-1.0/">
 	<site><globalid>Foo</globalid></site>
 	<site>
 		<globalid>acme.com</globalid>
 		<localid type="interwiki">acme</localid>
 		<group>Test</group>
-		<path type="link">http://acme.com/</path>
+		<path type="link">https://acme.com/</path>
 	</site>
 	<site type="mediawiki">
 		<source>meta.wikimedia.org</source>
@@ -13,7 +13,7 @@
 		<localid type="equivalent">de</localid>
 		<group>wikipedia</group>
 		<forward/>
-		<path type="link">http://de.wikipedia.org/w/</path>
-		<path type="page_path">http://de.wikipedia.org/wiki/</path>
+		<path type="link">https://de.wikipedia.org/w/</path>
+		<path type="page_path">https://de.wikipedia.org/wiki/</path>
 	</site>
 </sites>
